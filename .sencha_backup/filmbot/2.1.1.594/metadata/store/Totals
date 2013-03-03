@@ -1,0 +1,17 @@
+{
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Totals",
+        "autoLoad": true,
+        "autoSync": false,
+        "model": "Totals",
+        "storeId": "Totals"
+    },
+    "id": "ExtBox1-ext-gen6466",
+    "designerId": "a044d04b-ed61-44ca-900f-998145cb352c"
+}

@@ -1,0 +1,65 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Navigation"
+    },
+    "id": "ExtBox1-ext-gen20237",
+    "designerId": "4b2f5b2d-9285-4ec4-89bd-39b7f7b28807",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onContainerActivate",
+                "fn": "onContainerActivate",
+                "designer|params": [
+                    "me",
+                    "item"
+                ],
+                "implHandler": [
+                    "if((item.items.items[1].id == 'orders') && (item.items.items[0].items.length == 2)){",
+                    "",
+                    "    item.items.items[0].add({",
+                    "        xtype:'spacer'",
+                    "    });",
+                    "",
+                    "    item.items.items[0].add({",
+                    "        xtype: 'button',",
+                    "        id: 'addOrder',",
+                    "        iconCls: 'add',",
+                    "        iconMask: true",
+                    "    });",
+                    "}",
+                    "",
+                    "if((item.items.items[1].id == 'inventory') && (item.items.items[0].items.length == 2)){",
+                    "",
+                    "    item.items.items[0].add({",
+                    "        xtype:'spacer'",
+                    "    });",
+                    "",
+                    "    item.items.items[0].add({",
+                    "        xtype: 'button',",
+                    "        id: 'addInventory',",
+                    "        iconCls: 'add',",
+                    "        iconMask: true",
+                    "    });",
+                    "}",
+                    ""
+                ],
+                "name": "select",
+                "designer|targetType": "Ext.ux.sllidenavigation.View",
+                "designer|controlQuery": ".slidenavigationview"
+            },
+            "designerId": "8f16e354-9166-4c07-aeb2-599f631d350a"
+        }
+    ]
+}

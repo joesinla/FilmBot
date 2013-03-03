@@ -1,0 +1,68 @@
+{
+    "type": "store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Windows",
+        "autoLoad": true,
+        "autoSync": true,
+        "groupField": "Type",
+        "model": "Window",
+        "storeId": "Windows"
+    },
+    "id": "ExtBox1-ext-gen21444",
+    "designerId": "fa9e65ed-6809-4917-82a8-ee7cf818d219",
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onStoreRemoverecords",
+                "fn": "onStoreRemoverecords",
+                "implHandler": [
+                    "console.log('remove window event', records);",
+                    "store.sync();"
+                ],
+                "name": "removerecords"
+            },
+            "designerId": "2b758da4-100f-4ec6-97f3-3c19d4438f2f"
+        },
+        {
+            "type": "localstorageproxy",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyLocalStorageProxy2"
+            },
+            "designerId": "8e1e2900-1cc9-4744-a872-57f1b36bd9d9"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onStoreAddrecords",
+                "fn": "onStoreAddrecords",
+                "implHandler": [
+                    "console.log('add window event');",
+                    "store.sync();"
+                ],
+                "name": "addrecords"
+            },
+            "designerId": "9963178a-2240-4487-ba2b-abb40aae3867"
+        }
+    ]
+}

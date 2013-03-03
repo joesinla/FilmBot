@@ -1,0 +1,243 @@
+{
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Inventory",
+        "designer|userAlias": "inventory",
+        "id": "inventory",
+        "layout": "card"
+    },
+    "id": "ExtBox1-ext-gen11005",
+    "designerId": "feaff807-b000-4a81-b3db-9b6ffb8fc032",
+    "cn": [
+        {
+            "type": "list",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyList3",
+                "id": "InventoryList",
+                "itemCls": "tweet",
+                "store": "Rolls",
+                "onItemDisclosure": true
+            },
+            "designerId": "7242d8bb-7d07-4afe-bb29-389c6d09037b",
+            "cn": [
+                {
+                    "type": "template",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "itemTpl",
+                        "implHandler": [
+                            "<div>{Manufacturer} {Type} {Shade}{Size}{RollNumber}{LinearFeet} </div>"
+                        ],
+                        "designer|displayName": "itemTpl"
+                    },
+                    "designerId": "cf8734f1-415a-4c65-a746-23f530cc18d7"
+                }
+            ]
+        },
+        {
+            "type": "formpanel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyFormPanel",
+                "id": "InventoryForm",
+                "defaults": [
+                    "{",
+                    "    labelWidth: '40%'",
+                    "}"
+                ]
+            },
+            "designerId": "7cb2673d-0a3a-4abe-9dd0-b0a220e6f046",
+            "cn": [
+                {
+                    "type": "fieldset",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyFieldSet",
+                        "id": "FilmFields",
+                        "defaults": [
+                            "{",
+                            "    labelWidth: '40%'",
+                            "}"
+                        ],
+                        "title": null
+                    },
+                    "designerId": "b7209358-3ce3-4c85-9e96-37dfa93a96db",
+                    "cn": [
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyTextField",
+                                "id": "MnfField",
+                                "label": "Manufacturer",
+                                "labelWidth": null,
+                                "labelWrap": true,
+                                "name": "Manufacturer",
+                                "autoComplete": true
+                            },
+                            "designerId": "e5263d07-7107-4211-b72e-74f28166c1a4"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyTextField1",
+                                "id": "TypeField",
+                                "label": "Type",
+                                "name": "Type",
+                                "autoComplete": true
+                            },
+                            "designerId": "94ac102f-8e30-45be-9778-bc4045b3713d"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyTextField1",
+                                "id": "ShadeField",
+                                "label": "Shade",
+                                "name": "Shade",
+                                "autoComplete": true
+                            },
+                            "designerId": "84df7877-c6de-403e-8c56-bb5056ebcac2"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyTextField1",
+                                "id": "SizeField",
+                                "label": "Size",
+                                "name": "Size",
+                                "autoComplete": true
+                            },
+                            "designerId": "a5d5ccc8-3559-4fae-bfe2-4e3cf1f8e43a"
+                        }
+                    ]
+                },
+                {
+                    "type": "fieldset",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyFieldSet5",
+                        "id": "RollFields",
+                        "defaults": [
+                            "{",
+                            "    labelWidth: '40%'",
+                            "}",
+                            ""
+                        ],
+                        "title": ""
+                    },
+                    "designerId": "edc8fa89-8d18-4be6-a87e-e7e58cb0eac5",
+                    "cn": [
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyTextField1",
+                                "id": "RollNumberField",
+                                "label": "Roll Number",
+                                "name": "RollNumber",
+                                "autoComplete": false
+                            },
+                            "designerId": "7b627642-4990-49a3-8d55-71a9cf064a15"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyTextField1",
+                                "id": "LinearFeetField",
+                                "label": "Linear Feet",
+                                "name": "LinearFeet"
+                            },
+                            "designerId": "06041c54-aa96-4f41-b297-9c14bc88bf44"
+                        },
+                        {
+                            "type": "textfield",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyTextField1",
+                                "id": "PriceField",
+                                "label": "Price",
+                                "name": "Price"
+                            },
+                            "designerId": "d4bbf883-53c0-4b89-a71b-05dfd0733493"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton",
+                        "id": "InventoryEnter",
+                        "iconCls": null,
+                        "iconMask": true,
+                        "text": "Enter"
+                    },
+                    "designerId": "5978c2df-c8a8-4e3d-80ec-bd7a5541498f"
+                }
+            ]
+        }
+    ]
+}

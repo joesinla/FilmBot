@@ -1,0 +1,102 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "test",
+        "designer|userAlias": "test"
+    },
+    "id": "ExtBox1-ext-gen25463",
+    "designerId": "b51b9561-f334-4037-b24b-c9061aaf896d",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "connected",
+                "fn": "connected",
+                "implHandler": [
+                    "console.log('connected');",
+                    "",
+                    "this.syncStores();"
+                ],
+                "name": "connected",
+                "designer|targetType": null,
+                "designer|controlQuery": "#sio"
+            },
+            "designerId": "cdf06769-a488-4a10-9919-e6b57cd5c3ae"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "offline",
+                "fn": "offline",
+                "implHandler": [
+                    "console.log('offline');"
+                ],
+                "name": "offline",
+                "designer|controlQuery": "#sio"
+            },
+            "designerId": "55353d46-4234-4802-96ba-1476ae47fb48"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "authorized",
+                "fn": "authorized",
+                "designer|params": [
+                    "user"
+                ],
+                "implHandler": [
+                    "console.log('authorized', user);",
+                    "",
+                    "this.syncStores();"
+                ],
+                "name": "authorized",
+                "designer|controlQuery": "#sio"
+            },
+            "designerId": "ac2e3b85-a404-4061-8e59-1c15a486ebf4"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "syncStores",
+                "fn": "syncStores",
+                "implHandler": [
+                    "console.log('sync stores..');",
+                    "",
+                    "//sync and load all stores",
+                    "var rollStore = Ext.getStore('Rolls');",
+                    "var orderStore = Ext.getStore('Orders');",
+                    "rollStore.sync();",
+                    "orderStore.sync();",
+                    "rollStore.load();",
+                    "orderStore.load();"
+                ]
+            },
+            "designerId": "b1fc94cd-2de9-433f-a814-0a186b9f23ea"
+        }
+    ]
+}

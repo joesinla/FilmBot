@@ -1,0 +1,711 @@
+{
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Orders",
+        "designer|userAlias": "orders",
+        "id": "orders",
+        "layout": "card"
+    },
+    "id": "ExtBox1-ext-gen26978",
+    "designerId": "155afc20-1a68-487b-9b92-432888bb2798",
+    "cn": [
+        {
+            "type": "list",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyList",
+                "id": "OrderList",
+                "layout": "fit",
+                "store": "Orders",
+                "onItemDisclosure": true
+            },
+            "designerId": "a8aca840-d242-4540-b84c-11c50a86efd0",
+            "cn": [
+                {
+                    "type": "template",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "itemTpl",
+                        "implHandler": [
+                            "<div>Order {Number} was created on {Created}</div>"
+                        ],
+                        "designer|displayName": "itemTpl"
+                    },
+                    "designerId": "ce3a1cb1-c2c0-45f7-82b3-d66e437a1a5f"
+                }
+            ]
+        },
+        {
+            "type": "tabpanel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|animation": "slide",
+                "designer|userClassName": "MyTabPanel1",
+                "id": "newOrder",
+                "itemId": "newOrder"
+            },
+            "designerId": "d099700b-4d11-4afc-b37f-0624ee8df176",
+            "cn": [
+                {
+                    "type": "tabbar",
+                    "reference": {
+                        "name": "tabBar",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|align": null,
+                        "container|pack": "center",
+                        "designer|userClassName": "MyTabBar",
+                        "docked": "bottom"
+                    },
+                    "designerId": "5fc83c37-fc83-4d5f-ac52-8c8dd8788fb7"
+                },
+                {
+                    "type": "formpanel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Add Windows",
+                        "iconCls": "add",
+                        "designer|userClassName": "MyFormPanel",
+                        "id": "AddWindowPanel",
+                        "layout": null
+                    },
+                    "designerId": "373235a7-622f-4682-a929-f55e13f265b2",
+                    "cn": [
+                        {
+                            "type": "fieldset",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyFieldSet4",
+                                "id": "WindowDemensions",
+                                "layout": null,
+                                "title": null
+                            },
+                            "designerId": "1fb7d5cf-7ddb-43d3-813a-4c4c2963e9a5",
+                            "cn": [
+                                {
+                                    "type": "container",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "container|align": "center",
+                                        "container|pack": "center",
+                                        "designer|userClassName": "MyContainer5",
+                                        "id": "DimensionsPanel",
+                                        "margin": null,
+                                        "width": null,
+                                        "layout": "hbox"
+                                    },
+                                    "designerId": "9166fcd8-0b6f-43c2-bf4e-a480a9fb8a91",
+                                    "cn": [
+                                        {
+                                            "type": "numberfield",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 3,
+                                                "designer|userClassName": "MyNumberField",
+                                                "id": "PanesField",
+                                                "minWidth": null,
+                                                "width": "30px",
+                                                "label": null,
+                                                "name": "Panes",
+                                                "placeHolder": "Panes"
+                                            },
+                                            "designerId": "c7c90478-507a-4986-b0bb-63eb313dbf47"
+                                        },
+                                        {
+                                            "type": "numberfield",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 3,
+                                                "designer|userClassName": "MyNumberField1",
+                                                "id": "WidthField",
+                                                "label": null,
+                                                "name": "Width",
+                                                "autoComplete": null,
+                                                "placeHolder": "Width"
+                                            },
+                                            "designerId": "678cead7-f6ae-4a00-a188-f5de557f1c76"
+                                        },
+                                        {
+                                            "type": "numberfield",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "layout|flex": 3,
+                                                "designer|userClassName": "MyNumberField2",
+                                                "id": "HeightField",
+                                                "label": null,
+                                                "name": "Height",
+                                                "placeHolder": "Height"
+                                            },
+                                            "designerId": "05588254-5008-4347-b235-a64e9772eef5"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "fieldset",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyFieldSet3",
+                                "id": "WindowDetails",
+                                "defaults": [
+                                    "{labelWidth: '30%'}"
+                                ],
+                                "title": null
+                            },
+                            "designerId": "9a3f99be-1a50-4d51-960c-bef692e5e1c6",
+                            "cn": [
+                                {
+                                    "type": "selectfield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MySelectField",
+                                        "id": "FilmSelect",
+                                        "itemId": null,
+                                        "label": "Film",
+                                        "labelWidth": null,
+                                        "options": null
+                                    },
+                                    "designerId": "c95360d9-3695-4026-b8e7-ad78b1bb212e",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "designer|userClassName": "onFilmInitialize",
+                                                "fn": "onFilmInitialize",
+                                                "implHandler": [
+                                                    "var me = this;",
+                                                    "me.element.on('tap', function(e, t){this.fireEvent('tap', this, e, t);}, me);"
+                                                ],
+                                                "name": "initialize"
+                                            },
+                                            "designerId": "2bddc8e4-17ce-4583-b520-3cb2fb800eec"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "textfield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyTextField11",
+                                        "id": "Location",
+                                        "label": "Location",
+                                        "labelWidth": null,
+                                        "name": "Location"
+                                    },
+                                    "designerId": "1907c4ea-1d95-40a8-9775-759d89bd9186"
+                                },
+                                {
+                                    "type": "selectfield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MySelectField1",
+                                        "id": "Direction",
+                                        "label": "Direction",
+                                        "labelWidth": null,
+                                        "name": "Direction",
+                                        "options": "[\n    {text:'',value:''},\n    {text:'North',value:'North'},\n    {text:'South',value:'South'},\n    {text:'East',value:'East'},\n    {text:'West',value:'West'}\n]"
+                                    },
+                                    "designerId": "02f26716-c3fd-4cfd-b2d6-823c9bc92045"
+                                },
+                                {
+                                    "type": "sliderfield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MySliderField1",
+                                        "id": "Difficulty",
+                                        "label": "Removal",
+                                        "labelWidth": null,
+                                        "name": "Difficulty",
+                                        "maxValue": 10
+                                    },
+                                    "designerId": "8d92aec3-66b2-4e13-859f-4658ab56d16f"
+                                },
+                                {
+                                    "type": "hiddenfield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyHiddenField",
+                                        "id": "hMnfField",
+                                        "name": "Manufacturer"
+                                    },
+                                    "designerId": "4e6c3af0-1246-49ca-9794-1d0c5b568e7a"
+                                },
+                                {
+                                    "type": "hiddenfield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyHiddenField",
+                                        "id": "hTypeField",
+                                        "name": "Type"
+                                    },
+                                    "designerId": "93bc223d-98d9-43fd-a5ca-132443cf8c51"
+                                },
+                                {
+                                    "type": "hiddenfield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyHiddenField",
+                                        "id": "hShadeField",
+                                        "name": "Shade"
+                                    },
+                                    "designerId": "fa0f5ff4-868f-4f40-b369-e109f135784c"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton",
+                                "id": "enterOrder",
+                                "iconCls": null,
+                                "iconMask": true,
+                                "text": "Enter"
+                            },
+                            "designerId": "2617fc57-5065-4aa5-8716-e9e968bec90a"
+                        }
+                    ]
+                },
+                {
+                    "type": "formpanel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Customer",
+                        "iconCls": "user",
+                        "designer|userClassName": "MyFormPanel6",
+                        "id": "CustomerPanel",
+                        "itemId": null,
+                        "layout": null,
+                        "scrollable": [
+                            "true"
+                        ]
+                    },
+                    "designerId": "02120cd0-2ad0-46a2-8adf-c1036f4a35ad",
+                    "cn": [
+                        {
+                            "type": "fieldset",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyFieldSet1",
+                                "id": "contact",
+                                "itemId": null,
+                                "title": "Contact"
+                            },
+                            "designerId": "5ab558ed-da58-4b04-8ca4-b7e16084eed2",
+                            "cn": [
+                                {
+                                    "type": "textfield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyTextField2",
+                                        "cls": [
+                                            "hddn"
+                                        ],
+                                        "id": "First",
+                                        "inputCls": null,
+                                        "label": "First",
+                                        "labelCls": null,
+                                        "name": "First"
+                                    },
+                                    "designerId": "0e1c0734-992f-4ef7-b84e-b34c9a90ad04"
+                                },
+                                {
+                                    "type": "textfield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyTextField3",
+                                        "cls": [
+                                            "h"
+                                        ],
+                                        "id": "Last",
+                                        "inputCls": "hcustomer",
+                                        "label": "Last",
+                                        "name": "Last"
+                                    },
+                                    "designerId": "eb86b10e-f2e2-48fe-a5d8-b1e68227b6a5"
+                                },
+                                {
+                                    "type": "textfield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyTextField4",
+                                        "id": "Phone",
+                                        "inputCls": "hcustomer",
+                                        "label": "Phone",
+                                        "name": "Phone"
+                                    },
+                                    "designerId": "b55ea786-bd09-4305-a98d-04bda032be68"
+                                },
+                                {
+                                    "type": "textfield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyTextField5",
+                                        "id": "Email",
+                                        "inputCls": "hcustomer",
+                                        "label": "Email",
+                                        "name": "Email"
+                                    },
+                                    "designerId": "d528e08a-e9eb-4e3b-b412-df0bba07f2e9"
+                                },
+                                {
+                                    "type": "textfield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyTextField10",
+                                        "id": "Company",
+                                        "inputCls": "hcustomer",
+                                        "label": "Company",
+                                        "name": "Company"
+                                    },
+                                    "designerId": "7b25e0e2-cc6e-4992-aae6-39d8c5bfa94f"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "fieldset",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyFieldSet2",
+                                "id": "Address",
+                                "layout": "default",
+                                "title": "Job Address"
+                            },
+                            "designerId": "27906c93-e8a5-4468-a637-49eb2549126c",
+                            "cn": [
+                                {
+                                    "type": "textfield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyTextField6",
+                                        "id": "Street",
+                                        "label": "Street",
+                                        "name": "Street"
+                                    },
+                                    "designerId": "97d6f7d7-6f93-4712-bb42-a7cb2547af32"
+                                },
+                                {
+                                    "type": "textfield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyTextField7",
+                                        "id": "City",
+                                        "label": "City",
+                                        "name": "City"
+                                    },
+                                    "designerId": "971ed0ff-c257-4170-ae49-a294c11eda5b"
+                                },
+                                {
+                                    "type": "textfield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyTextField8",
+                                        "id": "State",
+                                        "label": "State",
+                                        "name": "State"
+                                    },
+                                    "designerId": "511d2296-9044-4a40-842c-24107e453539"
+                                },
+                                {
+                                    "type": "textfield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyTextField9",
+                                        "id": "Zip",
+                                        "label": "Zip",
+                                        "name": "Zip"
+                                    },
+                                    "designerId": "f7aa99fb-48d0-4cca-b2fa-051e89180fde"
+                                },
+                                {
+                                    "type": "checkboxfield",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyCheckbox",
+                                        "id": "BillingAddressOption",
+                                        "label": "Billing Address (if different)",
+                                        "labelWidth": "75%"
+                                    },
+                                    "designerId": "abe0bcb0-59d0-4df3-84e9-4a9840bc184f"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "Windows",
+                        "iconCls": "info",
+                        "designer|userClassName": "MyList2",
+                        "cls": [
+                            "windowlist-wrapper"
+                        ],
+                        "id": "WindowList",
+                        "styleHtmlContent": true,
+                        "ui": null,
+                        "layout": null,
+                        "emptyText": null,
+                        "itemCls": "windowlist-wrapper",
+                        "store": null,
+                        "disclosureProperty": null,
+                        "itemHeight": 30,
+                        "onItemDisclosure": true
+                    },
+                    "designerId": "fa2171c1-6af6-4b56-939c-a67479df7d1c",
+                    "cn": [
+                        {
+                            "type": "template",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "itemTpl",
+                                "implHandler": [
+                                    "<div class=\"tweet\"><h2>{Location}</h2><p>{Panes} - {Width} X {Height}   {Cut} cut from a {RollSize}\" {Type} linearfeet {LinearFeet}</p></div>"
+                                ],
+                                "designer|displayName": "itemTpl"
+                            },
+                            "designerId": "9a4e1c33-df11-4ca4-a430-7ba7fc034120"
+                        }
+                    ]
+                },
+                {
+                    "type": "list",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "MyList3",
+                        "iconCls": "info",
+                        "designer|userClassName": "MyList3",
+                        "id": "TotalList",
+                        "styleHtmlContent": true,
+                        "ui": null,
+                        "layout": null,
+                        "store": "Windows_has_Rolls",
+                        "disableSelection": true,
+                        "grouped": true,
+                        "itemHeight": 35
+                    },
+                    "designerId": "a589b596-d5b8-42f0-983e-ae0122f15630",
+                    "cn": [
+                        {
+                            "type": "template",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "itemTpl",
+                                "implHandler": [
+                                    "<div>List Item {LinearFeet}</div>"
+                                ],
+                                "designer|displayName": "itemTpl"
+                            },
+                            "designerId": "3b5a70c8-3e99-43b8-98b1-66283888d3c4"
+                        }
+                    ]
+                },
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onNewOrderActivate",
+                        "fn": "onNewOrderActivate",
+                        "implHandler": [
+                            "var tp = Ext.getCmp('newOrder');",
+                            "",
+                            "var btn = Ext.create('widget.actionbutton', {",
+                            "    id: 'actionBttn',",
+                            "    style:'position:absolute;top:auto;bottom:10px;right:10px;z-index:10;'",
+                            "",
+                            "});",
+                            "",
+                            "tp.element.insertFirst(btn.element);"
+                        ],
+                        "name": "activate"
+                    },
+                    "designerId": "cb90af8d-870b-4464-8f84-d5ccef4571b0"
+                },
+                {
+                    "type": "panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "title": "MyPanel",
+                        "iconCls": "info",
+                        "designer|userClassName": "MyPanel"
+                    },
+                    "designerId": "8d529053-8b3d-4d29-b750-52d49f6b432f",
+                    "cn": [
+                        {
+                            "type": "linkedinstance",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "designerId": "b15e0b67-1ee0-4d46-8357-c567d4169362",
+                            "masterInstanceId": "ExtBox1-ext-gen2017"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
