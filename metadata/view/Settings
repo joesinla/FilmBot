@@ -195,6 +195,19 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "type": "numberfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyNumberField5",
+                        "label": "Field"
+                    },
+                    "designerId": "772d8d19-00f3-4087-9e63-85ebe13551e0"
                 }
             ]
         }

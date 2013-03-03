@@ -69,6 +69,10 @@ Ext.define('MyApp.view.Settings', {
                         picker: {
                             itemId: 'mydatepicker'
                         }
+                    },
+                    {
+                        xtype: 'numberfield',
+                        label: 'Field'
                     }
                 ]
             }
