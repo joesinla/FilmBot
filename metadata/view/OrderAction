@@ -1,0 +1,98 @@
+{
+    "type": "Ext.ActionSheet",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "hidden": true,
+        "id": "ActionPanel",
+        "designer|userClassName": "OrderAction",
+        "designer|userAlias": "orderaction",
+        "hideOnMaskTap": true
+    },
+    "designerId": "519762ee-0acf-42ef-9c81-2d5b3d9245f3",
+    "cn": [
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "ActionDelete",
+                "ui": "decline",
+                "designer|userClassName": "MyButton68",
+                "text": "Delete"
+            },
+            "designerId": "886adf83-2b8e-4c1c-b27c-cde74be57bc4"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "ActionEmail",
+                "ui": "action",
+                "designer|userClassName": "MyButton69",
+                "text": "Email"
+            },
+            "designerId": "75ea9e78-8949-4f3e-9398-72e9d050dcc2"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "ActionSave",
+                "itemId": "ActionSave",
+                "ui": "action",
+                "designer|userClassName": "MyButton69",
+                "text": "Save"
+            },
+            "designerId": "d3864160-f221-4a16-9989-a225521667da"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "CancelButton",
+                "itemId": null,
+                "designer|userClassName": "MyButton69",
+                "text": "Cancel"
+            },
+            "designerId": "686d8567-83cd-4f19-bd57-118e09b10f44",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onActionCancelButtonTap",
+                        "fn": "onActionCancelButtonTap",
+                        "implHandler": [
+                            "button.up('#ActionPanel').hide();"
+                        ],
+                        "name": "tap"
+                    },
+                    "designerId": "f0551a1a-1b86-48c2-a2f6-017ee18b13a8"
+                }
+            ]
+        }
+    ]
+}

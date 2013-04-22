@@ -1,0 +1,100 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "model": "Window_has_Roll",
+        "storeId": "Windows_has_Rolls",
+        "designer|userClassName": "Windows_has_Rolls"
+    },
+    "designerId": "5d689f4b-9979-480b-adc7-4123be2b4822",
+    "cn": [
+        {
+            "type": "Ext.util.Grouper",
+            "reference": {
+                "name": "grouper",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyGrouper"
+            },
+            "designerId": "d5aeeec8-e575-45a6-a395-92d0e043d1b2",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "groupFn",
+                        "fn": "groupFn",
+                        "designer|params": [
+                            "record"
+                        ],
+                        "implHandler": [
+                            "return record.get('Roll_id');"
+                        ]
+                    },
+                    "designerId": "202f9206-d0f7-4cdf-b2be-7e2c3294569e"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onStoreAddrecords",
+                "fn": "onStoreAddrecords",
+                "implHandler": [
+                    "console.log('add whr event');",
+                    "store.sync();"
+                ],
+                "delay": null,
+                "name": "addrecords"
+            },
+            "designerId": "0e083307-cd0a-493b-bd12-580d8383763e"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onStoreRemoverecords",
+                "fn": "onStoreRemoverecords",
+                "implHandler": [
+                    "console.log('remove whr event');",
+                    "store.sync();"
+                ],
+                "name": "removerecords"
+            },
+            "designerId": "11497cc4-db77-4dbc-aaff-68086900347d"
+        },
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyLocalStorageProxy1",
+                "id": null
+            },
+            "designerId": "153bcdb8-26be-4eec-9334-576c5cd2decc"
+        }
+    ]
+}

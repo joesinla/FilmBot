@@ -1,0 +1,35 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "Window",
+        "storeId": "temp",
+        "designer|userClassName": "temp"
+    },
+    "designerId": "9f4cebd1-66ff-48a1-be7c-1e42e6f2be01",
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onStoreRemoverecords",
+                "fn": "onStoreRemoverecords",
+                "implHandler": [
+                    "Ext.getStore('Windows').remove(records);",
+                    "",
+                    "console.log('remove temp records event', records);"
+                ],
+                "name": "removerecords"
+            },
+            "designerId": "caa9dc49-db90-4b84-bb12-0629192239a9"
+        }
+    ]
+}

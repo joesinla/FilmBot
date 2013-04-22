@@ -1,0 +1,12 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "url": "js/phonegap.js"
+    },
+    "designerId": "f2f12b83-f9b2-4f4a-8744-100ab7cd0f2d"
+}

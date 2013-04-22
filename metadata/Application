@@ -1,0 +1,82 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "io": [
+            "{appId : \"3410023f-0a0f-40e1-be94-9492e9354e37\", url : \"https://api.sencha.io\"}"
+        ],
+        "models": [
+            "Roll",
+            "Order",
+            "Window",
+            "Window_has_Roll"
+        ],
+        "stores": [
+            "Orders",
+            "Rolls",
+            "temp",
+            "Windows"
+        ],
+        "views": [
+            "Main_View",
+            "FilmPicker",
+            "Inventory",
+            "Settings",
+            "Home",
+            "actionbutton",
+            "OrderAction",
+            "Orders",
+            "ioLoginbutton"
+        ],
+        "appFolder": null,
+        "controllers": [
+            "Orders",
+            "Inventory",
+            "Navigation",
+            "Calc",
+            "Ext.io.Controller",
+            "ioControl"
+        ],
+        "name": "MyApp"
+    },
+    "configAlternates": {
+        "io": "object",
+        "channels": "array"
+    },
+    "designerId": "application",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "io",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "channels",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "launch",
+                "fn": "launch",
+                "implHandler": [
+                    "Ext.Viewport.add( Ext.create('MyApp.view.Main_View'));",
+                    "//Ext.Viewport.add( Ext.create('widget.orderAction'));"
+                ]
+            },
+            "designerId": "6e2021f7-cf80-4922-925c-c5d8c1cecdfe"
+        }
+    ]
+}

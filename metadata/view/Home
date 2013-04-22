@@ -1,0 +1,30 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Home",
+        "designer|userAlias": "home"
+    },
+    "designerId": "b3f2106a-71f7-4376-bd89-4f8375f14523",
+    "cn": [
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "testbttn",
+                "itemId": "testbttn",
+                "designer|userClassName": "MyButton4",
+                "text": "MyButton4"
+            },
+            "designerId": "a9905445-df41-4b28-9475-fc7b743957e7"
+        }
+    ]
+}

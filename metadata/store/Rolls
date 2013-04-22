@@ -1,0 +1,66 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "model": "Roll",
+        "storeId": "Rolls",
+        "designer|userClassName": "Rolls"
+    },
+    "designerId": "3a4307cd-1cda-4bf5-a35b-f302e822271c",
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onStoreBeforeSync",
+                "fn": "onStoreBeforeSync",
+                "implHandler": [
+                    "console.log('remove roll event');",
+                    "//store.sync();"
+                ],
+                "name": "beforesync"
+            },
+            "designerId": "f84c0a79-9505-4200-8000-fab084178f61"
+        },
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyLocalStorageProxy",
+                "id": null
+            },
+            "designerId": "3ab115b9-ab70-4e4e-8dad-c252f168bac3"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onStoreAddrecords",
+                "fn": "onStoreAddrecords",
+                "implHandler": [
+                    "console.log('add roll event');",
+                    "//store.sync();"
+                ],
+                "name": "addrecords"
+            },
+            "designerId": "2bf0d310-6908-4419-b686-590ece9ec226"
+        }
+    ]
+}

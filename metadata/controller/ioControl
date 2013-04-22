@@ -1,0 +1,157 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ioControl",
+        "designer|userAlias": "iocontrol"
+    },
+    "designerId": "b51b9561-f334-4037-b24b-c9061aaf896d",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "init",
+                "fn": "init",
+                "designer|params": [
+                    "application"
+                ],
+                "implHandler": [
+                    "this.getApplication().sio.on({",
+                    "    authorized: this.onAuth,",
+                    "    logout: this.onLogout,",
+                    "    usermessage: this.onUserMessage,",
+                    "    scope: this",
+                    "});"
+                ]
+            },
+            "designerId": "3a47e5e4-ca80-4f61-bdee-7234a9061823"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onAuth",
+                "fn": "onAuth",
+                "designer|params": [
+                    "user"
+                ],
+                "implHandler": [
+                    "console.log(\"onAuth\", user);",
+                    "this.syncStores();",
+                    "return true;"
+                ]
+            },
+            "designerId": "efb25ae2-e0dc-46a9-9b65-e7178f732094"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onLogout",
+                "fn": "onLogout",
+                "implHandler": [
+                    "var store = Ext.getStore('todos');",
+                    "store.getProxy().clear();",
+                    "store.load();",
+                    "this.getAddButton().setDisabled(true);",
+                    "return true;"
+                ]
+            },
+            "designerId": "93a2a355-b6fa-4ae6-b9c4-da256ed19527"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onUserMessage",
+                "fn": "onUserMessage",
+                "designer|params": [
+                    "sender",
+                    "message"
+                ],
+                "implHandler": [
+                    "console.log('sender', sender, 'message', message);",
+                    "this.syncStores();",
+                    "return true;"
+                ]
+            },
+            "designerId": "ef0d0ae4-4f53-44b0-8f00-932e3118ed9a"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "syncStores",
+                "fn": "syncStores",
+                "implHandler": [
+                    "console.log('sync stores..');",
+                    "",
+                    "//sync and load all stores",
+                    "var rollStore = Ext.getStore('Rolls');",
+                    "var orderStore = Ext.getStore('Orders');",
+                    "var windowStore = Ext.getStore('Windows');",
+                    "rollStore.sync();",
+                    "rollStore.load();",
+                    "orderStore.sync();",
+                    "orderStore.load();",
+                    "windowStore.sync();",
+                    "windowStore.sync();"
+                ]
+            },
+            "designerId": "b1fc94cd-2de9-433f-a814-0a186b9f23ea"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "syncCallback",
+                "fn": "syncCallback",
+                "implHandler": [
+                    "console.log(\"broadcast update\", arguments);",
+                    "this.getApplication().sio.getUser(function(user, error) {",
+                    "    if (user) {",
+                    "        console.log(\"user\", user);",
+                    "        user.send({",
+                    "            message: \"updated\"",
+                    "        },",
+                    "        function() {",
+                    "            console.log(\"send callback\");",
+                    "        }",
+                    "        );",
+                    "    }",
+                    "});"
+                ]
+            },
+            "designerId": "9f87e270-825e-4e66-826f-76ba2a9a9e13"
+        }
+    ]
+}

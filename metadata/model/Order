@@ -1,0 +1,201 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Order"
+    },
+    "designerId": "a2a330a7-0521-4237-abc3-227363b7c74b",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Number",
+                "designer|userClassName": "field"
+            },
+            "designerId": "497b78ac-9491-47d6-a485-97f8e85a52a3"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Status",
+                "designer|userClassName": "field"
+            },
+            "designerId": "e8f7d75c-1a36-4d52-ba08-28a6c08ec6ec"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Created",
+                "designer|userClassName": "field"
+            },
+            "designerId": "fcbab5ad-6fc2-4ab5-8571-56c71a1b88f0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Updated",
+                "designer|userClassName": "field"
+            },
+            "designerId": "bc49af19-b113-42da-89b9-1da77daa8b8b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "First",
+                "designer|userClassName": "field28"
+            },
+            "designerId": "eb313eeb-80e2-48e6-9e74-2af148f05c3d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Last",
+                "designer|userClassName": "field28"
+            },
+            "designerId": "c837f9b9-04b7-4231-a059-350361c40d50"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Company",
+                "designer|userClassName": "field28"
+            },
+            "designerId": "f5ddf069-0716-4849-9b66-ba130f6d7721"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Phone",
+                "designer|userClassName": "field28"
+            },
+            "designerId": "a9e11b67-3516-40f0-aa66-b7637e0dda85"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Email",
+                "designer|userClassName": "field28"
+            },
+            "designerId": "e2895c76-0a6e-4062-915e-a5de26215156"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Street",
+                "designer|userClassName": "field28"
+            },
+            "designerId": "d847b596-eaca-4b2f-b8ca-96593a2dc17b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "City",
+                "designer|userClassName": "field28"
+            },
+            "designerId": "49f4393f-1980-45f3-8e68-4ddad81c9798"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "State",
+                "designer|userClassName": "field28"
+            },
+            "designerId": "e8274b64-c232-4470-ae82-6ff36049d1e2"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Zip",
+                "designer|userClassName": "field28"
+            },
+            "designerId": "c242319c-78b0-4551-a05e-37aef29e6e2f"
+        },
+        {
+            "type": "Ext.data.association.HasMany",
+            "reference": {
+                "name": "hasMany",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyHasManyAssociation",
+                "model": "Window",
+                "autoLoad": true,
+                "autoSync": true,
+                "foreignKey": null,
+                "name": "windows",
+                "store": null
+            },
+            "designerId": "233b1f5f-f624-4ebc-95de-ea01f1551b52"
+        }
+    ]
+}

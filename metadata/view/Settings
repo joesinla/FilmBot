@@ -1,0 +1,206 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "settings",
+        "designer|userClassName": "Settings",
+        "designer|userAlias": "settings",
+        "layout": "card"
+    },
+    "designerId": "c63b3ac9-c6d5-4e20-900a-96ad11f57e64",
+    "cn": [
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "settingsForm",
+                "designer|userClassName": "MyFormPanel3",
+                "layout": null
+            },
+            "designerId": "89cbc18c-2618-4263-9f4d-79851df88742",
+            "cn": [
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyFieldSet5",
+                        "layout": null,
+                        "title": "French Pane"
+                    },
+                    "designerId": "d7339395-ca32-439c-80f9-6e134a9ffbe3",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyContainer7",
+                                "layout": "fit"
+                            },
+                            "designerId": "84d14925-5b37-4bad-a66d-1433831c0691",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Number",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyNumberField3",
+                                        "label": null,
+                                        "placeHolder": "Width"
+                                    },
+                                    "designerId": "11409e98-9701-4e62-908c-ae2c8846a189"
+                                },
+                                {
+                                    "type": "Ext.Spacer",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "minWidth": null,
+                                        "designer|userClassName": "MySpacer"
+                                    },
+                                    "designerId": "fdd9d925-e570-41f1-9a0d-bf41207696e2"
+                                },
+                                {
+                                    "type": "Ext.field.Number",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyNumberField3",
+                                        "label": null,
+                                        "placeHolder": "Height"
+                                    },
+                                    "designerId": "82ac32d5-2595-47b2-b13a-9a1f26a16c97"
+                                },
+                                {
+                                    "type": "Ext.Spacer",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "minWidth": null,
+                                        "designer|userClassName": "MySpacer"
+                                    },
+                                    "designerId": "60c0ccc5-f9de-4069-a65b-76d8b9f615d4"
+                                },
+                                {
+                                    "type": "Ext.field.Number",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "padding": null,
+                                        "designer|userClassName": "MyNumberField3",
+                                        "label": null,
+                                        "placeHolder": "$0.00"
+                                    },
+                                    "designerId": "9f1db308-5fe6-4fce-ad26-ac3e25994a71"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyFieldSet5",
+                        "title": "Labor"
+                    },
+                    "designerId": "cb594ce2-7ce6-4c8d-85f6-bb3b7b454e7e",
+                    "cn": [
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyContainer7",
+                                "layout": null
+                            },
+                            "designerId": "7f1ef7b1-43cf-4ca5-8e78-37e1918973f4",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Number",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyNumberField3",
+                                        "label": null,
+                                        "placeHolder": "Cost per Sqft"
+                                    },
+                                    "designerId": "44a10cf9-fc45-40fa-be00-5e0c3ada6336"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyFieldSet5",
+                        "title": "Tax"
+                    },
+                    "designerId": "c9eb62b7-dfed-4db3-85c0-8e21762ffb62",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Number",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyNumberField7",
+                                "label": "Field",
+                                "name": "Tax"
+                            },
+                            "designerId": "95521ea8-0e75-46ea-b9d4-15dec10d8d1d"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

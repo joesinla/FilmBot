@@ -1,0 +1,338 @@
+{
+    "type": "Ext.picker.Picker",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "FilmPicker",
+        "designer|userClassName": "FilmPicker",
+        "designer|userAlias": "filmpicker",
+        "hideOnMaskTap": true,
+        "useTitles": true
+    },
+    "designerId": "06af2c6f-3e92-4434-be6c-50169e37c3ed",
+    "cn": [
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "doneButton",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "mybutton7",
+                "designer|userClassName": "MyButton12",
+                "text": "Done"
+            },
+            "designerId": "7da5372f-c56e-4912-84af-4407a8105950",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onMybutton7Tap",
+                        "fn": "onMybutton7Tap",
+                        "implHandler": [
+                            ""
+                        ],
+                        "name": "tap"
+                    },
+                    "designerId": "f2f723b9-ecf4-46dd-9b42-9daf5bd19a10"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "cancelButton",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyButton13",
+                "text": "Cancel"
+            },
+            "designerId": "50714de8-e2b4-4920-8392-5f0c6f45b5c0"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "initialize",
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "",
+                    "var store = Ext.getStore('Rolls');",
+                    "",
+                    "var typesData = [];",
+                    "store.each(function(roll){",
+                    "    typesData.push(roll.get('Manufacturer'));",
+                    "});",
+                    "",
+                    "var uniqueArray = typesData.filter(function(elem, pos) {",
+                    "    return typesData.indexOf(elem) == pos;",
+                    "});",
+                    "",
+                    "var tData = [{text:\"\",value:\"\"}];",
+                    "",
+                    "Ext.each(uniqueArray,function(elem){",
+                    "    tData.push({\"text\":elem,\"value\":elem});",
+                    "});",
+                    "",
+                    "this.getInnerItems()[0].getStore().setData(tData);"
+                ]
+            },
+            "designerId": "c470a4c0-dddf-49c4-bcc9-ac35c5b2004e"
+        },
+        {
+            "type": "Ext.picker.Slot",
+            "reference": {
+                "name": "slots",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "flex": 2,
+                "id": "mSlot",
+                "itemId": "mSlot",
+                "minWidth": null,
+                "width": "55px",
+                "designer|userClassName": "MyPickerSlot",
+                "name": "mSlot",
+                "title": null,
+                "data": [
+                    "[{\"text\":\"\",\"value\":\"\"}]"
+                ]
+            },
+            "configAlternates": {
+                "flex": "number"
+            },
+            "designerId": "d5bed733-3069-4f93-93aa-7a7601b6a774",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "flex",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onMypickerslotSlotpick",
+                        "fn": "onMypickerslotSlotpick",
+                        "implHandler": [
+                            "this.getInnerItems()[2].getStore().removeAll();",
+                            "",
+                            "",
+                            "var store = Ext.getStore('Rolls');",
+                            "store.clearFilter();",
+                            "",
+                            "console.log(pickerslot.getValue(true));",
+                            "//store.load();",
+                            "store.filter('Manufacturer', pickerslot.getValue(true));",
+                            "",
+                            "var types = [];",
+                            "store.each(function(obj){",
+                            "    ",
+                            "    types.push(obj.getData().Type);",
+                            "});",
+                            "",
+                            "var uniqueArray = types.filter(function(elem, pos) {",
+                            "    return types.indexOf(elem) == pos;",
+                            "});",
+                            "",
+                            "var tData = [[{\"text\":\"\",\"value\":\"\"}]];",
+                            "Ext.each(uniqueArray,function(elem){",
+                            "    tData.push({\"text\":elem,\"value\":elem});",
+                            "});",
+                            "",
+                            "",
+                            "",
+                            "this.getInnerItems()[1].getStore().setData(tData);",
+                            "",
+                            ""
+                        ],
+                        "name": "slotpick"
+                    },
+                    "designerId": "0d4681e0-b450-4920-91d7-54073ff8802f"
+                }
+            ]
+        },
+        {
+            "type": "Ext.picker.Slot",
+            "reference": {
+                "name": "slots",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "flex": "2",
+                "id": "tSlot",
+                "itemId": "tSlot",
+                "maxWidth": null,
+                "width": null,
+                "designer|userClassName": "MyPickerSlot1",
+                "name": "tSlot",
+                "title": null,
+                "data": [
+                    "[{\"text\":\"\",\"value\":\"\"}]"
+                ]
+            },
+            "designerId": "0f45757f-9748-49fd-acef-cb507b882559",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "flex",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onMypickerslot1Slotpick",
+                        "fn": "onMypickerslot1Slotpick",
+                        "implHandler": [
+                            "var store = Ext.getStore('Rolls');",
+                            "store.clearFilter();",
+                            "",
+                            "console.log(pickerslot.getValue(true));",
+                            "//store.load();",
+                            "store.filter('Type', pickerslot.getValue(true));",
+                            "",
+                            "var types = [];",
+                            "store.each(function(obj){",
+                            "    ",
+                            "    types.push(obj.getData().Size);",
+                            "});",
+                            "",
+                            "var uniqueArray = types.filter(function(elem, pos) {",
+                            "    return types.indexOf(elem) == pos;",
+                            "});",
+                            "",
+                            "var tData = [[{\"text\":\"\",\"value\":\"\"}]];",
+                            "Ext.each(uniqueArray,function(elem){",
+                            "    tData.push({\"text\":elem,\"value\":elem});",
+                            "});",
+                            "",
+                            "this.getInnerItems()[2].getStore().setData(tData);"
+                        ],
+                        "name": "slotpick"
+                    },
+                    "designerId": "e831a899-8863-4f35-8d18-8c89aaba84d4"
+                }
+            ]
+        },
+        {
+            "type": "Ext.picker.Slot",
+            "reference": {
+                "name": "slots",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "flex": "1",
+                "id": "sSlot",
+                "itemId": "sSlot",
+                "maxWidth": null,
+                "right": null,
+                "width": null,
+                "designer|userClassName": "MyPickerSlot2",
+                "align": null,
+                "name": "sSlot",
+                "title": null,
+                "data": [
+                    "[{\"text\":\"\",\"value\":\"\"}]"
+                ]
+            },
+            "designerId": "22650e3e-bbde-47a4-8bf4-078eb63893d0",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "flex",
+                    "type": "string"
+                }
+            ],
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "onMypickerslot2Slotpick",
+                        "fn": "onMypickerslot2Slotpick",
+                        "implHandler": [
+                            ""
+                        ],
+                        "name": "slotpick"
+                    },
+                    "designerId": "e6a05f73-bb78-440b-9b7d-1ff37df4a7d1"
+                }
+            ]
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onFilmPickerHide",
+                "fn": "onFilmPickerHide",
+                "implHandler": [
+                    "",
+                    "var form = Ext.getCmp('AddWindowPanel');",
+                    "",
+                    "var mnfValue = component.getValue().mSlot;",
+                    "var typeValue = component.getValue().tSlot;",
+                    "var shadeValue = component.getValue().sSlot;",
+                    "",
+                    "//this.getTypeSlot().deselectAll();",
+                    "//this.getShadeSlot().deselectAll();",
+                    "",
+                    "if(mnfValue && typeValue && shadeValue){",
+                    "    form.setValues({Manufacturer : mnfValue});",
+                    "    form.setValues({Type : typeValue});",
+                    "    form.setValues({Shade : shadeValue});",
+                    "",
+                    "    Ext.getCmp('FilmSelect').setPlaceHolder(typeValue + \"  %\" + shadeValue);",
+                    "",
+                    "    //??",
+                    "    Ext.getStore(\"Rolls\").clearFilter();",
+                    "",
+                    "}",
+                    ""
+                ],
+                "name": "hide"
+            },
+            "designerId": "c026a3b4-0000-47b5-abd0-32978abe22c9"
+        }
+    ]
+}

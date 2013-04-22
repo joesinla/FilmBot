@@ -1,0 +1,41 @@
+{
+  "name": "filmbot",
+  "indexHtmlPath": "index.html",
+  "url": null,
+  "js": [
+    {
+      "path": "touch/sencha-touch.js",
+      "x-bootstrap": true
+    },
+    {
+      "path": "app.js",
+      "bundle": true,
+      "update": "delta"
+    }
+  ],
+  "css": [
+    {
+      "path": "resources/css/base.css",
+      "update": "delta"
+    }
+  ],
+  "appCache": {
+    "cache": [
+      "index.html"
+    ],
+    "network": [
+      "*"
+    ],
+    "fallback": []
+  },
+  "resources": [
+    "resources/images",
+    "resources/icons",
+    "resources/startup"
+  ],
+  "ignore": [
+    ".svn$"
+  ],
+  "archivePath": "archive",
+  "id": "36d67147-f54d-43c6-8475-7b8841440111"
+}

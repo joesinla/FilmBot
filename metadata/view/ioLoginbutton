@@ -1,0 +1,14 @@
+{
+    "type": "Ext.Button",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ioLoginbutton",
+        "designer|userAlias": "sioAuthButton",
+        "text": "Login"
+    },
+    "designerId": "05678a88-ca74-4267-b43d-8ff0ed14ae1c"
+}

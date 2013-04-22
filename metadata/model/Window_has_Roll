@@ -1,0 +1,79 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Window_has_Roll"
+    },
+    "designerId": "07e3437e-1ed5-4435-badb-6834d843dacc",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Window_id",
+                "designer|userClassName": "field35"
+            },
+            "designerId": "a7e6aec8-b9f2-4451-a0ac-f3efa2ac8749"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Roll_id",
+                "designer|userClassName": "field36"
+            },
+            "designerId": "81ea09d1-a637-435e-8299-da67366479cc"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "LinearFeet",
+                "designer|userClassName": "field37"
+            },
+            "designerId": "3d7d5c0e-4e11-4626-b93a-57de71e4c942"
+        },
+        {
+            "type": "Ext.data.association.BelongsTo",
+            "reference": {
+                "name": "belongsTo",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyBelongsToAssociation",
+                "model": "Window"
+            },
+            "designerId": "4ef614f4-b6e1-487f-b755-2820e9c89e89"
+        },
+        {
+            "type": "Ext.data.association.BelongsTo",
+            "reference": {
+                "name": "belongsTo",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyBelongsToAssociation1",
+                "model": "Roll"
+            },
+            "designerId": "044e2bdc-3a47-4d3a-a031-3465e27044c9"
+        }
+    ]
+}

@@ -1,0 +1,216 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Window",
+        "designer|userAlias": "window"
+    },
+    "designerId": "7f56159a-30d7-4955-a79f-ed63b7b1e91c",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Panes",
+                "designer|userClassName": "field11"
+            },
+            "designerId": "2b0e409b-4c77-4242-988f-10529431b79b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Width",
+                "designer|userClassName": "field12"
+            },
+            "designerId": "96deb0dc-40b0-40cb-a014-2bc07f2bf663"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Height",
+                "designer|userClassName": "field13"
+            },
+            "designerId": "ff567f1d-ae0f-480b-b200-6cd1c05ce7e5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Manufacturer",
+                "designer|userClassName": "field14"
+            },
+            "designerId": "98bda3fa-075a-4a7f-b9e7-74ccc7a8f535"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Type",
+                "designer|userClassName": "field15"
+            },
+            "designerId": "89477a50-4f5c-48ee-aaa2-29166eba1d7d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Shade",
+                "designer|userClassName": "field16"
+            },
+            "designerId": "4dfd2e67-d15d-4121-89b2-e4c94124d2d6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Location",
+                "designer|userClassName": "field17"
+            },
+            "designerId": "2ed27d50-fddf-4722-a492-9f44e549c0d5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Direction",
+                "designer|userClassName": "field18"
+            },
+            "designerId": "8b8e14bc-6150-46e8-aaad-b93932383222"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Removal",
+                "designer|userClassName": "field19"
+            },
+            "designerId": "0a3c4e60-7fd6-4aaa-9d08-44454bc9deab"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "RollSize",
+                "designer|userClassName": "field40"
+            },
+            "designerId": "e423d83f-0307-43c7-b6ee-9490588e65d6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "LinearFeet",
+                "designer|userClassName": "field37"
+            },
+            "designerId": "a4920aff-a59f-405e-a23f-b98e8c5d495c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Cut",
+                "designer|userClassName": "field37"
+            },
+            "designerId": "43bd192a-f14c-4013-b288-5ddc3a1d0077"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "RollNumber",
+                "designer|userClassName": "field37"
+            },
+            "designerId": "fb951b84-fc3b-4ae6-9174-db33cc603927"
+        },
+        {
+            "type": "Ext.data.association.HasMany",
+            "reference": {
+                "name": "hasMany",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "associationKey": null,
+                "designer|userClassName": "MyHasManyAssociation2",
+                "designer|displayName": "hasManyWindow_has_roll",
+                "model": "Window_has_Roll",
+                "autoLoad": true,
+                "autoSync": true,
+                "foreignKey": "Window_id",
+                "name": "whr"
+            },
+            "designerId": "1a5d2f0f-d4ef-4639-8521-4d84fc30c686"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "orderNumber",
+                "designer|userClassName": "field37"
+            },
+            "designerId": "ea7afad0-537b-46bb-8e43-a3eef8737ca9"
+        }
+    ]
+}

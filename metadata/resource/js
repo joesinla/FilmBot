@@ -1,0 +1,12 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "url": "ux/slidenavigation/View.js"
+    },
+    "designerId": "ca58ae0a-5113-4c2f-9fcf-c77efce39a6b"
+}

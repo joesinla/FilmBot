@@ -1,0 +1,1071 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Orders"
+    },
+    "id": "ExtBox1-ext-gen31612",
+    "designerId": "9e04e7ac-feac-47e5-8caa-89507c0a7c6e",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onAddOrderButtonTap",
+                "fn": "onAddOrderButtonTap",
+                "implHandler": [
+                    "this.getOrders().animateActiveItem(1, {type:'slide',direction:'up'});",
+                    "",
+                    "var bttn = Ext.getCmp('addOrder');",
+                    "",
+                    "",
+                    "bttn.setIconCls('arrow_down');",
+                    "bttn.setItemId('closeOrder');",
+                    "bttn.setId('closeOrder');",
+                    "",
+                    "bttn.observableId = '#closeOrder';",
+                    "",
+                    "this.newOrder();",
+                    "",
+                    "/*",
+                    "this.getCustomerForm().reset();",
+                    "this.getCustomerForm().setRecord(null);",
+                    "",
+                    "if(Ext.getStore('temp')){Ext.getStore('temp').removeAll();}",
+                    "",
+                    "*/"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#addOrder"
+            },
+            "designerId": "afdf07a1-a772-4eb6-9c26-5b0bdaadfaba"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "newOrders",
+                "ref": "orders",
+                "selector": "#orders"
+            },
+            "designerId": "1d8514ad-f456-4f4d-ba55-fd0e03d719c9"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onCloseOrderButtonTap",
+                "fn": "onCloseOrderButtonTap",
+                "implHandler": [
+                    "this.getOrders().animateActiveItem(0, {type:'slide',direction:'down'});",
+                    "",
+                    "var bttn = Ext.getCmp('addOrder');",
+                    "",
+                    "bttn.setIconCls('add');",
+                    "bttn.setItemId('addOrder');",
+                    "bttn.setId('addOrder');",
+                    "",
+                    "bttn.observableId = '#addOrder';"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#closeOrder"
+            },
+            "designerId": "0982f043-00e8-4776-b4aa-c4f1d6c4fb2f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onEnterButtonTap",
+                "fn": "onEnterButtonTap",
+                "implHandler": [
+                    "Ext.Viewport.setMasked({",
+                    "    xtype: 'loadmask',",
+                    "    message: 'Calculating...'",
+                    "});",
+                    "new Ext.util.DelayedTask(function () {",
+                    "    Ext.Viewport.setMasked(false);    ",
+                    "}).delay(450);",
+                    "",
+                    "",
+                    "",
+                    "var form = this.getWindowForm();",
+                    "var values = form.getValues();",
+                    "",
+                    "",
+                    "",
+                    "var calc = MyApp.app.getController('Calc').calc(values.Type, values.Shade, values.Panes,values.Width,values.Height);",
+                    "",
+                    "",
+                    "",
+                    "var windowModel = Ext.create('MyApp.model.Window',{",
+                    "    Panes: values.Panes,",
+                    "    Width: values.Width,",
+                    "    Height: values.Height,",
+                    "    Manufacturer: values.Manufacturer,",
+                    "    Type: values.Type,",
+                    "    Shade: values.Shade,",
+                    "    Location: values.Location,",
+                    "    Direction: values.Direction,",
+                    "    RollSize: calc[0],",
+                    "    LinearFeet: calc[1],",
+                    "    Cut: calc[5]",
+                    "",
+                    "});",
+                    "",
+                    "",
+                    "",
+                    "if(!Ext.getStore('temp')){",
+                    "    tempStore = new Ext.data.Store();",
+                    "    tempStore.setModel(Ext.ModelManager.getModel('Window'));",
+                    "    tempStore.setStoreId('temp');",
+                    "",
+                    "}else{",
+                    "    windowStore = Ext.getStore('temp');",
+                    "}",
+                    "",
+                    "tempStore.add(windowModel);",
+                    "this.getWindowList().setStore('temp');",
+                    "",
+                    "//reset form",
+                    "var z = form.getInnerItems();",
+                    "",
+                    "Ext.each(z[0].getInnerItems(), function(item){",
+                    "    var a = item.getInnerItems();",
+                    "    Ext.each(a, function(item){",
+                    "        item.reset();",
+                    "    });",
+                    "});",
+                    "",
+                    "",
+                    "//reset window set details",
+                    "/*",
+                    "Ext.each(z[1].getInnerItems(), function(item){",
+                    "",
+                    "if(item.id != \"FilmSelect\"){",
+                    "//console.log(item.id);",
+                    "item.reset();",
+                    "}else{",
+                    "item.setPlaceHolder('');",
+                    "}",
+                    "});",
+                    "",
+                    "*/"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#enterOrder"
+            },
+            "designerId": "9d8843b0-d058-4fb0-8abe-a1202246a1d2"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "enterOrder",
+                "forceCreate": true,
+                "ref": "enterOrder",
+                "selector": "#enterOrder"
+            },
+            "designerId": "a6d2ebb2-0b29-4b66-a499-c81e20e5bffe"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TabPanel",
+                "ref": "TabPanel",
+                "selector": "#newOrder"
+            },
+            "designerId": "0114952b-5376-415c-a9f2-d96494345534"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "windowForm",
+                "ref": "windowForm",
+                "selector": "#AddWindowPanel"
+            },
+            "designerId": "4e796fd3-ce94-4791-a922-bbb5612d197c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onActionDeleteButtonTap",
+                "fn": "onActionDeleteButtonTap",
+                "implHandler": [
+                    "Ext.Msg.confirm(  ",
+                    "\"Confirm\", ",
+                    "\"Do you wish to delete Order \" + this.getCustomerForm().getRecord().getData().Number + \" ?\", ",
+                    "function(button){",
+                    "    if (button == 'yes') {",
+                    "        var record = MyApp.app.getController('Orders').getCustomerForm().getRecord();",
+                    "        MyApp.app.getController('Orders').deleteOrder(record);",
+                    "    } else {",
+                    "        return false;",
+                    "    }",
+                    "});",
+                    "",
+                    ""
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#ActionDelete"
+            },
+            "designerId": "a22a7f29-654c-41ca-b5fe-ce50043fc27d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onActionEmailButtonTap",
+                "fn": "onActionEmailButtonTap",
+                "implHandler": [
+                    "console.log('email tap');",
+                    "",
+                    "var tempStore = Ext.getStore('temp');",
+                    "",
+                    "var records = tempStore.getData().items;",
+                    "",
+                    "var tbl = '<table width=\"316\" border=\"1\">'+",
+                    "'<tr>'+",
+                    "'<th width=\"99\" scope=\"col\">header</th>'+",
+                    "'<th width=\"9\" scope=\"col\">1</th>'+",
+                    "'<th width=\"9\" scope=\"col\">2</th>'+",
+                    "'<th width=\"9\" scope=\"col\">3</th>'+",
+                    "'<th width=\"9\" scope=\"col\">4</th>'+",
+                    "'<th width=\"9\" scope=\"col\">5</th>'+",
+                    "'<th width=\"9\" scope=\"col\">6</th>'+",
+                    "'</tr>'+",
+                    "'<tr>'+",
+                    "'<td>1</td>'+",
+                    "'<td>2</td>'+",
+                    "'<td>3</td>'+",
+                    "'<td>4</td>'+",
+                    "'<td>5</td>'+",
+                    "'<td>6</td>'+",
+                    "'<td>7</td>'+",
+                    "'</tr>'+",
+                    "'</table>'+",
+                    "'</body>'+",
+                    "'</html>';",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "window.open('mailto:joesinla@gmail.com?Subject=OnlineQuote&body=' + tbl);"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#ActionEmail"
+            },
+            "designerId": "0c98cf3e-cea4-439e-b116-e5e353677ed3"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "ActionPanel",
+                "ref": "ActionPanel",
+                "selector": "#ActionPanel"
+            },
+            "designerId": "aba71739-0439-4165-9a85-fa73319db381"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTextfieldTap",
+                "fn": "onTextfieldTap",
+                "designer|params": [
+                    "textfield"
+                ],
+                "implHandler": [
+                    "var fPicker = this.getFilmPicker();",
+                    "",
+                    "var store = Ext.getStore('Rolls');",
+                    "var types = store.getData().items;",
+                    "",
+                    "var typesData = [];",
+                    "Ext.each(types, function(type){",
+                    "    typesData.push(type.getData().Manufacturer);",
+                    "});",
+                    "",
+                    "var uniqueArray = typesData.filter(function(elem, pos) {",
+                    "    return typesData.indexOf(elem) == pos;",
+                    "});",
+                    "",
+                    "var tData = [{text:\"\",value:\"\"}];",
+                    "",
+                    "Ext.each(uniqueArray,function(elem){",
+                    "    tData.push({\"text\":elem,\"value\":elem});",
+                    "});",
+                    "",
+                    "var slot = this.getMnfSlot().setData(tData);",
+                    "",
+                    "Ext.Viewport.add(fPicker);",
+                    "fPicker.show();"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.field.Text",
+                "designer|controlQuery": "textfield"
+            },
+            "designerId": "7da9006f-b464-410d-b52f-eda4791d3e75"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MnfSlot",
+                "ref": "MnfSlot",
+                "selector": "#MnfSlot"
+            },
+            "designerId": "82f6e747-f48f-49a7-956d-ebf9148c2606"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "TypeSlot",
+                "ref": "TypeSlot",
+                "selector": "#TypeSlot"
+            },
+            "designerId": "f2064e17-0701-4441-9ba8-cfffd767ae07"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "ShadeSlot",
+                "ref": "ShadeSlot",
+                "selector": "#ShadeSlot"
+            },
+            "designerId": "566841fa-d6e3-43e5-b3b9-40d506c28556"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "FilmPicker",
+                "autoCreate": true,
+                "ref": "FilmPicker",
+                "selector": "#FilmPicker",
+                "xtype": "FilmPicker"
+            },
+            "designerId": "622cc99b-c656-49f6-9bc4-475ad5c134fc"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onMnfPickerslotSlotpick",
+                "fn": "onMnfPickerslotSlotpick",
+                "implHandler": [
+                    "this.getShadeSlot().setData([\"\"]);",
+                    "",
+                    "var mnfSlot = this.getMnfSlot();",
+                    "",
+                    "var mnfValue = mnfSlot.getSelection()[0].getData().value;",
+                    "",
+                    "var store = Ext.getStore('Rolls');",
+                    "store.clearFilter();",
+                    "",
+                    "//store.load();",
+                    "store.filter('Manufacturer', mnfValue);",
+                    "",
+                    "var types = [];",
+                    "Ext.each(store.getData().items, function(obj){",
+                    "    types.push(obj.getData().Type);",
+                    "});",
+                    "",
+                    "var uniqueArray = types.filter(function(elem, pos) {",
+                    "    return types.indexOf(elem) == pos;",
+                    "});",
+                    "",
+                    "var tData = [{text:\"\",value:\"\"}];",
+                    "Ext.each(uniqueArray,function(elem){",
+                    "    tData.push({\"text\":elem,\"value\":elem});",
+                    "});",
+                    "",
+                    "this.getTypeSlot().setData(tData);"
+                ],
+                "name": "slotpick",
+                "designer|targetType": "Ext.picker.Slot",
+                "designer|controlQuery": "#MnfSlot"
+            },
+            "designerId": "78ce9ae4-d66e-47ac-b9df-8055afa94e46"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTypePickerslotSlotpick",
+                "fn": "onTypePickerslotSlotpick",
+                "implHandler": [
+                    "var typeSlot = this.getTypeSlot();",
+                    "",
+                    "var typeValue = typeSlot.getSelection()[0].getData().value;",
+                    "",
+                    "var store = Ext.getStore('Rolls');",
+                    "store.filter('Type', typeValue);",
+                    "",
+                    "var shades = [];",
+                    "Ext.each(store.getData().items, function(obj){",
+                    "    shades.push(obj.getData().Shade);",
+                    "});",
+                    "",
+                    "var uniqueArray = shades.filter(function(elem, pos) {",
+                    "    return shades.indexOf(elem) == pos;",
+                    "});",
+                    "",
+                    "var tData = [{text:\"\",value:\"\"}];",
+                    "Ext.each(uniqueArray,function(elem){",
+                    "    tData.push({\"text\":elem,\"value\":elem});",
+                    "});",
+                    "",
+                    "this.getShadeSlot().setData(tData);"
+                ],
+                "name": "slotpick",
+                "designer|targetType": "Ext.picker.Slot",
+                "designer|controlQuery": "#TypeSlot"
+            },
+            "designerId": "484b287b-9dba-4742-9b11-48017210d5c6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onFilmPickerHide",
+                "fn": "onFilmPickerHide",
+                "implHandler": [
+                    "this.getTypeSlot().setData([\"\"]);",
+                    "this.getShadeSlot().setData([\"\"]);",
+                    "",
+                    "var form = this.getWindowForm();",
+                    "",
+                    "var mnfValue = this.getMnfSlot().getSelection()[0].getData().value;",
+                    "var typeValue = this.getTypeSlot().getSelection()[0].getData().value;",
+                    "var shadeValue = this.getShadeSlot().getSelection()[0].getData().value;",
+                    "",
+                    "this.getTypeSlot().deselectAll();",
+                    "this.getShadeSlot().deselectAll();",
+                    "",
+                    "if(mnfValue && typeValue && shadeValue){",
+                    "    form.setValues({Manufacturer : mnfValue});",
+                    "    form.setValues({Type : typeValue});",
+                    "    form.setValues({Shade : shadeValue});",
+                    "",
+                    "    Ext.getCmp('FilmSelect').setPlaceHolder(typeValue + \"  %\" + shadeValue);",
+                    "",
+                    "    //??",
+                    "    Ext.getStore(\"Rolls\").clearFilter();",
+                    "",
+                    "}"
+                ],
+                "name": "hide",
+                "designer|targetType": "Ext.picker.Picker",
+                "designer|controlQuery": "#FilmPicker"
+            },
+            "designerId": "6c02369d-0be1-43bb-b8da-81337f22970c"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "CustomerForm",
+                "ref": "CustomerForm",
+                "selector": "#CustomerPanel"
+            },
+            "designerId": "677c32d3-27cc-4f72-8bea-69d3af2ace30"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "WindowList",
+                "ref": "WindowList",
+                "selector": "#WindowList"
+            },
+            "designerId": "c53b26ff-7628-4374-9c86-3831e6eb48de"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "OrderList",
+                "ref": "OrderList",
+                "selector": "#OrderList"
+            },
+            "designerId": "08c62387-0e24-4c18-96ae-834467311271"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "saveOrder",
+                "fn": "saveOrder",
+                "designer|params": [
+                    "order"
+                ],
+                "implHandler": [
+                    "/*",
+                    "* Save Order and Windows",
+                    "*",
+                    "*/ ",
+                    "",
+                    "var orderStore = Ext.getStore('Orders');",
+                    "var temp = Ext.getStore('temp');",
+                    "var windowStore = Ext.getStore('Windows');",
+                    "var orderModel = this.getCustomerForm().getRecord();",
+                    "",
+                    "//if order is phantom then order must be a new save",
+                    "if(orderModel.phantom === true){",
+                    "",
+                    "    orderModel.set(this.getCustomerForm().getValues());",
+                    "    //get temp store and add it to windows store through adding it to ordermodel",
+                    "    temp.each(function(record){",
+                    "",
+                    "        orderModel.windows().add(record);",
+                    "        windowStore.add(record);",
+                    "    });",
+                    "    //otherwise update the order  ",
+                    "}else{",
+                    "    orderModel.set(this.getCustomerForm().getValues());",
+                    "    orderModel.set({Updated: Date.now()});",
+                    "",
+                    "    //remove all windows that match order id",
+                    "    windowStore.filter('order_id', orderModel.getId());",
+                    "",
+                    "    windowStore.load();",
+                    "",
+                    "    var windows = windowStore.getData().items;",
+                    "",
+                    "    Ext.each(windows, function(r){",
+                    "        r.erase();",
+                    "    });",
+                    "",
+                    "    if(windowStore.isFiltered()){windowStore.clearFilter();}",
+                    "",
+                    "    //replace widnowstore with updated window records",
+                    "    temp.each(function(r){",
+                    "        orderModel.windows().add(r);",
+                    "        windowStore.add(r);",
+                    "        //r.save()",
+                    "    });",
+                    "}",
+                    "",
+                    "orderStore.add(orderModel);",
+                    "",
+                    "this.getCustomerForm().setRecord(orderModel);",
+                    "",
+                    "//refresh order list",
+                    "Ext.getStore('Orders').load();",
+                    "this.getOrderList().refresh();",
+                    "",
+                    "//refresh window store",
+                    "var sStre = Ext.getStore('Windows');",
+                    "sStre.sync();",
+                    "sStre.load();",
+                    "",
+                    "",
+                    "//Reserve film per window on order//",
+                    "var reserved = MyApp.app.getController('Inventory').reserveFilm(orderModel);",
+                    "",
+                    "if(reserved){",
+                    "",
+                    "}else{",
+                    "",
+                    "}",
+                    "",
+                    "return;"
+                ]
+            },
+            "designerId": "c5c27408-e32c-4f8d-b5d3-17e5a333842f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onActionButtonTap",
+                "fn": "onActionButtonTap",
+                "implHandler": [
+                    "var actionSheet = Ext.getCmp('ActionPanel').show();"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#actionBttn"
+            },
+            "designerId": "ed88d957-5def-4986-9acd-89d92b04a9c4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onActionSaveButtonTap",
+                "fn": "onActionSaveButtonTap",
+                "implHandler": [
+                    "//var record = this.getCustomerForm().getRecord();",
+                    "",
+                    "this.saveOrder();",
+                    "",
+                    "/*",
+                    "if(record === null){",
+                    "this.saveOrder();",
+                    "}else{",
+                    "this.updateOrder(record);",
+                    "}",
+                    "",
+                    "",
+                    "Ext.getStore('Orders').load();",
+                    "*/",
+                    "",
+                    "this.getActionPanel().hide();"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#ActionSave"
+            },
+            "designerId": "74014033-7b58-42fa-837e-b87c70a61ccd"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onOrderListSelect",
+                "fn": "onOrderListSelect",
+                "implHandler": [
+                    "this.getCustomerForm().setRecord(record);",
+                    "",
+                    "//set status button to value of current orders status",
+                    "/*var statusBtn = this.getOrders().down('#StatusButtons');",
+                    "switch (record.getData().Status){",
+                    "case \"Active\":",
+                    "statusBtn.setPressedButtons(0);",
+                    "break;",
+                    "case \"Hold\":",
+                    "statusBtn.setPressedButtons(1);",
+                    "break;",
+                    "case \"Complete\":",
+                    "statusBtn.setPressedButtons(2);",
+                    "break;",
+                    "}",
+                    "*/",
+                    "",
+                    "",
+                    "",
+                    "//find store if exist, erase it, then create a new temp store and populate it with windows from record",
+                    "if(Ext.getStore('temp')){",
+                    "    Ext.getStore('temp').removeAll();",
+                    "}",
+                    "",
+                    "tempStore = new Ext.data.Store();",
+                    "tempStore.setModel(Ext.ModelManager.getModel('Window'));",
+                    "tempStore.setStoreId('temp'); ",
+                    "",
+                    "",
+                    "var windowStore = Ext.getStore('Windows');",
+                    "",
+                    "",
+                    "if(windowStore.isFiltered()){",
+                    "    windowStore.clearFilter();",
+                    "}",
+                    "",
+                    "windowStore.filter('order_id', record.getId());",
+                    "",
+                    "",
+                    "var windows = windowStore.getData().items;",
+                    "",
+                    "",
+                    "Ext.each(windows, function(record){",
+                    "    tempStore.add(record);",
+                    "});",
+                    "",
+                    "windowStore.clearFilter();",
+                    "",
+                    "tempStore.load();",
+                    "",
+                    "//set windowshasrolls store to filter by this order id",
+                    "//Ext.getStore('Windows_has_rolls').filter('Order_id'",
+                    "",
+                    "this.getWindowList().setStore('temp');",
+                    "",
+                    "this.getOrderList().deselectAll();",
+                    "",
+                    "this.getOrders().animateActiveItem(1, {type:'slide',direction:'up'});",
+                    "",
+                    "var bttn = Ext.getCmp('addOrder');",
+                    "",
+                    "bttn.setIconCls('arrow_down');",
+                    "bttn.setItemId('closeOrder');",
+                    "bttn.setId('closeOrder');",
+                    "",
+                    "bttn.observableId = '#closeOrder';"
+                ],
+                "name": "select",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "#OrderList"
+            },
+            "designerId": "04ed4f6e-dc14-426a-a0d2-8fc6eb477aa3"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onWindowListDisclose",
+                "fn": "onWindowListDisclose",
+                "implHandler": [
+                    "Ext.Msg.confirm(",
+                    "\"Confirm\", ",
+                    "\"Do you wish to delete window?\", ",
+                    "function(button){",
+                    "    if (button == 'yes') {",
+                    "        store = Ext.getStore('temp');",
+                    "        store.remove(record);",
+                    "",
+                    "    } else {",
+                    "        return false;",
+                    "    }",
+                    "});"
+                ],
+                "name": "disclose",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "#WindowList"
+            },
+            "designerId": "669f9bb5-7379-4f5b-85ca-11ae58f62097"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "deleteOrder",
+                "fn": "deleteOrder",
+                "designer|params": [
+                    "record"
+                ],
+                "implHandler": [
+                    "//get stores..",
+                    "var windowStore = Ext.getStore('Windows');",
+                    "var orderStore = Ext.getStore('Orders');",
+                    "var tempstore = Ext.getStore('temp');",
+                    "",
+                    "windowStore.filter('order_id', record.getId());",
+                    "",
+                    "windowStore.load();",
+                    "",
+                    "var windows = windowStore.getData().items;",
+                    "",
+                    "Ext.each(windows, function(r){",
+                    "    windowStore.remove(r);",
+                    "});",
+                    "",
+                    "if(windowStore.isFiltered()){windowStore.clearFilter();}",
+                    "",
+                    "",
+                    "",
+                    "//delete record ",
+                    "orderStore.remove(record);",
+                    "",
+                    "//reset all order forms",
+                    "this.getCustomerForm().reset();",
+                    "",
+                    "var x = this.getWindowForm().getInnerItems();",
+                    "",
+                    "Ext.each(x[0].getInnerItems(), function(item){",
+                    "    var a = item.getInnerItems();",
+                    "    Ext.each(a, function(item){",
+                    "        console.log(item);",
+                    "        item.reset();",
+                    "    });",
+                    "});",
+                    "",
+                    "//reset window set details",
+                    "Ext.each(x[1].getInnerItems(), function(item){",
+                    "",
+                    "    if(item.id != \"FilmSelect\"){",
+                    "        item.reset();",
+                    "    }else{",
+                    "        item.setPlaceHolder('');",
+                    "    }",
+                    "});",
+                    "",
+                    "//clear temp window store",
+                    "if(tempstore){",
+                    "    tempstore.removeAll();",
+                    "    tempstore.load();",
+                    "}",
+                    "",
+                    "//refresh order list",
+                    "orderStore.load();",
+                    "this.getOrderList().refresh();",
+                    "",
+                    "",
+                    "this.getActionPanel().hide();"
+                ]
+            },
+            "designerId": "bf649abf-f404-46f3-9491-534e951100d6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onOrderListDisclose",
+                "fn": "onOrderListDisclose",
+                "implHandler": [
+                    "Ext.Msg.confirm(",
+                    "\"Confirm\", ",
+                    "\"Do you wish to delete Order \" + record.getData().Number + \" ?\", ",
+                    "function(button){",
+                    "    if (button == 'yes') {",
+                    "        MyApp.app.getController('Orders').deleteOrder(record);",
+                    "    } else {",
+                    "        return false;",
+                    "    }",
+                    "});",
+                    ""
+                ],
+                "name": "disclose",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "#OrderList"
+            },
+            "designerId": "904a4c26-f1d5-4b53-9b46-2aa812fbc194"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onMnfSlotDragEnd",
+                "fn": "onMnfSlotDragEnd",
+                "implHandler": [
+                    "console.log('drag end');",
+                    "",
+                    "var mnfSlot = this.getMnfSlot();",
+                    "",
+                    "var mnfValue = mnfSlot.getSelection()[0].getData().value;",
+                    "",
+                    "console.log(mnfValue);"
+                ],
+                "name": "dragend",
+                "designer|targetType": "Ext.picker.Slot",
+                "designer|controlQuery": "#FilmPicker"
+            },
+            "designerId": "da9a5eda-c459-48d2-8694-20bbc7cf6640"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "createTotals",
+                "fn": "createTotals",
+                "implHandler": [
+                    "x = new Ext.store.Windows();",
+                    "",
+                    "",
+                    "console.log(x);"
+                ]
+            },
+            "designerId": "2ec29112-b770-4782-92a1-1ef192a05350"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onActiveButtonTap",
+                "fn": "onActiveButtonTap",
+                "implHandler": [
+                    "console.log('active');"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#ActiveBttn"
+            },
+            "designerId": "bb55bdb5-6c05-4f9f-a889-12bcaf230225"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "newOrder",
+                "fn": "newOrder",
+                "implHandler": [
+                    "this.getCustomerForm().reset();",
+                    "this.getCustomerForm().setRecord(null);",
+                    "",
+                    "if(Ext.getStore('temp')){Ext.getStore('temp').removeAll();}",
+                    "",
+                    "//new order #",
+                    "var orderNumber = Math.floor(Math.random()*90000) + 10000;",
+                    "",
+                    "var orderModel = Ext.create('MyApp.model.Order');",
+                    "",
+                    "orderModel.set({",
+                    "    Number: orderNumber,",
+                    "    Created: Date.now(),",
+                    "    Status: \"Active\"",
+                    "});",
+                    "",
+                    "this.getCustomerForm().setRecord(orderModel);",
+                    "this.getOrders().down('#StatusButtons').setPressedButtons(0);"
+                ]
+            },
+            "designerId": "97ed2d27-da3a-4873-aa05-e4cc07f31594"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onSegmentedbuttonToggle",
+                "fn": "onSegmentedbuttonToggle",
+                "implHandler": [
+                    "this.getCustomerForm().getRecord().set('Status', button.getText());",
+                    "",
+                    "console.log('event');"
+                ],
+                "name": "toggle",
+                "designer|targetType": "Ext.SegmentedButton",
+                "designer|controlQuery": "#StatusButtons"
+            },
+            "designerId": "2c898e53-b786-4d73-b066-84f45f3799cc"
+        }
+    ]
+}

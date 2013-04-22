@@ -1,0 +1,59 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Settings"
+    },
+    "designerId": "0628d1f3-a4bb-4e60-83d1-34257d7a0185",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "tabbar",
+                "ref": "tabbar",
+                "selector": "#SettingsTabBar"
+            },
+            "designerId": "978d93fb-3116-478f-a23f-80f78dc1c19a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onTabpanelActiveItemChange",
+                "fn": "onTabpanelActiveItemChange",
+                "implHandler": [
+                    "var x = this.getTabbar().getActiveItem();",
+                    "var button = x;",
+                    "if(x.id == 'SettingsAction'){",
+                    "    var settings = button.settingsPanel;",
+                    "    if (!settings) {",
+                    "        settings = button.settingsPanel = Ext.widget('ordersettings');",
+                    "        settings.showBy(button);",
+                    "    }else{",
+                    "        settings.hide();",
+                    "    }",
+                    "}",
+                    "",
+                    ""
+                ],
+                "name": "activeitemchange",
+                "designer|targetType": "Ext.tab.Panel",
+                "designer|controlQuery": "#SettingsTabBar"
+            },
+            "designerId": "a5c385f1-3f00-43af-a7b0-cf233fd641b6"
+        }
+    ]
+}

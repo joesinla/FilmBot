@@ -1,0 +1,19 @@
+{
+    "type": "Ext.Button",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "height": 20,
+        "id": null,
+        "ui": null,
+        "width": 35,
+        "designer|userClassName": "actionbutton",
+        "designer|userAlias": "actionbutton",
+        "iconCls": "action",
+        "text": null
+    },
+    "designerId": "f07de2a3-84c6-4636-9377-8ff4b2f212f7"
+}

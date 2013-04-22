@@ -1,0 +1,101 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "groupField": null,
+        "model": "Window",
+        "storeId": "Windows",
+        "designer|userClassName": "Windows"
+    },
+    "designerId": "fa9e65ed-6809-4917-82a8-ee7cf818d219",
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onStoreDeleteRecords",
+                "fn": "onStoreDeleteRecords",
+                "implHandler": [
+                    "//MyApp.app.getController('Inventory').reserveFilm2(records, 'delete');",
+                    "console.log('remove window record', records);"
+                ],
+                "name": "removerecords"
+            },
+            "designerId": "2b758da4-100f-4ec6-97f3-3c19d4438f2f"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onStoreAddRecords",
+                "fn": "onStoreAddRecords",
+                "implHandler": [
+                    "console.log('add window event');",
+                    "//MyApp.app.getController('Inventory').reserveFilm2(records, 'add');"
+                ],
+                "name": "addrecords"
+            },
+            "designerId": "9963178a-2240-4487-ba2b-abb40aae3867"
+        },
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyLocalStorageProxy1",
+                "id": null
+            },
+            "designerId": "720eb3fc-7e71-4a33-8b6b-263fa87f1e02"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onStoreBeforeSync",
+                "fn": "onStoreBeforeSync",
+                "implHandler": [
+                    "console.log('window store sync');"
+                ],
+                "name": "beforesync"
+            },
+            "designerId": "63608092-9bf0-43f3-9441-4534be947f97"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onStoreLoad",
+                "fn": "onStoreLoad",
+                "implHandler": [
+                    "console.log('windowstore load');"
+                ],
+                "name": "load"
+            },
+            "designerId": "759de17e-f2d9-4295-b0bb-bbda6b52f7df"
+        }
+    ]
+}

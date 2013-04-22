@@ -1,0 +1,65 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "data": null,
+        "model": "Order",
+        "storeId": "Orders",
+        "designer|userClassName": "Orders"
+    },
+    "designerId": "29582cfd-f2f6-4569-a611-17751df61290",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyLocalStorageProxy3",
+                "id": null
+            },
+            "designerId": "4a275480-449e-4c74-b143-d09d6cd07f1a"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onStoreRemoverecords",
+                "fn": "onStoreRemoverecords",
+                "implHandler": [
+                    "console.log('orders remove event');"
+                ],
+                "name": "removerecords"
+            },
+            "designerId": "da45da9f-cc54-4844-8321-10cf89ada6af"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onStoreAddrecords",
+                "fn": "onStoreAddrecords",
+                "implHandler": [
+                    "console.log('order add event');"
+                ],
+                "name": "addrecords"
+            },
+            "designerId": "671699dc-1d44-4ae9-a909-d1df08ddc67e"
+        }
+    ]
+}

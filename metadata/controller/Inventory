@@ -1,0 +1,425 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Inventory"
+    },
+    "designerId": "84918fea-7062-4bc1-a787-01ffb4e48ce8",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onAddInventoryButtonTap",
+                "fn": "onAddInventoryButtonTap",
+                "implHandler": [
+                    "this.getInventory().animateActiveItem(1, {type:'slide',direction:'up'});",
+                    "",
+                    "var bttn = Ext.getCmp('addInventory');",
+                    "",
+                    "bttn.setIconCls('arrow_down');",
+                    "bttn.setItemId('closeInventory');",
+                    "bttn.setId('closeInventory');",
+                    "",
+                    "bttn.observableId = '#closeInventory';"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#addInventory"
+            },
+            "designerId": "108346d0-f56a-4a44-87f9-39862f2a7871"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onCloseInventoryButtonTap",
+                "fn": "onCloseInventoryButtonTap",
+                "implHandler": [
+                    "this.getInventory().animateActiveItem(0, {type:'slide',direction:'down'});",
+                    "",
+                    "var bttn = Ext.getCmp('addInventory');",
+                    "",
+                    "bttn.setIconCls('add');",
+                    "bttn.setItemId('addInventory');",
+                    "bttn.setId('addInventory');",
+                    "",
+                    "bttn.observableId = '#addInventory';"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#closeInventory"
+            },
+            "designerId": "c001fa84-113a-4e59-9d3b-86c8b1c05d11"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "Reference3",
+                "ref": "inventory",
+                "selector": "#inventory"
+            },
+            "designerId": "b97d6b8f-27f0-4898-b98d-15f756a25dbe"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onInventoryEnterButtonTap",
+                "fn": "onInventoryEnterButtonTap",
+                "implHandler": [
+                    "Ext.Viewport.setMasked({",
+                    "    xtype: 'loadmask',",
+                    "    message: 'Added Roll'",
+                    "});",
+                    "new Ext.util.DelayedTask(function () {",
+                    "    Ext.Viewport.setMasked(false);    ",
+                    "}).delay(450);",
+                    "",
+                    "this.addRoll();"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#InventoryEnter"
+            },
+            "designerId": "934a223a-ce47-4130-a2ef-5fc81461d795"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "invForm",
+                "ref": "invForm",
+                "selector": "#InventoryForm"
+            },
+            "designerId": "adafdedf-6dfa-4425-930a-31430d39f72d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "onListDisclose",
+                "fn": "onListDisclose",
+                "implHandler": [
+                    "var that = this;",
+                    "Ext.Msg.confirm(",
+                    "\"Confirm\", ",
+                    "\"Do you wish to delete roll?\", ",
+                    "function(button){",
+                    "    if (button == 'yes') {",
+                    "        ",
+                    "        that.deleteRoll(record);",
+                    "    } else {",
+                    "        return false;",
+                    "    }",
+                    "});"
+                ],
+                "name": "disclose",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "#InventoryList"
+            },
+            "designerId": "694c8d5a-70c9-48c2-9e53-f56d567c42a6"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "addRoll",
+                "fn": "addRoll",
+                "designer|params": [
+                    "record"
+                ],
+                "implHandler": [
+                    "//get form and values",
+                    "var form = this.getInvForm();",
+                    "var formData = form.getValues();",
+                    "",
+                    "//create model",
+                    "var rollModel = Ext.create('MyApp.model.Roll', formData);",
+                    "",
+                    "",
+                    "//get store",
+                    "var rollStore = Ext.getStore('Rolls');",
+                    "",
+                    "record = rollStore.findRecord('RollNumber', formData.RollNumber,0,false,false,true);",
+                    "",
+                    "if(record !== null){",
+                    "    alert('This roll already exists.');",
+                    "}else{            ",
+                    "",
+                    "    rollStore.add(rollModel);",
+                    "    rollStore.sync();//Ext.bind(this.getApplication().getController('ioControl').syncCallback, this));",
+                    "    rollStore.load();",
+                    "    //form.reset();",
+                    "}"
+                ]
+            },
+            "designerId": "15b6d47b-b13c-4076-9464-397f9faa3683"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "deleteRoll",
+                "fn": "deleteRoll",
+                "designer|params": [
+                    "record"
+                ],
+                "implHandler": [
+                    "var rollStore = Ext.getStore('Rolls');",
+                    "rollStore.remove(record);",
+                    "rollStore.sync();//Ext.bind(this.getApplication().getController('ioControl').syncCallback, this));"
+                ]
+            },
+            "designerId": "ac7f82b1-8946-4fb7-98b7-94f6bf01f96f"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "reserveFilm",
+                "fn": "reserveFilm",
+                "designer|params": [
+                    "order"
+                ],
+                "implHandler": [
+                    "order = order.getData();",
+                    "",
+                    "var windows = order.windows;",
+                    "var me = this;",
+                    "var whrStore = Ext.getStore('Windows_has_Rolls');",
+                    "whrStore.load();",
+                    "",
+                    "",
+                    "//each window in the order gets assigned to one or more rolls",
+                    "//if the rolls in inventory run out of film start a new roll with a rollnumber null",
+                    "Ext.each(windows, function(window){ ",
+                    "",
+                    "    //perform check on windows_has_rolls to check if this window has been entered",
+                    "    var record = whrStore.findRecord('Window_id', window.id);",
+                    "",
+                    "    if(record === null){ ",
+                    "",
+                    "        var rollStore = me.getRoll(window.Type, window.Shade, window.RollSize);",
+                    "        rollStore.sort('LinearFeet', 'ASC');",
+                    "",
+                    "        var rolls = rollStore.getData().items;",
+                    "        var panes = window.Panes;",
+                    "        var windowLength = window.LinearFeet / panes;",
+                    "        var linearFeet = window.LinearFeet;",
+                    "",
+                    "        /*",
+                    "        1. Get film from inventory rolls that where matched to the window",
+                    "        --each film roll check to see if it has enough film, if it does then take away",
+                    "        from the rolls linearfeet value and add to reserved value, if not move to the next roll-- */",
+                    "",
+                    "        for(var i = 0; rolls.length > i; i++){",
+                    "            var windowid = window.id;",
+                    "",
+                    "            if(linearFeet === 0) break;",
+                    "",
+                    "            var data = rolls[i].getData();",
+                    "",
+                    "            if(data.LinearFeet < windowLength) continue;",
+                    "",
+                    "            var dividend = Math.floor(data.LinearFeet / windowLength);",
+                    "            var needed;",
+                    "",
+                    "            if(linearFeet >= data.LinearFeet){",
+                    "                needed = dividend * windowLength;",
+                    "            }else{",
+                    "                needed = linearFeet;",
+                    "            }",
+                    "",
+                    "            rolls[i].set('LinearFeet', data.LinearFeet - needed);",
+                    "            rolls[i].set('ReservedLinearFeet', data.ReservedLinearFeet + needed);",
+                    "",
+                    "            var whrModel = Ext.create('MyApp.model.Window_has_Roll', {",
+                    "                Window_id: windowid,",
+                    "                Roll_id: data.id,",
+                    "                LinearFeet: needed",
+                    "            });",
+                    "",
+                    "            linearFeet -= needed;",
+                    "",
+                    "",
+                    "            whrStore.add(whrModel);",
+                    "            whrStore.sync();",
+                    "            whrStore.load();",
+                    "            //whrModel.save();",
+                    "            //rolls[i].save();",
+                    "",
+                    "        }",
+                    "",
+                    "",
+                    "        /*",
+                    "        2.Second create new rolls that need to be ordered and label roll number need",
+                    "        --create a roll model and save it with a reserved value of the amount needed, if the",
+                    "        amount needed is greater than 100ft, (loop back) create another roll model -- */",
+                    "        if(linearFeet > 0){",
+                    "",
+                    "            var stillNeeded;",
+                    "",
+                    "            while( linearFeet > 0 ){",
+                    "                if(linearFeet < 100){",
+                    "",
+                    "                    stillNeeded = linearFeet;",
+                    "                    linearFeet -= linearFeet;",
+                    "                }else{",
+                    "                    stillNeeded = 100;",
+                    "                    linearFeet -= 100;",
+                    "                }",
+                    "",
+                    "                var whrNewModel = Ext.create('MyApp.model.Window_has_Roll', {",
+                    "                    Window_id: window.id,",
+                    "                    Roll_id: 0,",
+                    "                    LinearFeet: stillNeeded",
+                    "                });",
+                    "",
+                    "                whrStore.add(whrNewModel);",
+                    "                whrNewModel.save();",
+                    "            }",
+                    "",
+                    "        }",
+                    "",
+                    "        rollStore.clearFilter();",
+                    "",
+                    "    }//end if window exists check in windowshasrolls store",
+                    "",
+                    "",
+                    "});//end window loop",
+                    "",
+                    "",
+                    "return true;"
+                ]
+            },
+            "designerId": "b31003a0-a8c3-41bc-9cd8-2223329d85d1"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "getRoll",
+                "fn": "getRoll",
+                "designer|params": [
+                    "type",
+                    "shade",
+                    "size"
+                ],
+                "implHandler": [
+                    "var store = Ext.getStore('Rolls');",
+                    "",
+                    "store.clearFilter();",
+                    "",
+                    "if(size){",
+                    "    store.filterBy(function(record){",
+                    "        var x = (record.get('Type') == type) && (record.get('Shade') == shade) && (record.get('Size') == size);",
+                    "        return x;",
+                    "    });   ",
+                    "}else{",
+                    "    store.filterBy(function(record){",
+                    "        var x = (record.get('Type') == type) && (record.get('Shade') == shade);",
+                    "        return x;",
+                    "    });",
+                    "}",
+                    "",
+                    "return store;"
+                ]
+            },
+            "designerId": "868d805e-4923-464a-a8a4-374861476d6b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "refreshStore",
+                "fn": "refreshStore",
+                "implHandler": [
+                    "var store = Ext.getStore('Rolls');",
+                    "store.sync();",
+                    "store.load();"
+                ]
+            },
+            "designerId": "1e9f5213-c5c9-4185-9a04-fa08a8393324"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "reserveFilm2",
+                "fn": "reserveFilm2",
+                "designer|params": [
+                    "records",
+                    "action"
+                ],
+                "implHandler": [
+                    "switch (action){",
+                    "    case 'add':",
+                    "    console.log('add records', records);",
+                    "    break;",
+                    "    case 'delete':",
+                    "    console.log('delete records', records);",
+                    "    break;",
+                    "    case 'update':",
+                    "    console.log('update records', records);",
+                    "    break;",
+                    "}"
+                ]
+            },
+            "designerId": "6bc23cdb-043c-4063-b754-cef2897400eb"
+        }
+    ]
+}
