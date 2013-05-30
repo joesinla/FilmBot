@@ -19,8 +19,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "Manufacturer",
-                "type": "string",
-                "designer|userClassName": "field1"
+                "type": "string"
             },
             "designerId": "037e9010-39e6-4e2e-8169-c95b4fc58752"
         },
@@ -32,7 +31,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyLengthValidation",
                 "designer|displayName": "MnfValidation",
                 "field": "Manufacturer",
                 "max": 25,
@@ -49,8 +47,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "Type",
-                "type": "string",
-                "designer|userClassName": "field1"
+                "type": "string"
             },
             "designerId": "9d2b330b-6a28-4ba8-a587-cd8a39f1a0d1"
         },
@@ -62,7 +59,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyLengthValidation1",
                 "designer|displayName": "TypeValidation",
                 "field": "Type",
                 "max": 20,
@@ -79,8 +75,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "Shade",
-                "type": "int",
-                "designer|userClassName": "field1"
+                "type": "int"
             },
             "designerId": "304490ea-86af-4858-ae15-64260d8245d1"
         },
@@ -92,7 +87,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyLengthValidation2",
                 "designer|displayName": "ShadeValidation",
                 "field": "Shade",
                 "max": 3,
@@ -109,8 +103,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "Size",
-                "type": "int",
-                "designer|userClassName": "field1"
+                "type": "int"
             },
             "designerId": "84790add-b2bd-4983-93b3-6c2a0bb1eb95"
         },
@@ -122,7 +115,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyLengthValidation3",
                 "designer|displayName": "SizeValidation",
                 "field": "Size",
                 "max": 3,
@@ -138,8 +130,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "RollNumber",
-                "designer|userClassName": "field1"
+                "name": "RollNumber"
             },
             "designerId": "1e447850-a591-480f-8910-861211cf6253"
         },
@@ -151,7 +142,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyLengthValidation4",
                 "designer|displayName": "RollNumberValidation",
                 "field": "RollNumber",
                 "max": 30,
@@ -168,8 +158,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "LinearFeet",
-                "type": "int",
-                "designer|userClassName": "field1"
+                "type": "int"
             },
             "designerId": "75f93aab-ec90-4a22-949e-1b8be2dd7ccb"
         },
@@ -181,7 +170,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyLengthValidation5",
                 "designer|displayName": "LinearFeetValidation",
                 "field": "LinearFeet",
                 "max": 3,
@@ -198,8 +186,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "Price",
-                "type": "float",
-                "designer|userClassName": "field1"
+                "type": "float"
             },
             "designerId": "0eb1867b-1a62-45be-9ae0-e448b14d3c2b"
         },
@@ -212,8 +199,7 @@
             "codeClass": null,
             "userConfig": {
                 "name": "ReservedLinearFeet",
-                "type": "int",
-                "designer|userClassName": "field1"
+                "type": "int"
             },
             "designerId": "5ce957c9-7ee6-4a6c-af39-d208b53c8c1b"
         },
@@ -225,7 +211,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyHasManyAssociation1",
                 "designer|displayName": "hasManyWindow_has_Roll",
                 "model": "Window_has_Roll",
                 "autoLoad": true,

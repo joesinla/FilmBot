@@ -18,7 +18,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyFunction8",
                 "fn": "calc",
                 "designer|params": [
                     "type",
@@ -80,7 +79,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "singleCut",
                 "fn": "singleCut",
                 "designer|params": [
                     "sizes",
@@ -177,7 +175,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "splitCut",
                 "fn": "splitCut",
                 "designer|params": [
                     "sizes",
@@ -239,7 +236,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "closeRoll",
                 "fn": "closeRoll",
                 "designer|params": [
                     "sizes",
@@ -262,7 +258,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "closeRoll2",
                 "fn": "closeRoll2",
                 "designer|params": [
                     "sizes",

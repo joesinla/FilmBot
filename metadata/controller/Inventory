@@ -18,7 +18,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onAddInventoryButtonTap",
                 "fn": "onAddInventoryButtonTap",
                 "implHandler": [
                     "this.getInventory().animateActiveItem(1, {type:'slide',direction:'up'});",
@@ -45,7 +44,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onCloseInventoryButtonTap",
                 "fn": "onCloseInventoryButtonTap",
                 "implHandler": [
                     "this.getInventory().animateActiveItem(0, {type:'slide',direction:'down'});",
@@ -72,7 +70,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "Reference3",
                 "ref": "inventory",
                 "selector": "#inventory"
             },
@@ -86,7 +83,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onInventoryEnterButtonTap",
                 "fn": "onInventoryEnterButtonTap",
                 "implHandler": [
                     "Ext.Viewport.setMasked({",
@@ -113,7 +109,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "invForm",
                 "ref": "invForm",
                 "selector": "#InventoryForm"
             },
@@ -127,7 +122,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onListDisclose",
                 "fn": "onListDisclose",
                 "implHandler": [
                     "var that = this;",
@@ -157,7 +151,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "addRoll",
                 "fn": "addRoll",
                 "designer|params": [
                     "record"
@@ -197,7 +190,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "deleteRoll",
                 "fn": "deleteRoll",
                 "designer|params": [
                     "record"
@@ -218,7 +210,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "reserveFilm",
                 "fn": "reserveFilm",
                 "designer|params": [
                     "order"
@@ -344,7 +335,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "getRoll",
                 "fn": "getRoll",
                 "designer|params": [
                     "type",
@@ -381,7 +371,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "refreshStore",
                 "fn": "refreshStore",
                 "implHandler": [
                     "var store = Ext.getStore('Rolls');",
@@ -399,7 +388,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "reserveFilm2",
                 "fn": "reserveFilm2",
                 "designer|params": [
                     "records",

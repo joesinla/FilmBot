@@ -22,7 +22,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyLocalStorageProxy3",
                 "id": null
             },
             "designerId": "4a275480-449e-4c74-b143-d09d6cd07f1a"
@@ -35,7 +34,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onStoreRemoverecords",
                 "fn": "onStoreRemoverecords",
                 "implHandler": [
                     "console.log('orders remove event');"
@@ -52,7 +50,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onStoreAddrecords",
                 "fn": "onStoreAddrecords",
                 "implHandler": [
                     "console.log('order add event');"
@@ -60,6 +57,24 @@
                 "name": "addrecords"
             },
             "designerId": "671699dc-1d44-4ae9-a909-d1df08ddc67e"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onStoreLoad",
+                "implHandler": [
+                    "console.log('order store load', records);",
+                    "",
+                    "MyApp.app.getController('Home').loadStore(store);"
+                ],
+                "name": "load"
+            },
+            "designerId": "35a6d6cc-7235-40ba-999c-c0c9e85d507b"
         }
     ]
 }

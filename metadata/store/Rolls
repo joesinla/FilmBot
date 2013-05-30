@@ -21,7 +21,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onStoreBeforeSync",
                 "fn": "onStoreBeforeSync",
                 "implHandler": [
                     "console.log('remove roll event');",
@@ -39,7 +38,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyLocalStorageProxy",
                 "id": null
             },
             "designerId": "3ab115b9-ab70-4e4e-8dad-c252f168bac3"
@@ -52,7 +50,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onStoreAddrecords",
                 "fn": "onStoreAddrecords",
                 "implHandler": [
                     "console.log('add roll event');",

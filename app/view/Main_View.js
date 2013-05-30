@@ -47,19 +47,22 @@ Ext.define("MyApp.view.Main_View", {
          *  modified the width.
          */
         list: {
+            cls: 'test',
             maxDrag: 400,
             width: 200,
             items: [{
+                /*    
                 xtype: 'toolbar',
                 docked: 'top',
-                ui: 'light',                    
+                ui: 'light', 
+                               
                 title: {
                     title: 'FilmBot',
                     centered: false,
                     width: 200,
                     left: 0
                 },
-                
+                */
                 /**
                  *  Here's an example of how to add a different type of
                  *  component into the toolbar of the list.
@@ -104,7 +107,7 @@ Ext.define("MyApp.view.Main_View", {
             slideButton: true,
             items: [{
                 xtype: 'toolbar',
-                title: '',
+                title: 'FilmBot',
                 docked: 'top'
             },{
                 xtype: 'home',

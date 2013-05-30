@@ -39,7 +39,8 @@
             "Navigation",
             "Calc",
             "Ext.io.Controller",
-            "ioControl"
+            "ioControl",
+            "Home"
         ],
         "name": "MyApp"
     },
@@ -69,7 +70,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "launch",
                 "fn": "launch",
                 "implHandler": [
                     "Ext.Viewport.add( Ext.create('MyApp.view.Main_View'));",

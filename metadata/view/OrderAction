@@ -24,7 +24,6 @@
             "userConfig": {
                 "id": "ActionDelete",
                 "ui": "decline",
-                "designer|userClassName": "MyButton68",
                 "text": "Delete"
             },
             "designerId": "886adf83-2b8e-4c1c-b27c-cde74be57bc4"
@@ -39,7 +38,6 @@
             "userConfig": {
                 "id": "ActionEmail",
                 "ui": "action",
-                "designer|userClassName": "MyButton69",
                 "text": "Email"
             },
             "designerId": "75ea9e78-8949-4f3e-9398-72e9d050dcc2"
@@ -55,7 +53,6 @@
                 "id": "ActionSave",
                 "itemId": "ActionSave",
                 "ui": "action",
-                "designer|userClassName": "MyButton69",
                 "text": "Save"
             },
             "designerId": "d3864160-f221-4a16-9989-a225521667da"
@@ -70,7 +67,6 @@
             "userConfig": {
                 "id": "CancelButton",
                 "itemId": null,
-                "designer|userClassName": "MyButton69",
                 "text": "Cancel"
             },
             "designerId": "686d8567-83cd-4f19-bd57-118e09b10f44",
@@ -83,7 +79,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "onActionCancelButtonTap",
                         "fn": "onActionCancelButtonTap",
                         "implHandler": [
                             "button.up('#ActionPanel').hide();"

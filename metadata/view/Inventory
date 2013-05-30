@@ -22,8 +22,8 @@
             "codeClass": null,
             "userConfig": {
                 "id": "InventoryList",
-                "designer|userClassName": "MyList3",
                 "designer|createAlias": null,
+                "disableSelection": true,
                 "itemCls": "tweet",
                 "store": "Rolls",
                 "itemHeight": 40,
@@ -39,7 +39,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "itemTpl",
                         "implHandler": [
                             "<div>{Manufacturer} {Type} {Shade}{Size}{RollNumber}{LinearFeet}<div class=\"deleteplaceholder\"></div> </div>"
                         ],
@@ -54,9 +53,6 @@
                         "type": "array"
                     },
                     "codeClass": null,
-                    "userConfig": {
-                        "designer|userClassName": "MyPullRefreshPlugin"
-                    },
                     "designerId": "3be290d4-09a0-42b0-b509-610973556327",
                     "cn": [
                         {
@@ -67,7 +63,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "refreshFn",
                                 "fn": "refreshFn",
                                 "designer|params": [
                                     "plugin"
@@ -92,7 +87,6 @@
             "codeClass": null,
             "userConfig": {
                 "id": "InventoryForm",
-                "designer|userClassName": "MyFormPanel",
                 "defaults": [
                     "{",
                     "    labelWidth: '40%'",
@@ -110,7 +104,6 @@
                     "codeClass": null,
                     "userConfig": {
                         "id": "FilmFields",
-                        "designer|userClassName": "MyFieldSet",
                         "defaults": [
                             "{",
                             "    labelWidth: '40%'",
@@ -129,7 +122,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "id": "MnfField",
-                                "designer|userClassName": "MyTextField",
                                 "label": null,
                                 "labelWidth": null,
                                 "labelWrap": true,
@@ -148,7 +140,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "id": "TypeField",
-                                "designer|userClassName": "MyTextField1",
                                 "label": null,
                                 "name": "Type",
                                 "autoComplete": true,
@@ -165,7 +156,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "id": "ShadeField",
-                                "designer|userClassName": "MyTextField1",
                                 "label": null,
                                 "name": "Shade",
                                 "autoComplete": true,
@@ -182,7 +172,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "id": "SizeField",
-                                "designer|userClassName": "MyTextField1",
                                 "label": null,
                                 "name": "Size",
                                 "autoComplete": true,
@@ -202,7 +191,6 @@
                     "userConfig": {
                         "id": "RollFields",
                         "ui": "dark",
-                        "designer|userClassName": "MyFieldSet5",
                         "defaults": null,
                         "title": null
                     },
@@ -217,7 +205,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "id": "RollNumberField",
-                                "designer|userClassName": "MyTextField1",
                                 "label": null,
                                 "name": "RollNumber",
                                 "autoComplete": false,
@@ -234,7 +221,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "id": "LinearFeetField",
-                                "designer|userClassName": "MyTextField1",
                                 "label": null,
                                 "name": "LinearFeet",
                                 "placeHolder": "Linear Feet"
@@ -250,7 +236,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "id": "PriceField",
-                                "designer|userClassName": "MyTextField1",
                                 "label": null,
                                 "name": "Price",
                                 "placeHolder": "Price"
@@ -269,7 +254,6 @@
                     "userConfig": {
                         "id": "InventoryEnter",
                         "ui": "action",
-                        "designer|userClassName": "MyButton",
                         "iconCls": null,
                         "text": "Add"
                     },

@@ -20,7 +20,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onStoreRemoverecords",
                 "fn": "onStoreRemoverecords",
                 "implHandler": [
                     "Ext.getStore('Windows').remove(records);",

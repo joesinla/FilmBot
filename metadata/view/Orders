@@ -22,7 +22,6 @@
             "codeClass": null,
             "userConfig": {
                 "id": "OrderList",
-                "designer|userClassName": "MyList",
                 "store": "Orders",
                 "onItemDisclosure": true
             },
@@ -36,9 +35,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "itemTpl",
                         "implHandler": [
-                            "<div>Order {Number} was created on {Created}</div>"
+                            "<div>Order {Number} was created on {Created:date(\"m-d H:i:s\")}</div>"
                         ],
                         "designer|displayName": "itemTpl"
                     },
@@ -57,7 +55,7 @@
                 "container|animation": "slide",
                 "id": "newOrder",
                 "itemId": "newOrder",
-                "designer|userClassName": "MyTabPanel1"
+                "ui": null
             },
             "designerId": "d099700b-4d11-4afc-b37f-0624ee8df176",
             "cn": [
@@ -72,7 +70,7 @@
                         "container|align": null,
                         "container|pack": "center",
                         "docked": "bottom",
-                        "designer|userClassName": "MyTabBar"
+                        "ui": null
                     },
                     "designerId": "5fc83c37-fc83-4d5f-ac52-8c8dd8788fb7"
                 },
@@ -87,7 +85,6 @@
                         "title": "Add Windows",
                         "iconCls": "add",
                         "id": "AddWindowPanel",
-                        "designer|userClassName": "MyFormPanel",
                         "layout": null
                     },
                     "designerId": "373235a7-622f-4682-a929-f55e13f265b2",
@@ -101,7 +98,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "id": "WindowDemensions",
-                                "designer|userClassName": "MyFieldSet4",
                                 "layout": null,
                                 "title": null
                             },
@@ -120,7 +116,6 @@
                                         "id": "DimensionsPanel",
                                         "margin": null,
                                         "width": null,
-                                        "designer|userClassName": "MyContainer5",
                                         "layout": "hbox"
                                     },
                                     "designerId": "9166fcd8-0b6f-43c2-bf4e-a480a9fb8a91",
@@ -137,7 +132,6 @@
                                                 "id": "PanesField",
                                                 "minWidth": null,
                                                 "width": "30px",
-                                                "designer|userClassName": "MyNumberField",
                                                 "label": null,
                                                 "name": "Panes",
                                                 "placeHolder": "Panes"
@@ -154,7 +148,6 @@
                                             "userConfig": {
                                                 "layout|flex": 3,
                                                 "id": "WidthField",
-                                                "designer|userClassName": "MyNumberField1",
                                                 "label": null,
                                                 "name": "Width",
                                                 "autoComplete": null,
@@ -172,7 +165,6 @@
                                             "userConfig": {
                                                 "layout|flex": 3,
                                                 "id": "HeightField",
-                                                "designer|userClassName": "MyNumberField2",
                                                 "label": null,
                                                 "name": "Height",
                                                 "placeHolder": "Height"
@@ -192,7 +184,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "id": "WindowDetails",
-                                "designer|userClassName": "MyFieldSet3",
                                 "defaults": [
                                     "{labelWidth: '30%'}"
                                 ],
@@ -210,7 +201,6 @@
                                     "userConfig": {
                                         "id": "FilmSelect",
                                         "itemId": null,
-                                        "designer|userClassName": "MySelectField",
                                         "label": "Film",
                                         "labelWidth": null,
                                         "options": null
@@ -225,7 +215,6 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "designer|userClassName": "onFilmInitialize",
                                                 "fn": "onFilmInitialize",
                                                 "implHandler": [
                                                     "var me = this;",
@@ -246,7 +235,6 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "id": "Location",
-                                        "designer|userClassName": "MyTextField11",
                                         "label": "Location",
                                         "labelWidth": null,
                                         "name": "Location",
@@ -263,7 +251,6 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "id": "Direction",
-                                        "designer|userClassName": "MySelectField1",
                                         "label": "Direction",
                                         "labelWidth": null,
                                         "name": "Direction",
@@ -288,7 +275,6 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "id": "Difficulty",
-                                        "designer|userClassName": "MySliderField1",
                                         "label": "Removal",
                                         "labelWidth": null,
                                         "name": "Difficulty",
@@ -305,7 +291,6 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "id": "hMnfField",
-                                        "designer|userClassName": "MyHiddenField",
                                         "name": "Manufacturer"
                                     },
                                     "designerId": "4e6c3af0-1246-49ca-9794-1d0c5b568e7a"
@@ -319,7 +304,6 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "id": "hTypeField",
-                                        "designer|userClassName": "MyHiddenField",
                                         "name": "Type"
                                     },
                                     "designerId": "93bc223d-98d9-43fd-a5ca-132443cf8c51"
@@ -333,7 +317,6 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "id": "hShadeField",
-                                        "designer|userClassName": "MyHiddenField",
                                         "name": "Shade"
                                     },
                                     "designerId": "fa0f5ff4-868f-4f40-b369-e109f135784c"
@@ -349,7 +332,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "id": "enterOrder",
-                                "designer|userClassName": "MyButton",
                                 "iconCls": null,
                                 "text": "Enter"
                             },
@@ -369,7 +351,6 @@
                         "iconCls": "user",
                         "id": "CustomerPanel",
                         "itemId": null,
-                        "designer|userClassName": "MyFormPanel6",
                         "layout": null
                     },
                     "designerId": "02120cd0-2ad0-46a2-8adf-c1036f4a35ad",
@@ -382,7 +363,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyFieldSet8",
                                 "title": "Company"
                             },
                             "designerId": "c3ae91cc-0e20-4124-8edf-e56e0f5eb256",
@@ -396,7 +376,6 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "id": "Company",
-                                        "designer|userClassName": "MyTextField10",
                                         "inputCls": "hcustomer",
                                         "label": null,
                                         "name": "Company",
@@ -416,7 +395,6 @@
                             "userConfig": {
                                 "id": "contact",
                                 "itemId": null,
-                                "designer|userClassName": "MyFieldSet1",
                                 "title": "Contact"
                             },
                             "designerId": "5ab558ed-da58-4b04-8ca4-b7e16084eed2",
@@ -433,7 +411,6 @@
                                             "hddn"
                                         ],
                                         "id": "First",
-                                        "designer|userClassName": "MyTextField2",
                                         "inputCls": null,
                                         "label": null,
                                         "labelCls": null,
@@ -454,7 +431,6 @@
                                             "h"
                                         ],
                                         "id": "Last",
-                                        "designer|userClassName": "MyTextField3",
                                         "inputCls": "hcustomer",
                                         "label": null,
                                         "name": "Last",
@@ -471,7 +447,6 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "id": "Phone",
-                                        "designer|userClassName": "MyTextField4",
                                         "inputCls": "hcustomer",
                                         "label": null,
                                         "name": "Phone",
@@ -488,7 +463,6 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "id": "Email",
-                                        "designer|userClassName": "MyTextField5",
                                         "inputCls": "hcustomer",
                                         "label": null,
                                         "name": "Email",
@@ -507,7 +481,6 @@
                             "codeClass": null,
                             "userConfig": {
                                 "id": "Address",
-                                "designer|userClassName": "MyFieldSet2",
                                 "title": "Job Address"
                             },
                             "designerId": "27906c93-e8a5-4468-a637-49eb2549126c",
@@ -521,7 +494,6 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "id": "Street",
-                                        "designer|userClassName": "MyTextField6",
                                         "label": null,
                                         "name": "Street",
                                         "placeHolder": "Street"
@@ -537,7 +509,6 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "id": "City",
-                                        "designer|userClassName": "MyTextField7",
                                         "label": null,
                                         "name": "City",
                                         "placeHolder": "City"
@@ -553,7 +524,6 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "id": "State",
-                                        "designer|userClassName": "MyTextField8",
                                         "label": null,
                                         "name": "State",
                                         "placeHolder": "State"
@@ -569,7 +539,6 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "id": "Zip",
-                                        "designer|userClassName": "MyTextField9",
                                         "label": null,
                                         "name": "Zip",
                                         "placeHolder": "Zip"
@@ -596,7 +565,6 @@
                         "id": "WindowList",
                         "styleHtmlContent": true,
                         "ui": null,
-                        "designer|userClassName": "MyList2",
                         "emptyText": null,
                         "itemCls": "windowlist-wrapper",
                         "store": "temp",
@@ -614,11 +582,10 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "itemTpl",
                                 "implHandler": [
-                                    "<div class=\"tweet-wrapper\">",
-                                    "    <img src=\"resources/images/noimage.jpeg\" />",
-                                    "              <div class=\"tweet\">",
+                                    "<div class=\"window-wrapper\">",
+                                    "    <img src=\"touch-2.2.1/resources/images/noimage.jpg\" />",
+                                    "              <div class=\"window-content\">",
                                     "                  <h2>{Location}</h2>",
                                     "                  <p>{Panes}{Width}{Height}{Type}{Shade}{Size}</p>",
                                     "              </div>",
@@ -643,7 +610,6 @@
                         "id": "TotalList",
                         "styleHtmlContent": true,
                         "ui": null,
-                        "designer|userClassName": "MyList3",
                         "disableSelection": true,
                         "store": "Windows_has_Rolls",
                         "grouped": true,
@@ -659,7 +625,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "itemTpl",
                                 "implHandler": [
                                     "<div>List Item {LinearFeet}</div>"
                                 ],
@@ -677,7 +642,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "onNewOrderActivate",
                         "fn": "onNewOrderActivate",
                         "implHandler": [
                             "var tp = Ext.getCmp('newOrder');",
@@ -703,8 +667,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "title": "Details",
-                        "iconCls": "settings",
-                        "designer|userClassName": "MyFormPanel2"
+                        "iconCls": "settings"
                     },
                     "designerId": "8d529053-8b3d-4d29-b750-52d49f6b432f",
                     "cn": [
@@ -716,7 +679,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyTextArea1",
                                 "label": null,
                                 "name": "Notes",
                                 "placeHolder": "Notes:"
@@ -731,7 +693,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyFieldSet10",
                                 "title": "Additional Expenses"
                             },
                             "designerId": "4056f033-e038-4503-87ac-e055c053144c",
@@ -744,7 +705,6 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyContainer9",
                                         "layout": "hbox"
                                     },
                                     "designerId": "5de2bbe5-9295-434d-8e6f-bcf8515f4f28",
@@ -757,7 +717,6 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "designer|userClassName": "MyButton6",
                                                 "text": "MyButton6"
                                             },
                                             "designerId": "3d288796-684a-4fd2-a719-98e0ff6c05de"
@@ -770,7 +729,6 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
-                                                "designer|userClassName": "MyTextField17",
                                                 "label": "Field"
                                             },
                                             "designerId": "3b7638d4-b333-4cbb-b5ce-360303c92c92"

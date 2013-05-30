@@ -23,7 +23,6 @@
             "codeClass": null,
             "userConfig": {
                 "itemId": "mybutton7",
-                "designer|userClassName": "MyButton12",
                 "text": "Done"
             },
             "designerId": "7da5372f-c56e-4912-84af-4407a8105950",
@@ -36,7 +35,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "onMybutton7Tap",
                         "fn": "onMybutton7Tap",
                         "implHandler": [
                             ""
@@ -55,7 +53,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyButton13",
                 "text": "Cancel"
             },
             "designerId": "50714de8-e2b4-4920-8392-5f0c6f45b5c0"
@@ -68,7 +65,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "initialize",
                 "fn": "initialize",
                 "implHandler": [
                     "this.callParent();",
@@ -109,7 +105,6 @@
                 "itemId": "mSlot",
                 "minWidth": null,
                 "width": "55px",
-                "designer|userClassName": "MyPickerSlot",
                 "name": "mSlot",
                 "title": null,
                 "data": [
@@ -136,7 +131,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "onMypickerslotSlotpick",
                         "fn": "onMypickerslotSlotpick",
                         "implHandler": [
                             "this.getInnerItems()[2].getStore().removeAll();",
@@ -189,7 +183,6 @@
                 "itemId": "tSlot",
                 "maxWidth": null,
                 "width": null,
-                "designer|userClassName": "MyPickerSlot1",
                 "name": "tSlot",
                 "title": null,
                 "data": [
@@ -213,7 +206,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "onMypickerslot1Slotpick",
                         "fn": "onMypickerslot1Slotpick",
                         "implHandler": [
                             "var store = Ext.getStore('Rolls');",
@@ -260,7 +252,6 @@
                 "maxWidth": null,
                 "right": null,
                 "width": null,
-                "designer|userClassName": "MyPickerSlot2",
                 "align": null,
                 "name": "sSlot",
                 "title": null,
@@ -285,7 +276,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "onMypickerslot2Slotpick",
                         "fn": "onMypickerslot2Slotpick",
                         "implHandler": [
                             ""
@@ -304,7 +294,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onFilmPickerHide",
                 "fn": "onFilmPickerHide",
                 "implHandler": [
                     "",

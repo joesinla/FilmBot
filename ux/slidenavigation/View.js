@@ -86,7 +86,7 @@ Ext.define('Ext.ux.slidenavigation.View', {
             width: 250,
             maxDrag: null,
             itemTpl: '{title}',
-            grouped: true,
+            grouped: false,
             items: [{
                 xtype: 'toolbar',
                 docked: 'top',
@@ -190,7 +190,7 @@ Ext.define('Ext.ux.slidenavigation.View', {
         shadowStyle: '0 0 4px 1px #999',
 
 
-        slideButtonDefaults: {}
+        slideButtonDefaults: { cls: "btn"}
     },
         
     initConfig: function() {

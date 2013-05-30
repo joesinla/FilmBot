@@ -6,7 +6,10 @@
     },
     "codeClass": null,
     "userConfig": {
-        "basePath": "touch-2.2.1/"
+        "designer|userClassName": "Library",
+        "basePath": "touch-2.2.1/",
+        "includeCss": false,
+        "theme": null
     },
     "designerId": "29fa902f-f9ae-4776-8892-e4a47fae4132"
 }

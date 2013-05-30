@@ -20,9 +20,6 @@
                 "type": "object"
             },
             "codeClass": null,
-            "userConfig": {
-                "designer|userClassName": "MyGrouper"
-            },
             "designerId": "d5aeeec8-e575-45a6-a395-92d0e043d1b2",
             "cn": [
                 {
@@ -33,7 +30,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "groupFn",
                         "fn": "groupFn",
                         "designer|params": [
                             "record"
@@ -54,7 +50,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onStoreAddrecords",
                 "fn": "onStoreAddrecords",
                 "implHandler": [
                     "console.log('add whr event');",
@@ -73,7 +68,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onStoreRemoverecords",
                 "fn": "onStoreRemoverecords",
                 "implHandler": [
                     "console.log('remove whr event');",
@@ -91,7 +85,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyLocalStorageProxy1",
                 "id": null
             },
             "designerId": "153bcdb8-26be-4eec-9334-576c5cd2decc"

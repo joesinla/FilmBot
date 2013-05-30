@@ -18,8 +18,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "Window_id",
-                "designer|userClassName": "field35"
+                "name": "Window_id"
             },
             "designerId": "a7e6aec8-b9f2-4451-a0ac-f3efa2ac8749"
         },
@@ -31,8 +30,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "Roll_id",
-                "designer|userClassName": "field36"
+                "name": "Roll_id"
             },
             "designerId": "81ea09d1-a637-435e-8299-da67366479cc"
         },
@@ -44,8 +42,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "LinearFeet",
-                "designer|userClassName": "field37"
+                "name": "LinearFeet"
             },
             "designerId": "3d7d5c0e-4e11-4626-b93a-57de71e4c942"
         },
@@ -57,7 +54,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyBelongsToAssociation",
                 "model": "Window"
             },
             "designerId": "4ef614f4-b6e1-487f-b755-2820e9c89e89"
@@ -70,7 +66,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyBelongsToAssociation1",
                 "model": "Roll"
             },
             "designerId": "044e2bdc-3a47-4d3a-a031-3465e27044c9"

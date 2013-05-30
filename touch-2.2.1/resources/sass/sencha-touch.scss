@@ -1,2 +1,95 @@
+
+$foundation-background: rgb(115,126,132);
+$foundation-navbar: rgb(19,153,189);
+$foundation-secondary: rgb(19,167,199);
+$foundation-grey: rgb(115,126,132);
+
+$black: rgb(34,34,34);
+ 
+
+
+$base-font-family: 'lobster';
+
 @import 'sencha-touch/default';
 @import 'sencha-touch/default/all';
+
+//@import 'sencha-touch/default/src/Panel';
+//@import 'sencha-touch/default/src/Button';
+
+
+//@import "foundation";
+//@import 'bootstrap';
+@import 'compass/css3';
+//@import 'flatui/flat-ui';
+
+
+
+@import url("http://fonts.googleapis.com/css?family=Open+Sans");
+@import url("http://fonts.googleapis.com/css?family=Lobster");
+@import url("http://fonts.googleapis.com/css?family=Prata");
+
+.window-wrapper img{
+	height: 75px;
+	width: 75px;
+	float: left;
+	margin: 5px;
+}
+
+.window-content {
+	position: relitive;
+	top: 0; left: 60px;
+	padding-right: 80px;
+	
+}
+
+.window-content h2{
+	//font-size: 90%;
+	font-family: $base-font-family;
+	color: orange;
+}
+
+.window-content p{
+	//clear: both;
+}
+
+
+.x-title {
+	font-family: $base-font-family;
+	letter-spacing:1.55px;
+}
+
+
+.homedataview {
+
+	height: 155px;
+	width: 155px;
+	padding:10px;
+	border:5px solid blue;
+	margin:5px;
+	float: left;
+	@include border-radius(25px);
+
+	&:hover {
+		border: 4px solid red;
+	}
+	
+}
+
+.test {
+	
+	border:2px solid red;
+}
+
+.x-slidenavigation-list {
+	color: white;
+	background-color: $black;
+	border: 0;
+	
+	.x-list-item {
+		border: 0;
+		color: white;
+		height: 15px !important;
+		
+	}
+}
+

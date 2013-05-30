@@ -10,10 +10,10 @@
         "cacheBust": false,
         "buildShouldOverwriteIndex": true
     },
-    "xdsVersion": "2.2.1",
-    "xdsBuild": 951,
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 971,
     "schemaVersion": 1,
-    "upgradeVersion": 210000000500,
+    "upgradeVersion": 210000000501,
     "framework": "touch22",
     "topInstanceFileMap": {
         "29fa902f-f9ae-4776-8892-e4a47fae4132": {
@@ -212,14 +212,6 @@
             ],
             "className": "temp"
         },
-        "e78c806b-3935-4238-8a56-2b0abce9a0d2": {
-            "paths": [
-                "metadata/view/MyButton6",
-                "app/view/override/MyButton6.js",
-                "app/view/MyButton6.js"
-            ],
-            "className": "MyButton6"
-        },
         "05678a88-ca74-4267-b43d-8ff0ed14ae1c": {
             "paths": [
                 "metadata/view/ioLoginbutton",
@@ -234,17 +226,25 @@
             ],
             "className": "js1"
         },
-        "30318d91-6283-4887-a40f-abb95277552a": {
-            "paths": [
-                "metadata/resource/js2"
-            ],
-            "className": "js2"
-        },
         "f2f12b83-f9b2-4f4a-8744-100ab7cd0f2d": {
             "paths": [
                 "metadata/resource/js3"
             ],
             "className": "js3"
+        },
+        "bd332bf6-cc41-4ee8-bb2b-2dd7545503ec": {
+            "paths": [
+                "metadata/controller/Home",
+                "app/controller/override/Home.js",
+                "app/controller/Home.js"
+            ],
+            "className": "Home"
+        },
+        "ce0191f8-6b31-42e5-8f89-baaff0618d6b": {
+            "paths": [
+                "metadata/resource/css"
+            ],
+            "className": "css"
         }
     },
     "viewOrderMap": {
@@ -256,7 +256,6 @@
             "f07de2a3-84c6-4636-9377-8ff4b2f212f7",
             "519762ee-0acf-42ef-9c81-2d5b3d9245f3",
             "06af2c6f-3e92-4434-be6c-50169e37c3ed",
-            "e78c806b-3935-4238-8a56-2b0abce9a0d2",
             "05678a88-ca74-4267-b43d-8ff0ed14ae1c"
         ],
         "store": [
@@ -272,7 +271,8 @@
             "4b2f5b2d-9285-4ec4-89bd-39b7f7b28807",
             "0628d1f3-a4bb-4e60-83d1-34257d7a0185",
             "09c1fa57-66c8-4591-925d-7db1f10f8235",
-            "b51b9561-f334-4037-b24b-c9061aaf896d"
+            "b51b9561-f334-4037-b24b-c9061aaf896d",
+            "bd332bf6-cc41-4ee8-bb2b-2dd7545503ec"
         ],
         "model": [
             "a2a330a7-0521-4237-abc3-227363b7c74b",
@@ -285,8 +285,8 @@
             "ca58ae0a-5113-4c2f-9fcf-c77efce39a6b",
             "8418c8dc-3658-47e5-b8d2-61bd7fa8bef5",
             "e77d5b87-5f6a-4385-a2ed-082ad1912b6d",
-            "30318d91-6283-4887-a40f-abb95277552a",
-            "f2f12b83-f9b2-4f4a-8744-100ab7cd0f2d"
+            "f2f12b83-f9b2-4f4a-8744-100ab7cd0f2d",
+            "ce0191f8-6b31-42e5-8f89-baaff0618d6b"
         ],
         "app": [
             "application"

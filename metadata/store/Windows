@@ -22,7 +22,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onStoreDeleteRecords",
                 "fn": "onStoreDeleteRecords",
                 "implHandler": [
                     "//MyApp.app.getController('Inventory').reserveFilm2(records, 'delete');",
@@ -40,7 +39,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onStoreAddRecords",
                 "fn": "onStoreAddRecords",
                 "implHandler": [
                     "console.log('add window event');",
@@ -58,7 +56,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "MyLocalStorageProxy1",
                 "id": null
             },
             "designerId": "720eb3fc-7e71-4a33-8b6b-263fa87f1e02"
@@ -71,7 +68,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onStoreBeforeSync",
                 "fn": "onStoreBeforeSync",
                 "implHandler": [
                     "console.log('window store sync');"
@@ -88,7 +84,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onStoreLoad",
                 "fn": "onStoreLoad",
                 "implHandler": [
                     "console.log('windowstore load');"

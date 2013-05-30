@@ -6,25 +6,52 @@
     },
     "codeClass": null,
     "userConfig": {
+        "cls": [
+            "test"
+        ],
+        "id": "HomePanel",
         "designer|userClassName": "Home",
-        "designer|userAlias": "home"
+        "designer|userAlias": "home",
+        "layout": "card"
     },
     "designerId": "b3f2106a-71f7-4376-bd89-4f8375f14523",
     "cn": [
         {
-            "type": "Ext.Button",
+            "type": "Ext.dataview.DataView",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "id": "testbttn",
-                "itemId": "testbttn",
-                "designer|userClassName": "MyButton4",
-                "text": "MyButton4"
+                "centered": false,
+                "id": "HomeDataView",
+                "itemId": null,
+                "designer|createAlias": null,
+                "store": null,
+                "useComponents": false
             },
-            "designerId": "a9905445-df41-4b28-9475-fc7b743957e7"
+            "designerId": "30cff914-d384-4cf8-8a6e-f1b0828bc608",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "<div class=\"homedataview\" id=dv{#}>",
+                            "    <p>{#}Order number: {name} </p>",
+                            "    <p><span>Created on: {Created:date(\"m-d H:i:s\")}</span></p>",
+                            "</div>"
+                        ],
+                        "designer|displayName": "itemTpl"
+                    },
+                    "designerId": "51ccdf1d-9fb5-4b91-bed3-971c7ff5e147"
+                }
+            ]
         }
     ]
 }

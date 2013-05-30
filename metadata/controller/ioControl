@@ -19,7 +19,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "init",
                 "fn": "init",
                 "designer|params": [
                     "application"
@@ -43,7 +42,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onAuth",
                 "fn": "onAuth",
                 "designer|params": [
                     "user"
@@ -64,7 +62,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onLogout",
                 "fn": "onLogout",
                 "implHandler": [
                     "var store = Ext.getStore('todos');",
@@ -84,7 +81,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onUserMessage",
                 "fn": "onUserMessage",
                 "designer|params": [
                     "sender",
@@ -106,7 +102,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "syncStores",
                 "fn": "syncStores",
                 "implHandler": [
                     "console.log('sync stores..');",
@@ -133,7 +128,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "syncCallback",
                 "fn": "syncCallback",
                 "implHandler": [
                     "console.log(\"broadcast update\", arguments);",

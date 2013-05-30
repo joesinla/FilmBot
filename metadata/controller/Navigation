@@ -18,7 +18,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "designer|userClassName": "onContainerActivate",
                 "fn": "onContainerActivate",
                 "designer|params": [
                     "me",

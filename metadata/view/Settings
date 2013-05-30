@@ -22,7 +22,6 @@
             "codeClass": null,
             "userConfig": {
                 "id": "settingsForm",
-                "designer|userClassName": "MyFormPanel3",
                 "layout": null
             },
             "designerId": "89cbc18c-2618-4263-9f4d-79851df88742",
@@ -35,7 +34,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyFieldSet5",
                         "layout": null,
                         "title": "French Pane"
                     },
@@ -49,7 +47,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyContainer7",
                                 "layout": "fit"
                             },
                             "designerId": "84d14925-5b37-4bad-a66d-1433831c0691",
@@ -62,7 +59,6 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyNumberField3",
                                         "label": null,
                                         "placeHolder": "Width"
                                     },
@@ -76,8 +72,7 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "minWidth": null,
-                                        "designer|userClassName": "MySpacer"
+                                        "minWidth": null
                                     },
                                     "designerId": "fdd9d925-e570-41f1-9a0d-bf41207696e2"
                                 },
@@ -89,7 +84,6 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyNumberField3",
                                         "label": null,
                                         "placeHolder": "Height"
                                     },
@@ -103,8 +97,7 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "minWidth": null,
-                                        "designer|userClassName": "MySpacer"
+                                        "minWidth": null
                                     },
                                     "designerId": "60c0ccc5-f9de-4069-a65b-76d8b9f615d4"
                                 },
@@ -117,7 +110,6 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "padding": null,
-                                        "designer|userClassName": "MyNumberField3",
                                         "label": null,
                                         "placeHolder": "$0.00"
                                     },
@@ -135,7 +127,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyFieldSet5",
                         "title": "Labor"
                     },
                     "designerId": "cb594ce2-7ce6-4c8d-85f6-bb3b7b454e7e",
@@ -148,7 +139,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyContainer7",
                                 "layout": null
                             },
                             "designerId": "7f1ef7b1-43cf-4ca5-8e78-37e1918973f4",
@@ -161,7 +151,6 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "designer|userClassName": "MyNumberField3",
                                         "label": null,
                                         "placeHolder": "Cost per Sqft"
                                     },
@@ -179,7 +168,6 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "designer|userClassName": "MyFieldSet5",
                         "title": "Tax"
                     },
                     "designerId": "c9eb62b7-dfed-4db3-85c0-8e21762ffb62",
@@ -192,7 +180,6 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "designer|userClassName": "MyNumberField7",
                                 "label": "Field",
                                 "name": "Tax"
                             },

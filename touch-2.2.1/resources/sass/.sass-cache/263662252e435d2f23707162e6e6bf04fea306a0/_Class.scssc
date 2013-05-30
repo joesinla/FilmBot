@@ -1,0 +1,357 @@
+3.2.7 (Media Mark)
+32e375107378bb5127e7e0d748ee1efd53507c45
+o:Sass::Tree::RootNode
+:@template"Ì#/**
+ * @class Global_CSS
+ *
+ * Global CSS variables and mixins of Sencha Touch.
+ */
+
+/**
+ * @var {boolean} $include-html-style
+ * Optionally remove included HTML styles/typography (for components with styleHtmlContent: true).
+ * Styles are scoped to .x-html. Set t o false to reduce CSS weight.
+ */
+$include-html-style: true !default;
+
+/**
+ * @var {boolean} $include-default-icons
+ * Optionally remove the default icon set which includes the following toolbar and tab bar icons: action,
+ * add, arrow_down, arrow_left, arrow_right, arrow_up, bookmarks, compose, delete, download, favorites,
+ * home, info, locate, maps, more, organize, refresh, reply, search, settings, star, team, time, trash,
+ * and user. Set to false to reduce CSS weight.
+ */
+$include-default-icons: true !default;
+
+/**
+ * @var {boolean} $include-form-sliders
+ * Decides if default HTML styles are included (for components with styleHtmlContent: true). Class is applied to .x-html.
+ */
+$include-form-sliders: true !default;
+
+/**
+ * @var {boolean} $include-default-uis
+ * Decides whether or not to include the default UIs for all components.
+ */
+$include-default-uis: true !default;
+
+/**
+ * @var {color} $active-color
+ * Color used for elements like selected rows, "action" UIs (eg. on buttons) and certain overlays like the picker mask.
+ */
+//$active-color: darken(saturate($base-color, 55%), 10%) !default;
+
+/**
+ * @var {color} $page-bg-color
+ * Background color for fullscreen components.
+ */
+//$page-bg-color: #eee !default;
+
+/**
+ * @var {measurement} $global-row-height
+ * The minimum row height for items like toolbars.
+ */
+$global-row-height: 2.6em !default;
+
+/**
+ * @var {measurement} $global-row-height
+ * The minimum row height for items like toolbars.
+ */
+$global-list-height: 46px !default;
+
+/**
+ * @var {color} $loading-spinner-color
+ * Background-color for the bars in the loading spinner.
+ */
+$loading-spinner-color: #aaa !default;
+
+/**
+ * color styles
+ */
+
+$dark-theme: true !default;
+$dialog-color: #1F1F1F;
+
+/**
+ * @var {color} $base-color
+ * The primary color variable from which most elements derive their color scheme.
+ */
+$base-color: rgba(145,0,145,1) !default; // Triton Blue
+
+/**
+ * Light theme
+ */
+$light-background-color: #fff !default;
+$light-foreground-color: #111 !default;
+$light-inactive-color: #ddd !default;
+
+// Form fields
+$light-field-background-color: #fff !default;
+$light-field-border-color: #BABABA !default;
+$light-field-color: #000 !default;
+$light-field-placeholder-color: #7A7A7A !default;
+$light-field-focus-background-color: #fff !default;
+$light-field-focus-border-color: #5C5C5C !default;
+$light-field-disabled-background-color: #EAEAEA !default;
+$light-field-disabled-border-color: #D9D9D9 !default;
+$light-field-disabled-color: #9F9F9F !default;
+$light-field-disabled-placeholder-color: #BDBDBD !default;
+
+$light-form-slider-background-color: #C6C6C6 !default;
+$light-form-slider-value-background-color: $base-color !default;
+$light-form-slider-thumb-background-color: #000 !default;
+$light-form-slider-disabled-background-color: #DBDBDB !default;
+$light-form-slider-disabled-value-background-color: #BABABA !default;
+$light-form-slider-disabled-thumb-background-color: #A0A0A0 !default;
+
+$light-form-toggle-background-color: #A6A6A6 !default;
+$light-form-toggle-border-color: #A6A6A6 !default;
+$light-form-toggle-thumb-background-color: $light-form-slider-thumb-background-color !default;
+$light-form-toggle-disabled-background-color: #E0E0E0 !default;
+$light-form-toggle-disabled-border-color: #CCCCCC !default;
+$light-form-toggle-disabled-thumb-background-color: #A6A6A6 !default;
+
+/**
+ * Dark theme
+ */
+$dark-background-color: #111 !default;
+$dark-foreground-color: #fff !default;
+$dark-inactive-color: #666 !default;
+
+// Form fields
+$dark-field-background-color: #D2D2D2 !default;
+$dark-field-border-color: #D2D2D2 !default;
+$dark-field-color: rgba(0,0,0,.8) !default;
+$dark-field-placeholder-color: rgba(0,0,0,.6) !default;
+$dark-field-focus-background-color: #FFFFFF !default;
+$dark-field-focus-border-color: #FFFFFF !default;
+$dark-field-disabled-background-color: #1D1D1D !default;
+$dark-field-disabled-border-color: #777777 !default;
+$dark-field-disabled-color: rgba(255,255,255,.4) !default;
+$dark-field-disabled-placeholder-color: rgba(255,255,255,.2) !default;
+
+$dark-form-slider-background-color: #6C6C6C !default;
+$dark-form-slider-value-background-color: $base-color !default;
+$dark-form-slider-thumb-background-color: #fff !default;
+$dark-form-slider-disabled-background-color: #383838 !default;
+$dark-form-slider-disabled-value-background-color: #535353 !default;
+$dark-form-slider-disabled-thumb-background-color: #7E7E7E !default;
+
+$dark-form-toggle-background-color: #6B6B6B !default;
+$dark-form-toggle-border-color: #6C6C6C !default;
+$dark-form-toggle-thumb-background-color: $dark-form-slider-thumb-background-color !default;
+$dark-form-toggle-disabled-background-color: #383838 !default;
+$dark-form-toggle-disabled-border-color: #4A4A4A !default;
+$dark-form-toggle-disabled-thumb-background-color: #6C6C6C !default;
+
+/**
+ * Default values (light theme)
+ */
+
+$background-color: $light-background-color !default;
+$foreground-color: $light-foreground-color !default;
+$inactive-color: $light-inactive-color !default;
+
+// Form fields
+$field-background-color: $light-field-background-color !default;
+$field-border-color: $light-field-border-color !default;
+$field-color: $light-field-color !default;
+$field-placeholder-color: $light-field-placeholder-color !default;
+$field-focus-background-color: $light-field-focus-background-color !default;
+$field-focus-border-color: $light-field-focus-border-color !default;
+$field-disabled-background-color: $light-field-disabled-background-color !default;
+$field-disabled-border-color: $light-field-disabled-border-color !default;
+$field-disabled-color: $light-field-disabled-color !default;
+$field-disabled-placeholder-color: $light-field-disabled-placeholder-color !default;
+
+$form-slider-background-color: $light-form-slider-background-color !default;
+$form-slider-value-background-color: $light-form-slider-value-background-color !default;
+$form-slider-thumb-background-color: $light-form-slider-thumb-background-color !default;
+$form-slider-disabled-background-color: $light-form-slider-disabled-background-color !default;
+$form-slider-disabled-value-background-color: $light-form-slider-disabled-value-background-color !default;
+$form-slider-disabled-thumb-background-color: $light-form-slider-disabled-thumb-background-color !default;
+
+$form-toggle-background-color: $light-form-toggle-background-color !default;
+$form-toggle-border-color: $light-form-toggle-border-color !default;
+$form-toggle-thumb-background-color: $form-slider-thumb-background-color !default;
+$form-toggle-disabled-background-color: $light-form-toggle-disabled-background-color !default;
+$form-toggle-disabled-border-color: $light-form-toggle-disabled-border-color !default;
+$form-toggle-disabled-thumb-background-color: $light-form-toggle-disabled-thumb-background-color !default;
+
+@if ($dark-theme) {
+    $background-color: $dark-background-color;
+    $foreground-color: $dark-foreground-color;
+    $inactive-color: $dark-inactive-color;
+
+    // Form fields
+    $field-background-color: $dark-field-background-color;
+    $field-border-color: $dark-field-border-color;
+    $field-color: $dark-field-color;
+    $field-placeholder-color: $dark-field-placeholder-color;
+    $field-focus-background-color: $dark-field-focus-background-color;
+    $field-focus-border-color: $dark-field-focus-border-color;
+    $field-disabled-background-color: $dark-field-disabled-background-color;
+    $field-disabled-border-color: $dark-field-disabled-border-color;
+    $field-disabled-color: $dark-field-disabled-color;
+    $field-disabled-placeholder-color: $dark-field-disabled-placeholder-color;
+
+    $form-slider-background-color: $dark-form-slider-background-color;
+    $form-slider-value-background-color: $dark-form-slider-value-background-color;
+    $form-slider-thumb-background-color: $dark-form-slider-thumb-background-color;
+    $form-slider-disabled-background-color: $dark-form-slider-disabled-background-color;
+    $form-slider-disabled-value-background-color: $dark-form-slider-disabled-value-background-color;
+    $form-slider-disabled-thumb-background-color: $dark-form-slider-disabled-thumb-background-color;
+
+    $form-toggle-background-color: $dark-form-toggle-background-color;
+    $form-toggle-border-color: $dark-form-toggle-border-color;
+    $form-toggle-thumb-background-color: $form-slider-thumb-background-color;
+    $form-toggle-disabled-background-color: $dark-form-toggle-disabled-background-color;
+    $form-toggle-disabled-border-color: $dark-form-toggle-disabled-border-color;
+    $form-toggle-disabled-thumb-background-color: $dark-form-toggle-disabled-thumb-background-color;
+}
+
+$form-slider-height: 11px !default;
+
+$alert-color: red !default;
+$confirm-color: #92cf00 !default; // Green
+
+/**
+* font sizes
+*/
+$font-size-small: 10pt !default;
+$font-size-normal: 11pt !default;
+$font-size-medium: 15pt !default;
+$font-size-medium-large: 17pt !default;
+$font-size-large: 19pt !default;
+$font-size-extra-large: 24pt !default;
+:@has_childrenT:@options{ :@children[{o:Sass::Tree::CommentNode
+:
+@type:normal:@value["X/**
+ * @class Global_CSS
+ *
+ * Global CSS variables and mixins of Sencha Touch.
+ */;@;	[ :
+@lineio;
+
+;;;["’/**
+ * @var {boolean} $include-html-style
+ * Optionally remove included HTML styles/typography (for components with styleHtmlContent: true).
+ * Styles are scoped to .x-html. Set t o false to reduce CSS weight.
+ */;@;	[ ;io:Sass::Tree::VariableNode:
+@expro:Sass::Script::Bool;T;@;i:
+@name"include-html-style;@;	[ ;i:@guarded"!defaulto;
+
+;;;["ö/**
+ * @var {boolean} $include-default-icons
+ * Optionally remove the default icon set which includes the following toolbar and tab bar icons: action,
+ * add, arrow_down, arrow_left, arrow_right, arrow_up, bookmarks, compose, delete, download, favorites,
+ * home, info, locate, maps, more, organize, refresh, reply, search, settings, star, team, time, trash,
+ * and user. Set to false to reduce CSS weight.
+ */;@;	[ ;io;;o;;T;@;i;"include-default-icons;@;	[ ;i;"!defaulto;
+
+;;;["©/**
+ * @var {boolean} $include-form-sliders
+ * Decides if default HTML styles are included (for components with styleHtmlContent: true). Class is applied to .x-html.
+ */;@;	[ ;io;;o;;T;@;i ;"include-form-sliders;@;	[ ;i ;"!defaulto;
+
+;;;["|/**
+ * @var {boolean} $include-default-uis
+ * Decides whether or not to include the default UIs for all components.
+ */;@;	[ ;i"o;;o;;T;@;i&;"include-default-uis;@;	[ ;i&;"!defaulto;
+
+;;;["ù/**
+ * @var {color} $active-color
+ * Color used for elements like selected rows, "action" UIs (eg. on buttons) and certain overlays like the picker mask.
+ */;@;	[ ;i(o;
+
+;:silent;["J/*$active-color: darken(saturate($base-color, 55%), 10%) !default; */;@;	[ ;i,o;
+
+;;;["Z/**
+ * @var {color} $page-bg-color
+ * Background color for fullscreen components.
+ */;@;	[ ;i.o;
+
+;;;["(/*$page-bg-color: #eee !default; */;@;	[ ;i2o;
+
+;;;["h/**
+ * @var {measurement} $global-row-height
+ * The minimum row height for items like toolbars.
+ */;@;	[ ;i4o;;o:Sass::Script::Number;f2.6000000000000001 ÃÕ;@:@denominator_units[ ;i8:@numerator_units["em:@original"
+2.6em;"global-row-height;@;	[ ;i8;"!defaulto;
+
+;;;["h/**
+ * @var {measurement} $global-row-height
+ * The minimum row height for items like toolbars.
+ */;@;	[ ;i:o;;o;;i3;@;[ ;i>;["px;"	46px;"global-list-height;@;	[ ;i>;"!defaulto;
+
+;;;["l/**
+ * @var {color} $loading-spinner-color
+ * Background-color for the bars in the loading spinner.
+ */;@;	[ ;i@o;;o:Sass::Script::Color	;0;@;iD:@attrs{	:redi™:
+alphai:
+greeni™:	bluei™;"loading-spinner-color;@;	[ ;iD;"!defaulto;
+
+;;;["/**
+ * color styles
+ */;@;	[ ;iFo;;o;;T;@;iJ;"dark-theme;@;	[ ;iJ;"!defaulto;;o;	;0;@;iK;{	;i$;i;i$;i$;"dialog-color;@;	[ ;iK;0o;
+
+;;;["z/**
+ * @var {color} $base-color
+ * The primary color variable from which most elements derive their color scheme.
+ */;@;	[ ;iMo;;o:Sass::Script::Funcall;"	rgba;@:@splat0;iQ:@keywords{ :
+@args[	o;;ië;@;[ ;iQ;[ ;"145o;;i ;@;@~;iQ;[ ;"0o;;ië;@;@~;iQ;[ ;"145o;;i;@;@~;iQ;[ ;"1;"base-color;@;	[ ;iQ;"!defaulto;
+
+;;;["/* Triton Blue */;@;	[ ;iQo;
+
+;;;["/**
+ * Light theme
+ */;@;	[ ;iSo;;o;	;0;@;iV;{	;iˇ;i;iˇ;iˇ;"light-background-color;@;	[ ;iV;"!defaulto;;o;	;0;@;iW;{	;i;i;i;i;"light-foreground-color;@;	[ ;iW;"!defaulto;;o;	;0;@;iX;{	;i›;i;i›;i›;"light-inactive-color;@;	[ ;iX;"!defaulto;
+
+;;;["/* Form fields */;@;	[ ;iZo;;o;	;0;@;i[;{	;iˇ;i;iˇ;iˇ;"!light-field-background-color;@;	[ ;i[;"!defaulto;;o;	;0;@;i\;{	;i∫;i;i∫;i∫;"light-field-border-color;@;	[ ;i\;"!defaulto;;o;	;0;@;i];{	;i ;i;i ;i ;"light-field-color;@;	[ ;i];"!defaulto;;o;	;0;@;i^;{	;i;i;i;i;""light-field-placeholder-color;@;	[ ;i^;"!defaulto;;o;	;0;@;i_;{	;iˇ;i;iˇ;iˇ;"'light-field-focus-background-color;@;	[ ;i_;"!defaulto;;o;	;0;@;i`;{	;ia;i;ia;ia;"#light-field-focus-border-color;@;	[ ;i`;"!defaulto;;o;	;0;@;ia;{	;iÍ;i;iÍ;iÍ;"*light-field-disabled-background-color;@;	[ ;ia;"!defaulto;;o;	;0;@;ib;{	;iŸ;i;iŸ;iŸ;"&light-field-disabled-border-color;@;	[ ;ib;"!defaulto;;o;	;0;@;ic;{	;iü;i;iü;iü;"light-field-disabled-color;@;	[ ;ic;"!defaulto;;o;	;0;@;id;{	;iΩ;i;iΩ;iΩ;"+light-field-disabled-placeholder-color;@;	[ ;id;"!defaulto;;o;	;0;@;if;{	;i∆;i;i∆;i∆;"'light-form-slider-background-color;@;	[ ;if;"!defaulto;;o:Sass::Script::Variable	;"base-color;@;ig:@underscored_name"base_color;"-light-form-slider-value-background-color;@;	[ ;ig;"!defaulto;;o;	;0;@;ih;{	;i ;i;i ;i ;"-light-form-slider-thumb-background-color;@;	[ ;ih;"!defaulto;;o;	;0;@;ii;{	;i€;i;i€;i€;"0light-form-slider-disabled-background-color;@;	[ ;ii;"!defaulto;;o;	;0;@;ij;{	;i∫;i;i∫;i∫;"6light-form-slider-disabled-value-background-color;@;	[ ;ij;"!defaulto;;o;	;0;@;ik;{	;i†;i;i†;i†;"6light-form-slider-disabled-thumb-background-color;@;	[ ;ik;"!defaulto;;o;	;0;@;im;{	;i¶;i;i¶;i¶;"'light-form-toggle-background-color;@;	[ ;im;"!defaulto;;o;	;0;@;in;{	;i¶;i;i¶;i¶;"#light-form-toggle-border-color;@;	[ ;in;"!defaulto;;o;#	;"-light-form-slider-thumb-background-color;@;io;$"-light_form_slider_thumb_background_color;"-light-form-toggle-thumb-background-color;@;	[ ;io;"!defaulto;;o;	;0;@;ip;{	;i‡;i;i‡;i‡;"0light-form-toggle-disabled-background-color;@;	[ ;ip;"!defaulto;;o;	;0;@;iq;{	;iÃ;i;iÃ;iÃ;",light-form-toggle-disabled-border-color;@;	[ ;iq;"!defaulto;;o;	;0;@;ir;{	;i¶;i;i¶;i¶;"6light-form-toggle-disabled-thumb-background-color;@;	[ ;ir;"!defaulto;
+
+;;;["/**
+ * Dark theme
+ */;@;	[ ;ito;;o;	;0;@;iw;{	;i;i;i;i;"dark-background-color;@;	[ ;iw;"!defaulto;;o;	;0;@;ix;{	;iˇ;i;iˇ;iˇ;"dark-foreground-color;@;	[ ;ix;"!defaulto;;o;	;0;@;iy;{	;ik;i;ik;ik;"dark-inactive-color;@;	[ ;iy;"!defaulto;
+
+;;;["/* Form fields */;@;	[ ;i{o;;o;	;0;@;i|;{	;i“;i;i“;i“;" dark-field-background-color;@;	[ ;i|;"!defaulto;;o;	;0;@;i};{	;i“;i;i“;i“;"dark-field-border-color;@;	[ ;i};"!defaulto;;o;;"	rgba;@; 0;i~;!{ ;"[	o;;i ;@;@~;i~;[ ;"0o;;i ;@;@~;i~;[ ;"0o;;i ;@;@~;i~;[ ;"0o;;f0.80000000000000004 ôö;@;@~;i~;[ ;"0.8;"dark-field-color;@;	[ ;i~;"!defaulto;;o;;"	rgba;@; 0;i;!{ ;"[	o;;i ;@;@~;i;[ ;"0o;;i ;@;@~;i;[ ;"0o;;i ;@;@~;i;[ ;"0o;;f0.59999999999999998 33;@;@~;i;[ ;"0.6;"!dark-field-placeholder-color;@;	[ ;i;"!defaulto;;o;	;0;@;i{;{	;iˇ;i;iˇ;iˇ;"&dark-field-focus-background-color;@;	[ ;i{;"!defaulto;;o;	;0;@;i|;{	;iˇ;i;iˇ;iˇ;""dark-field-focus-border-color;@;	[ ;i|;"!defaulto;;o;	;0;@;i};{	;i";i;i";i";")dark-field-disabled-background-color;@;	[ ;i};"!defaulto;;o;	;0;@;i~;{	;i|;i;i|;i|;"%dark-field-disabled-border-color;@;	[ ;i~;"!defaulto;;o;;"	rgba;@; 0;i;!{ ;"[	o;;iˇ;@;@~;i;[ ;"255o;;iˇ;@;@~;i;[ ;"255o;;iˇ;@;@~;i;[ ;"255o;;f0.40000000000000002 ôö;@;@~;i;[ ;"0.4;"dark-field-disabled-color;@;	[ ;i;"!defaulto;;o;;"	rgba;@; 0;iÄ;!{ ;"[	o;;iˇ;@;@~;iÄ;[ ;"255o;;iˇ;@;@~;iÄ;[ ;"255o;;iˇ;@;@~;iÄ;[ ;"255o;;f0.20000000000000001 ôö;@;@~;iÄ;[ ;"0.2;"*dark-field-disabled-placeholder-color;@;	[ ;iÄ;"!defaulto;;o;	;0;@;iÇ;{	;iq;i;iq;iq;"&dark-form-slider-background-color;@;	[ ;iÇ;"!defaulto;;o;#	;"base-color;@;iÉ;$"base_color;",dark-form-slider-value-background-color;@;	[ ;iÉ;"!defaulto;;o;	;0;@;iÑ;{	;iˇ;i;iˇ;iˇ;",dark-form-slider-thumb-background-color;@;	[ ;iÑ;"!defaulto;;o;	;0;@;iÖ;{	;i=;i;i=;i=;"/dark-form-slider-disabled-background-color;@;	[ ;iÖ;"!defaulto;;o;	;0;@;iÜ;{	;iX;i;iX;iX;"5dark-form-slider-disabled-value-background-color;@;	[ ;iÜ;"!defaulto;;o;	;0;@;iá;{	;i~;i;i~;i~;"5dark-form-slider-disabled-thumb-background-color;@;	[ ;iá;"!defaulto;;o;	;0;@;iâ;{	;ip;i;ip;ip;"&dark-form-toggle-background-color;@;	[ ;iâ;"!defaulto;;o;	;0;@;iä;{	;iq;i;iq;iq;""dark-form-toggle-border-color;@;	[ ;iä;"!defaulto;;o;#	;",dark-form-slider-thumb-background-color;@;iã;$",dark_form_slider_thumb_background_color;",dark-form-toggle-thumb-background-color;@;	[ ;iã;"!defaulto;;o;	;0;@;iå;{	;i=;i;i=;i=;"/dark-form-toggle-disabled-background-color;@;	[ ;iå;"!defaulto;;o;	;0;@;iç;{	;iO;i;iO;iO;"+dark-form-toggle-disabled-border-color;@;	[ ;iç;"!defaulto;;o;	;0;@;ié;{	;iq;i;iq;iq;"5dark-form-toggle-disabled-thumb-background-color;@;	[ ;ié;"!defaulto;
+
+;;;[",/**
+ * Default values (light theme)
+ */;@;	[ ;iêo;;o;#	;"light-background-color;@;iî;$"light_background_color;"background-color;@;	[ ;iî;"!defaulto;;o;#	;"light-foreground-color;@;iï;$"light_foreground_color;"foreground-color;@;	[ ;iï;"!defaulto;;o;#	;"light-inactive-color;@;iñ;$"light_inactive_color;"inactive-color;@;	[ ;iñ;"!defaulto;
+
+;;;["/* Form fields */;@;	[ ;iòo;;o;#	;"!light-field-background-color;@;iô;$"!light_field_background_color;"field-background-color;@;	[ ;iô;"!defaulto;;o;#	;"light-field-border-color;@;iö;$"light_field_border_color;"field-border-color;@;	[ ;iö;"!defaulto;;o;#	;"light-field-color;@;iõ;$"light_field_color;"field-color;@;	[ ;iõ;"!defaulto;;o;#	;""light-field-placeholder-color;@;iú;$""light_field_placeholder_color;"field-placeholder-color;@;	[ ;iú;"!defaulto;;o;#	;"'light-field-focus-background-color;@;iù;$"'light_field_focus_background_color;"!field-focus-background-color;@;	[ ;iù;"!defaulto;;o;#	;"#light-field-focus-border-color;@;iû;$"#light_field_focus_border_color;"field-focus-border-color;@;	[ ;iû;"!defaulto;;o;#	;"*light-field-disabled-background-color;@;iü;$"*light_field_disabled_background_color;"$field-disabled-background-color;@;	[ ;iü;"!defaulto;;o;#	;"&light-field-disabled-border-color;@;i†;$"&light_field_disabled_border_color;" field-disabled-border-color;@;	[ ;i†;"!defaulto;;o;#	;"light-field-disabled-color;@;i°;$"light_field_disabled_color;"field-disabled-color;@;	[ ;i°;"!defaulto;;o;#	;"+light-field-disabled-placeholder-color;@;i¢;$"+light_field_disabled_placeholder_color;"%field-disabled-placeholder-color;@;	[ ;i¢;"!defaulto;;o;#	;"'light-form-slider-background-color;@;i§;$"'light_form_slider_background_color;"!form-slider-background-color;@;	[ ;i§;"!defaulto;;o;#	;"-light-form-slider-value-background-color;@;i•;$"-light_form_slider_value_background_color;"'form-slider-value-background-color;@;	[ ;i•;"!defaulto;;o;#	;"-light-form-slider-thumb-background-color;@;i¶;$"-light_form_slider_thumb_background_color;"'form-slider-thumb-background-color;@;	[ ;i¶;"!defaulto;;o;#	;"0light-form-slider-disabled-background-color;@;iß;$"0light_form_slider_disabled_background_color;"*form-slider-disabled-background-color;@;	[ ;iß;"!defaulto;;o;#	;"6light-form-slider-disabled-value-background-color;@;i®;$"6light_form_slider_disabled_value_background_color;"0form-slider-disabled-value-background-color;@;	[ ;i®;"!defaulto;;o;#	;"6light-form-slider-disabled-thumb-background-color;@;i©;$"6light_form_slider_disabled_thumb_background_color;"0form-slider-disabled-thumb-background-color;@;	[ ;i©;"!defaulto;;o;#	;"'light-form-toggle-background-color;@;i´;$"'light_form_toggle_background_color;"!form-toggle-background-color;@;	[ ;i´;"!defaulto;;o;#	;"#light-form-toggle-border-color;@;i¨;$"#light_form_toggle_border_color;"form-toggle-border-color;@;	[ ;i¨;"!defaulto;;o;#	;"'form-slider-thumb-background-color;@;i≠;$"'form_slider_thumb_background_color;"'form-toggle-thumb-background-color;@;	[ ;i≠;"!defaulto;;o;#	;"0light-form-toggle-disabled-background-color;@;iÆ;$"0light_form_toggle_disabled_background_color;"*form-toggle-disabled-background-color;@;	[ ;iÆ;"!defaulto;;o;#	;",light-form-toggle-disabled-border-color;@;iØ;$",light_form_toggle_disabled_border_color;"&form-toggle-disabled-border-color;@;	[ ;iØ;"!defaulto;;o;#	;"6light-form-toggle-disabled-thumb-background-color;@;i∞;$"6light_form_toggle_disabled_thumb_background_color;"0form-toggle-disabled-thumb-background-color;@;	[ ;i∞;"!defaultu:Sass::Tree::IfNode¶[o:Sass::Script::Variable	:
+@name"dark-theme:@options{ :
+@linei≤:@underscored_name"dark_theme0[o:Sass::Tree::VariableNode:
+@expro; 	;"dark-background-color;@;i≥;	"dark_background_color;"background-color;@:@children[ ;i≥:@guarded0o;
+;o; 	;"dark-foreground-color;@;i¥;	"dark_foreground_color;"foreground-color;@;[ ;i¥;0o;
+;o; 	;"dark-inactive-color;@;iµ;	"dark_inactive_color;"inactive-color;@;[ ;iµ;0o:Sass::Tree::CommentNode
+:
+@type:silent:@value["/* Form fields */;@;[ ;i∑o;
+;o; 	;" dark-field-background-color;@;i∏;	" dark_field_background_color;"field-background-color;@;[ ;i∏;0o;
+;o; 	;"dark-field-border-color;@;iπ;	"dark_field_border_color;"field-border-color;@;[ ;iπ;0o;
+;o; 	;"dark-field-color;@;i∫;	"dark_field_color;"field-color;@;[ ;i∫;0o;
+;o; 	;"!dark-field-placeholder-color;@;iª;	"!dark_field_placeholder_color;"field-placeholder-color;@;[ ;iª;0o;
+;o; 	;"&dark-field-focus-background-color;@;iº;	"&dark_field_focus_background_color;"!field-focus-background-color;@;[ ;iº;0o;
+;o; 	;""dark-field-focus-border-color;@;iΩ;	""dark_field_focus_border_color;"field-focus-border-color;@;[ ;iΩ;0o;
+;o; 	;")dark-field-disabled-background-color;@;iæ;	")dark_field_disabled_background_color;"$field-disabled-background-color;@;[ ;iæ;0o;
+;o; 	;"%dark-field-disabled-border-color;@;iø;	"%dark_field_disabled_border_color;" field-disabled-border-color;@;[ ;iø;0o;
+;o; 	;"dark-field-disabled-color;@;i¿;	"dark_field_disabled_color;"field-disabled-color;@;[ ;i¿;0o;
+;o; 	;"*dark-field-disabled-placeholder-color;@;i¡;	"*dark_field_disabled_placeholder_color;"%field-disabled-placeholder-color;@;[ ;i¡;0o;
+;o; 	;"&dark-form-slider-background-color;@;i√;	"&dark_form_slider_background_color;"!form-slider-background-color;@;[ ;i√;0o;
+;o; 	;",dark-form-slider-value-background-color;@;iƒ;	",dark_form_slider_value_background_color;"'form-slider-value-background-color;@;[ ;iƒ;0o;
+;o; 	;",dark-form-slider-thumb-background-color;@;i≈;	",dark_form_slider_thumb_background_color;"'form-slider-thumb-background-color;@;[ ;i≈;0o;
+;o; 	;"/dark-form-slider-disabled-background-color;@;i∆;	"/dark_form_slider_disabled_background_color;"*form-slider-disabled-background-color;@;[ ;i∆;0o;
+;o; 	;"5dark-form-slider-disabled-value-background-color;@;i«;	"5dark_form_slider_disabled_value_background_color;"0form-slider-disabled-value-background-color;@;[ ;i«;0o;
+;o; 	;"5dark-form-slider-disabled-thumb-background-color;@;i»;	"5dark_form_slider_disabled_thumb_background_color;"0form-slider-disabled-thumb-background-color;@;[ ;i»;0o;
+;o; 	;"&dark-form-toggle-background-color;@;i ;	"&dark_form_toggle_background_color;"!form-toggle-background-color;@;[ ;i ;0o;
+;o; 	;""dark-form-toggle-border-color;@;iÀ;	""dark_form_toggle_border_color;"form-toggle-border-color;@;[ ;iÀ;0o;
+;o; 	;"'form-slider-thumb-background-color;@;iÃ;	"'form_slider_thumb_background_color;"'form-toggle-thumb-background-color;@;[ ;iÃ;0o;
+;o; 	;"/dark-form-toggle-disabled-background-color;@;iÕ;	"/dark_form_toggle_disabled_background_color;"*form-toggle-disabled-background-color;@;[ ;iÕ;0o;
+;o; 	;"+dark-form-toggle-disabled-border-color;@;iŒ;	"+dark_form_toggle_disabled_border_color;"&form-toggle-disabled-border-color;@;[ ;iŒ;0o;
+;o; 	;"5dark-form-toggle-disabled-thumb-background-color;@;iœ;	"5dark_form_toggle_disabled_thumb_background_color;"0form-toggle-disabled-thumb-background-color;@;[ ;iœ;0o;;o;;i;@;[ ;i“;["px;"	11px;"form-slider-height;@;	[ ;i“;"!defaulto;;o;	;0;@;i‘;{	;iˇ;i;i ;i ;"alert-color;@;	[ ;i‘;"!defaulto;;o;	;0;@;i’;{	;ií;i;iœ;i ;"confirm-color;@;	[ ;i’;"!defaulto;
+
+;;;["/* Green */;@;	[ ;i’o;
+
+;;;["/**
+* font sizes
+*/;@;	[ ;i◊o;;o;;i;@;[ ;i⁄;["pt;"	10pt;"font-size-small;@;	[ ;i⁄;"!defaulto;;o;;i;@;[ ;i€;["pt;"	11pt;"font-size-normal;@;	[ ;i€;"!defaulto;;o;;i;@;[ ;i‹;["pt;"	15pt;"font-size-medium;@;	[ ;i‹;"!defaulto;;o;;i;@;[ ;i›;["pt;"	17pt;"font-size-medium-large;@;	[ ;i›;"!defaulto;;o;;i;@;[ ;iﬁ;["pt;"	19pt;"font-size-large;@;	[ ;iﬁ;"!defaulto;;o;;i;@;[ ;iﬂ;["pt;"	24pt;"font-size-extra-large;@;	[ ;iﬂ;"!default;i

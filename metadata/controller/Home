@@ -1,0 +1,66 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Home"
+    },
+    "designerId": "bd332bf6-cc41-4ee8-bb2b-2dd7545503ec",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "homeDataView",
+                "selector": "#HomeDataView"
+            },
+            "designerId": "e0add1d9-1a3c-47c3-8d82-da0d45978b33"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "loadStore",
+                "designer|params": [
+                    "store"
+                ],
+                "implHandler": [
+                    "var records = [];",
+                    "",
+                    "if(store.getData().length !== 0){",
+                    "    ",
+                    "    store.sort('Created', 'ASC');",
+                    "    ",
+                    "\tfor(var i = 0; i<4; i++){",
+                    "        if(store.getData().items[i]){",
+                    "            records.push(store.getData().items[i]);",
+                    "        }",
+                    "\t}",
+                    "}",
+                    "",
+                    "var store2 = Ext.create('Ext.data.Store');",
+                    "",
+                    "store2.add(records);",
+                    "",
+                    "var hdv = this.getHomeDataView();",
+                    "",
+                    "if(hdv){",
+                    "    hdv.setStore(store2);",
+                    "}"
+                ]
+            },
+            "designerId": "364da72b-3baa-450b-90e5-ba6634bd2eaa"
+        }
+    ]
+}
