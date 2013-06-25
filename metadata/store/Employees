@@ -1,0 +1,32 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "Employee",
+        "storeId": "Employees",
+        "designer|userClassName": "Employees"
+    },
+    "designerId": "8ce1628d-37c6-47ae-8d0b-d0ed699bb07c",
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onStoreAddrecords",
+                "implHandler": [
+                    "console.log(\"Employees store is synced yo\");"
+                ],
+                "name": "addrecords"
+            },
+            "designerId": "0b322140-95a9-4a5b-b51d-d7829e88066c"
+        }
+    ]
+}

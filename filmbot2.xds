@@ -4,16 +4,16 @@
         "urlPrefix": "http://localhost:8888/filmbot/",
         "spacesToIndent": 4,
         "exportPath": "/Users/josephfisher/Documents/web/filmbotp",
-        "sdkPath": "/Users/josephfisher/Documents/web/touch-2.2.1",
+        "sdkPath": "/Users/josephfisher/Documents/web/filmbot/touch-2.2.1",
         "lineEnding": "LF",
         "genTimestamps": false,
         "cacheBust": false,
         "buildShouldOverwriteIndex": true
     },
     "xdsVersion": "2.2.2",
-    "xdsBuild": 971,
+    "xdsBuild": 991,
     "schemaVersion": 1,
-    "upgradeVersion": 210000000501,
+    "upgradeVersion": 210000000503,
     "framework": "touch22",
     "topInstanceFileMap": {
         "29fa902f-f9ae-4776-8892-e4a47fae4132": {
@@ -220,18 +220,6 @@
             ],
             "className": "ioLoginbutton"
         },
-        "e77d5b87-5f6a-4385-a2ed-082ad1912b6d": {
-            "paths": [
-                "metadata/resource/js1"
-            ],
-            "className": "js1"
-        },
-        "f2f12b83-f9b2-4f4a-8744-100ab7cd0f2d": {
-            "paths": [
-                "metadata/resource/js3"
-            ],
-            "className": "js3"
-        },
         "bd332bf6-cc41-4ee8-bb2b-2dd7545503ec": {
             "paths": [
                 "metadata/controller/Home",
@@ -240,11 +228,71 @@
             ],
             "className": "Home"
         },
-        "ce0191f8-6b31-42e5-8f89-baaff0618d6b": {
+        "519d35ed-d5f8-491a-9025-c97d87ab7bb7": {
             "paths": [
-                "metadata/resource/css"
+                "metadata/view/Customers",
+                "app/view/override/Customers.js",
+                "app/view/Customers.js"
             ],
-            "className": "css"
+            "className": "Customers"
+        },
+        "c6b97797-21f5-424f-b970-4ed7e745d2df": {
+            "paths": [
+                "metadata/view/Employees",
+                "app/view/override/Employees.js",
+                "app/view/Employees.js"
+            ],
+            "className": "Employees"
+        },
+        "2c899366-fbc0-40a4-ae0e-ea33285d70e6": {
+            "paths": [
+                "metadata/controller/Employee",
+                "app/controller/override/Employee.js",
+                "app/controller/Employee.js"
+            ],
+            "className": "Employee"
+        },
+        "d0bc8a67-7854-4e82-b002-58efde0f4d6b": {
+            "paths": [
+                "metadata/model/Employee",
+                "app/model/override/Employee.js",
+                "app/model/Employee.js"
+            ],
+            "className": "Employee"
+        },
+        "8ce1628d-37c6-47ae-8d0b-d0ed699bb07c": {
+            "paths": [
+                "metadata/store/Employees",
+                "app/store/override/Employees.js",
+                "app/store/Employees.js"
+            ],
+            "className": "Employees"
+        },
+        "59b6292d-4ebc-438d-9a1c-e9db2bc6bb1d": {
+            "paths": [
+                "metadata/resource/js2"
+            ],
+            "className": "js2"
+        },
+        "448601b8-fe5f-44d3-b275-2cc6d819bc81": {
+            "paths": [
+                "metadata/resource/js3"
+            ],
+            "className": "js3"
+        },
+        "bacbbb86-4e17-4a81-ac18-1a23b3f7e6f5": {
+            "paths": [
+                "metadata/resource/js4"
+            ],
+            "className": "js4"
+        },
+        "63b5fc05-7f51-4b46-8251-c1ad896252de": {
+            "paths": [
+                "metadata/view/Stats",
+                "app/view/override/Stats.js",
+                "app/view/Stats.js"
+            ],
+            "className": "Stats"
         }
     },
     "viewOrderMap": {
@@ -252,16 +300,20 @@
             "b3f2106a-71f7-4376-bd89-4f8375f14523",
             "155afc20-1a68-487b-9b92-432888bb2798",
             "feaff807-b000-4a81-b3db-9b6ffb8fc032",
+            "519d35ed-d5f8-491a-9025-c97d87ab7bb7",
+            "c6b97797-21f5-424f-b970-4ed7e745d2df",
+            "63b5fc05-7f51-4b46-8251-c1ad896252de",
             "c63b3ac9-c6d5-4e20-900a-96ad11f57e64",
-            "f07de2a3-84c6-4636-9377-8ff4b2f212f7",
             "519762ee-0acf-42ef-9c81-2d5b3d9245f3",
             "06af2c6f-3e92-4434-be6c-50169e37c3ed",
+            "f07de2a3-84c6-4636-9377-8ff4b2f212f7",
             "05678a88-ca74-4267-b43d-8ff0ed14ae1c"
         ],
         "store": [
             "29582cfd-f2f6-4569-a611-17751df61290",
             "fa9e65ed-6809-4917-82a8-ee7cf818d219",
             "3a4307cd-1cda-4bf5-a35b-f302e822271c",
+            "8ce1628d-37c6-47ae-8d0b-d0ed699bb07c",
             "5d689f4b-9979-480b-adc7-4123be2b4822",
             "9f4cebd1-66ff-48a1-be7c-1e42e6f2be01"
         ],
@@ -272,21 +324,23 @@
             "0628d1f3-a4bb-4e60-83d1-34257d7a0185",
             "09c1fa57-66c8-4591-925d-7db1f10f8235",
             "b51b9561-f334-4037-b24b-c9061aaf896d",
-            "bd332bf6-cc41-4ee8-bb2b-2dd7545503ec"
+            "bd332bf6-cc41-4ee8-bb2b-2dd7545503ec",
+            "2c899366-fbc0-40a4-ae0e-ea33285d70e6"
         ],
         "model": [
             "a2a330a7-0521-4237-abc3-227363b7c74b",
             "92e22847-1d7c-421b-933f-c0f517e47d29",
             "7f56159a-30d7-4955-a79f-ed63b7b1e91c",
-            "07e3437e-1ed5-4435-badb-6834d843dacc"
+            "07e3437e-1ed5-4435-badb-6834d843dacc",
+            "d0bc8a67-7854-4e82-b002-58efde0f4d6b"
         ],
         "resource": [
             "29fa902f-f9ae-4776-8892-e4a47fae4132",
             "ca58ae0a-5113-4c2f-9fcf-c77efce39a6b",
             "8418c8dc-3658-47e5-b8d2-61bd7fa8bef5",
-            "e77d5b87-5f6a-4385-a2ed-082ad1912b6d",
-            "f2f12b83-f9b2-4f4a-8744-100ab7cd0f2d",
-            "ce0191f8-6b31-42e5-8f89-baaff0618d6b"
+            "59b6292d-4ebc-438d-9a1c-e9db2bc6bb1d",
+            "448601b8-fe5f-44d3-b275-2cc6d819bc81",
+            "bacbbb86-4e17-4a81-ac18-1a23b3f7e6f5"
         ],
         "app": [
             "application"

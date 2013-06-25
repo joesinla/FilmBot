@@ -1,0 +1,25 @@
+/******  COLOR PALLETTE  ************/
+
+$foundation-background: rgb(115,126,132);
+$foundation-navbar: rgb(19,153,189);
+$foundation-secondary: rgb(19,167,199);
+$foundation-grey: rgb(115,126,132);
+$flatui-darkblue: rgb(53,64,81);
+$black: rgb(34,34,34);
+$base-font-family: 'lobster';
+
+/*****************************/
+
+
+/*******  FONTS  *******/
+
+@import url("http://fonts.googleapis.com/css?family=Open+Sans");
+@import url("http://fonts.googleapis.com/css?family=Lobster");
+@import url("http://fonts.googleapis.com/css?family=Prata");
+
+@font-face{
+	font-family: futuraStd-Book;
+	src: url('../fonts/FuturaStd-Book.otf');
+}
+
+/*****************************/

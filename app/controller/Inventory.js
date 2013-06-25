@@ -19,7 +19,10 @@ Ext.define('MyApp.controller.Inventory', {
     config: {
         refs: {
             inventory: '#inventory',
-            invForm: '#InventoryForm'
+            invForm: '#InventoryForm',
+            invformField: '#invForm .x-field',
+            errorField: '#errorField',
+            filmAddButton: '#InventoryEnter'
         },
 
         control: {
@@ -34,12 +37,16 @@ Ext.define('MyApp.controller.Inventory', {
             },
             "#InventoryList": {
                 disclose: 'onListDisclose'
+            },
+            "#InventoryForm textfield": {
+                blur: 'onInvformTextfieldBlur',
+                focus: 'onTextareafieldFocus'
             }
         }
     },
 
     onAddInventoryButtonTap: function(button, e, eOpts) {
-        this.getInventory().animateActiveItem(1, {type:'slide',direction:'up'});
+        this.getInventory().animateActiveItem(1, {type:'slide', direction:'up'});
 
         var bttn = Ext.getCmp('addInventory');
 
@@ -63,14 +70,6 @@ Ext.define('MyApp.controller.Inventory', {
     },
 
     onInventoryEnterButtonTap: function(button, e, eOpts) {
-        Ext.Viewport.setMasked({
-            xtype: 'loadmask',
-            message: 'Added Roll'
-        });
-        new Ext.util.DelayedTask(function () {
-            Ext.Viewport.setMasked(false);    
-        }).delay(450);
-
         this.addRoll();
     },
 
@@ -89,6 +88,48 @@ Ext.define('MyApp.controller.Inventory', {
         });
     },
 
+    onInvformTextfieldBlur: function(textfield, e, eOpts) {
+        var value = textfield.getValue();
+
+        switch (textfield.id){
+            case "MnfField":
+            case "TypeField":
+            if(!isNaN(value)){
+                textfield.setCls("error");
+            }
+            case "RollNumberField": 
+            if(value.length < 3){
+                textfield.setCls("error");
+            }
+            break;
+
+            case "ShadeField":
+            if(value > 100 || isNaN(value)){
+                textfield.setCls("error");
+            }
+            break;
+
+            case "SizeField":
+            case "LinearFeetField":
+            if(value > 100  || isNaN(value)){
+                textfield.setCls("error");
+            }
+            break;
+        }
+    },
+
+    onTextareafieldFocus: function(textfield, e, eOpts) {
+        for(var i = 0; i < textfield.getCls().length; i++){
+            if(textfield.getCls()[i] === "error"){
+                textfield.removeCls("error");
+                textfield.reset();
+            }
+            if(this.getFilmAddButton().getText() === "Film Added!"){
+                this.getFilmAddButton().setText("Add");
+            }
+        }
+    },
+
     addRoll: function(record) {
         //get form and values
         var form = this.getInvForm();
@@ -98,19 +139,41 @@ Ext.define('MyApp.controller.Inventory', {
         var rollModel = Ext.create('MyApp.model.Roll', formData);
 
 
-        //get store
-        var rollStore = Ext.getStore('Rolls');
+        //validate model
 
-        record = rollStore.findRecord('RollNumber', formData.RollNumber,0,false,false,true);
+        var errors = rollModel.validate();
 
-        if(record !== null){
-            alert('This roll already exists.');
-        }else{            
+        if(!errors.isValid()){
+            var errField = this.getErrorField();
+            //add error data to error div
+            errField.setData(errors);
+            console.log('errfield',errField);
+            //show errors
+            errField.show();
+        }else{
 
-            rollStore.add(rollModel);
-            rollStore.sync();//Ext.bind(this.getApplication().getController('ioControl').syncCallback, this));
-            rollStore.load();
-            //form.reset();
+            //get store
+            var rollStore = Ext.getStore('Rolls');
+
+            record = rollStore.findRecord('RollNumber', formData.RollNumber,0,false,false,true);
+
+            if(record !== null){
+                alert('This roll already exists.');
+            }else{            
+
+                rollStore.add(rollModel);
+                rollStore.sync();//Ext.bind(this.getApplication().getController('ioControl').syncCallback, this));
+                rollStore.load();
+
+                //reset form, set button text, clear errors
+                form.reset();
+                this.getErrorField().setData();
+                console.log('has data?',this.getErrorField())
+                this.getFilmAddButton().setText("Film Added!");
+                this.getErrorField().hide();
+            }
+
+
         }
     },
 
@@ -268,6 +331,17 @@ Ext.define('MyApp.controller.Inventory', {
             case 'update':
             console.log('update records', records);
             break;
+        }
+    },
+
+    validate: function(field) {
+        var data = field.getValue();
+
+        if(data.length > 2){
+            field.removeCls("error");
+            return true;
+        }else{
+            field.addCls("error");
         }
     }
 

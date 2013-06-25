@@ -50,6 +50,56 @@
                         "designer|displayName": "itemTpl"
                     },
                     "designerId": "51ccdf1d-9fb5-4b91-bed3-971c7ff5e147"
+                },
+                {
+                    "type": "Ext.Component",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoUpload": true,
+                        "loadAsDataUrl": true,
+                        "states": [
+                            "{",
+                            "    browse: {",
+                            "        text: 'Browse and load'",
+                            "    },",
+                            "    ready: {",
+                            "        text: 'Load'",
+                            "    },",
+                            "    uploading: {",
+                            "        text: 'Loading',",
+                            "        loading: false",
+                            "    }",
+                            "}"
+                        ],
+                        "designer|createAlias": "fileupload"
+                    },
+                    "configAlternates": {
+                        "autoUpload": "boolean",
+                        "loadAsDataUrl": "boolean",
+                        "states": "object"
+                    },
+                    "designerId": "aefe0134-ce89-417b-9651-c3f41d43d5a4",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "autoUpload",
+                            "type": "string"
+                        },
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "loadAsDataUrl",
+                            "type": "string"
+                        },
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "states",
+                            "type": "string"
+                        }
+                    ]
                 }
             ]
         }

@@ -6,7 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "url": "http://code.jquery.com/jquery-1.9.1.js"
+        "designer|userClassName": "js2",
+        "url": "js/jquery-1.9.1.js"
     },
-    "designerId": "30318d91-6283-4887-a40f-abb95277552a"
+    "designerId": "59b6292d-4ebc-438d-9a1c-e9db2bc6bb1d"
 }

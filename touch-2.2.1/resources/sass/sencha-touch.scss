@@ -1,32 +1,57 @@
-
-$foundation-background: rgb(115,126,132);
-$foundation-navbar: rgb(19,153,189);
-$foundation-secondary: rgb(19,167,199);
-$foundation-grey: rgb(115,126,132);
-
-$black: rgb(34,34,34);
- 
-
-
-$base-font-family: 'lobster';
-
+/******** SENCHA TOUCH THEME  ******/
 @import 'sencha-touch/default';
 @import 'sencha-touch/default/all';
+/***********************************/
 
-//@import 'sencha-touch/default/src/Panel';
-//@import 'sencha-touch/default/src/Button';
+/******* VARIABLES / FONTS  / MIXINS ********/
+@import "vars";
+@import "compass/css3";
+@import "FileUp";
+
+@mixin placeholder-style {
+	::-webkit-input-placeholder {
+	   color: red;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+	   color: red;  
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: red;  
+	}
+
+	:-ms-input-placeholder {  
+	   color: red;  
+	}
+}
 
 
-//@import "foundation";
-//@import 'bootstrap';
-@import 'compass/css3';
-//@import 'flatui/flat-ui';
+
+
+/**********************************/
+
+.invform-error {
+	background-color: rgb(231, 76, 60);
+	
+}
+
+.x-field.error .x-input-el{
+
+	color: red;
+}
+
+.btn {
+	
+	margin: 0 5% 0 5%;
+}
 
 
 
-@import url("http://fonts.googleapis.com/css?family=Open+Sans");
-@import url("http://fonts.googleapis.com/css?family=Lobster");
-@import url("http://fonts.googleapis.com/css?family=Prata");
+.x-toolbar {
+	background-color: $foundation-navbar
+}
+
 
 .window-wrapper img{
 	height: 75px;
@@ -80,16 +105,66 @@ $base-font-family: 'lobster';
 	border:2px solid red;
 }
 
+
 .x-slidenavigation-list {
 	color: white;
-	background-color: $black;
+	background-color: $flatui-darkblue;
 	border: 0;
 	
 	.x-list-item {
-		border: 0;
+		font-family: "FuturaStd-Book";
+   		font-weight: 200;
+   		letter-spacing: 1.2px;
+		border: 0 !important;
 		color: white;
 		height: 15px !important;
-		
 	}
+
 }
+
+.x-input-el.error {
+	color: red;
+}
+
+
+
+.x-toolbar {
+    padding: 0 ;
+
+    &.x-docked-left {
+        width: 7em;
+       
+    }
+
+    &.x-docked-right {
+        width: 7em;
+        
+    }
+}
+
+.x-title {
+   
+    font-size: 1.2em;
+    margin: 0 0.3em;
+    padding: 0 .3em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

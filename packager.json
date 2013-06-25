@@ -89,7 +89,7 @@
      *  - iPad
      *  - Universal
      */
-    "deviceType": "iPhone",
+    "deviceType": "Universal",
 
     /**
      * @cfg {String} androidAPILevel

@@ -13,7 +13,7 @@
         @include background-gradient(saturate($active-color, 10%));
         width: $list-disclosure-size;
         height: $list-disclosure-size;
-        //margin: 7px 7px 0 0;
+        margin: 7px 7px 0 0;
 
         &:before {
             @include absolute-position(0, 0, 0, 0);

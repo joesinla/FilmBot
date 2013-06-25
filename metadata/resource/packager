@@ -18,7 +18,7 @@
         "outputPath": "../build/",
         "configuration": "Debug",
         "platform": "iOSSimulator",
-        "deviceType": "iPhone",
+        "deviceType": "Universal",
         "androidAPILevel": "8",
         "permissions": [
             "INTERNET",

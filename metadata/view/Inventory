@@ -87,6 +87,7 @@
             "codeClass": null,
             "userConfig": {
                 "id": "InventoryForm",
+                "itemId": null,
                 "defaults": [
                     "{",
                     "    labelWidth: '40%'",
@@ -95,6 +96,55 @@
             },
             "designerId": "7cb2673d-0a3a-4abe-9dd0-b0a220e6f046",
             "cn": [
+                {
+                    "type": "Ext.Component",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "data": null,
+                        "docked": null,
+                        "height": null,
+                        "hidden": true,
+                        "id": "errorField",
+                        "showAnimation": [
+                            "{type :\"slide\",direction : \"down\"}"
+                        ],
+                        "style": null,
+                        "zIndex": null
+                    },
+                    "configAlternates": {
+                        "showAnimation": "object"
+                    },
+                    "designerId": "2073b287-5071-4222-93a9-2b7153d85745",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "tpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "implHandler": [
+                                    "<div class=\"invform-error\">",
+                                    "   ",
+                                    "    <p>{config.field}{config.message} hiiiiii</p>",
+                                    "    <p>{config.field}{config.message} hiiiiii</p>",
+                                    "    <p>{config.field}{config.message} hiiiiii</p>",
+                                    "    <p>{config.field}{config.message} hiiiiii</p>",
+                                    "    <p>{config.field}{config.message} hiiiiii</p>",
+                                    "    ",
+                                    "</div>"
+                                ],
+                                "designer|displayName": "tpl"
+                            },
+                            "designerId": "97645222-239e-4096-8bb3-8415b9fc339c"
+                        }
+                    ]
+                },
                 {
                     "type": "Ext.form.FieldSet",
                     "reference": {
@@ -121,11 +171,16 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "cls": [
+                                    "val"
+                                ],
                                 "id": "MnfField",
+                                "inputCls": "val",
                                 "label": null,
                                 "labelWidth": null,
-                                "labelWrap": true,
+                                "labelWrap": null,
                                 "name": "Manufacturer",
+                                "required": true,
                                 "autoComplete": true,
                                 "placeHolder": "Manufacturer"
                             },
@@ -140,6 +195,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "id": "TypeField",
+                                "inputCls": "val",
                                 "label": null,
                                 "name": "Type",
                                 "autoComplete": true,
@@ -148,23 +204,27 @@
                             "designerId": "94ac102f-8e30-45be-9778-bc4045b3713d"
                         },
                         {
-                            "type": "Ext.field.Text",
+                            "type": "Ext.field.Number",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "cls": [
+                                    "val"
+                                ],
                                 "id": "ShadeField",
                                 "label": null,
                                 "name": "Shade",
+                                "required": true,
                                 "autoComplete": true,
                                 "placeHolder": "Shade"
                             },
                             "designerId": "84df7877-c6de-403e-8c56-bb5056ebcac2"
                         },
                         {
-                            "type": "Ext.field.Text",
+                            "type": "Ext.field.Number",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -174,6 +234,7 @@
                                 "id": "SizeField",
                                 "label": null,
                                 "name": "Size",
+                                "required": true,
                                 "autoComplete": true,
                                 "placeHolder": "Size"
                             },
@@ -207,13 +268,14 @@
                                 "id": "RollNumberField",
                                 "label": null,
                                 "name": "RollNumber",
+                                "required": true,
                                 "autoComplete": false,
                                 "placeHolder": "Roll Number"
                             },
                             "designerId": "7b627642-4990-49a3-8d55-71a9cf064a15"
                         },
                         {
-                            "type": "Ext.field.Text",
+                            "type": "Ext.field.Number",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
@@ -223,6 +285,7 @@
                                 "id": "LinearFeetField",
                                 "label": null,
                                 "name": "LinearFeet",
+                                "required": true,
                                 "placeHolder": "Linear Feet"
                             },
                             "designerId": "06041c54-aa96-4f41-b297-9c14bc88bf44"
@@ -238,6 +301,7 @@
                                 "id": "PriceField",
                                 "label": null,
                                 "name": "Price",
+                                "required": true,
                                 "placeHolder": "Price"
                             },
                             "designerId": "d4bbf883-53c0-4b89-a71b-05dfd0733493"
@@ -252,7 +316,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "cls": [
+                            "btn"
+                        ],
                         "id": "InventoryEnter",
+                        "margin": "2%",
                         "ui": "action",
                         "iconCls": null,
                         "text": "Add"

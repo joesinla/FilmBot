@@ -103,7 +103,7 @@ Ext.define('MyApp.view.Orders', {
                                     {
                                         xtype: 'selectfield',
                                         id: 'FilmSelect',
-                                        label: 'Film',
+                                        placeHolder: 'Film',
                                         listeners: [
                                             {
                                                 fn: function(component, eOpts) {
@@ -117,15 +117,15 @@ Ext.define('MyApp.view.Orders', {
                                     {
                                         xtype: 'textfield',
                                         id: 'Location',
-                                        label: 'Location',
                                         name: 'Location',
-                                        autoCapitalize: true
+                                        autoCapitalize: true,
+                                        placeHolder: 'Location'
                                     },
                                     {
                                         xtype: 'selectfield',
                                         id: 'Direction',
-                                        label: 'Direction',
                                         name: 'Direction',
+                                        placeHolder: 'Direction',
                                         options: [
                                             {
                                                 text: '',
@@ -152,7 +152,6 @@ Ext.define('MyApp.view.Orders', {
                                     {
                                         xtype: 'sliderfield',
                                         id: 'Difficulty',
-                                        label: 'Removal',
                                         name: 'Difficulty',
                                         maxValue: 10
                                     },
@@ -175,6 +174,7 @@ Ext.define('MyApp.view.Orders', {
                             },
                             {
                                 xtype: 'button',
+                                cls: 'btn',
                                 id: 'enterOrder',
                                 text: 'Enter'
                             }
@@ -314,24 +314,21 @@ Ext.define('MyApp.view.Orders', {
                                 placeHolder: 'Notes:'
                             },
                             {
-                                xtype: 'fieldset',
-                                title: 'Additional Expenses',
+                                xtype: 'toolbar',
+                                docked: 'top',
+                                title: '',
                                 items: [
                                     {
-                                        xtype: 'container',
-                                        layout: {
-                                            type: 'hbox'
-                                        },
-                                        items: [
-                                            {
-                                                xtype: 'button',
-                                                text: 'MyButton6'
-                                            },
-                                            {
-                                                xtype: 'textfield',
-                                                label: 'Field'
-                                            }
-                                        ]
+                                        xtype: 'button',
+                                        text: 'MyButton11'
+                                    },
+                                    {
+                                        xtype: 'button',
+                                        text: 'MyButton12'
+                                    },
+                                    {
+                                        xtype: 'button',
+                                        text: 'MyButton13'
                                     }
                                 ]
                             }
@@ -349,7 +346,7 @@ Ext.define('MyApp.view.Orders', {
         ]
     },
 
-    onNewOrderActivate: function(container, newActiveItem, oldActiveItem, eOpts) {
+    onNewOrderActivate: function(newActiveItem, container, oldActiveItem, eOpts) {
         var tp = Ext.getCmp('newOrder');
 
         var btn = Ext.create('widget.actionbutton', {

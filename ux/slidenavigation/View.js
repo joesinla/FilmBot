@@ -159,7 +159,7 @@ Ext.define('Ext.ux.slidenavigation.View', {
          * Defaults to -1, which is disabled.  Setting this to 10 will very closely mimic
          * the behavior of the FB version.
          */
-        containerSlideDelay: -1,
+        containerSlideDelay: 10,
         
         /**
          * @cfg {Integer} slideDuration Number of miliseconds to animate the sliding
@@ -187,10 +187,10 @@ Ext.define('Ext.ux.slidenavigation.View', {
          * open.  This should be a valid CSS 'box-shadow' argument.  Set to false to disable
          * it.
          */
-        shadowStyle: '0 0 4px 1px #999',
+        shadowStyle: '',
 
 
-        slideButtonDefaults: { cls: "btn"}
+        slideButtonDefaults: { cls: ""}
     },
         
     initConfig: function() {

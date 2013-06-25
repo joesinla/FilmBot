@@ -34,7 +34,26 @@ Ext.define('MyApp.view.Home', {
                     '    <p><span>Created on: {Created:date("m-d H:i:s")}</span></p>',
                     '</div>'
                 ],
-                useComponents: false
+                useComponents: false,
+                items: [
+                    {
+                        xtype: 'fileupload',
+                        autoUpload: true,
+                        loadAsDataUrl: true,
+                        states: {
+                            browse: {
+                                text: 'Browse and load'
+                            },
+                            ready: {
+                                text: 'Load'
+                            },
+                            uploading: {
+                                text: 'Loading',
+                                loading: false
+                            }
+                        }
+                    }
+                ]
             }
         ]
     }

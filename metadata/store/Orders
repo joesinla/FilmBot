@@ -70,7 +70,7 @@
                 "implHandler": [
                     "console.log('order store load', records);",
                     "",
-                    "MyApp.app.getController('Home').loadStore(store);"
+                    "//MyApp.app.getController('Home').loadStore(store);"
                 ],
                 "name": "load"
             },

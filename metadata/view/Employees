@@ -1,0 +1,382 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "activeItem": null,
+        "id": "employees",
+        "designer|userClassName": "Employees",
+        "designer|userAlias": "employees",
+        "layout": "card"
+    },
+    "designerId": "c6b97797-21f5-424f-b970-4ed7e745d2df",
+    "cn": [
+        {
+            "type": "Ext.dataview.List",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "EmployeeList",
+                "store": "Employees",
+                "onItemDisclosure": true,
+                "striped": true
+            },
+            "designerId": "806bab4f-68a1-44c2-a7e8-d626b73ef101",
+            "cn": [
+                {
+                    "type": "Ext.XTemplate",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "implHandler": [
+                            "<div>Order {Number} was created on {Created:date(\"m-d H:i:s\")}</div>"
+                        ],
+                        "designer|displayName": "itemTpl"
+                    },
+                    "designerId": "b1702127-9cb7-4538-b685-eace9ead7b57"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "EmployeeForm",
+                "layout": null
+            },
+            "designerId": "a80ec50b-108e-49f0-b3f6-d67e3fb11040",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": null,
+                        "layout": "hbox"
+                    },
+                    "designerId": "c74d69b5-40c7-4103-a7a3-a158a4c4decd",
+                    "cn": [
+                        {
+                            "type": "Ext.form.FieldSet",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1,
+                                "width": "45%",
+                                "layout": null,
+                                "title": ""
+                            },
+                            "designerId": "9c52e141-3759-4ffc-bdb7-3fcf3ef7e9f9",
+                            "cn": [
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": null,
+                                        "label": null,
+                                        "name": "First",
+                                        "placeHolder": "First Name"
+                                    },
+                                    "designerId": "f00707bf-b779-454b-96be-929b3a17bee7"
+                                },
+                                {
+                                    "type": "Ext.field.Text",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "label": null,
+                                        "name": "Last",
+                                        "placeHolder": "Last Name"
+                                    },
+                                    "designerId": "650cc417-4ff6-4a8a-b57e-7c4ddf393c34"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Ext.Container",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "layout|flex": 1
+                            },
+                            "designerId": "55cfd3c1-a334-4ce0-988a-299f74df3966",
+                            "cn": [
+                                {
+                                    "type": "Ext.Img",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "centered": false,
+                                        "height": "100px",
+                                        "id": "employeeImage",
+                                        "margin": "10px auto 10px auto",
+                                        "width": "100px",
+                                        "src": "touch-2.2.1/resources//images/no-image.gif"
+                                    },
+                                    "designerId": "9c7380c5-f703-45e6-a8c0-66e2b865d76a"
+                                },
+                                {
+                                    "type": "Ext.Component",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "autoUpload": false,
+                                        "loadAsDataUrl": null,
+                                        "states": null,
+                                        "url": "php/getfile.php",
+                                        "border": "1px solid black",
+                                        "centered": false,
+                                        "cls": [
+                                            "btn x-button"
+                                        ],
+                                        "height": 22,
+                                        "hidden": false,
+                                        "itemId": "fileBtn",
+                                        "margin": "auto",
+                                        "width": 100,
+                                        "designer|createAlias": "fileupload"
+                                    },
+                                    "configAlternates": {
+                                        "autoUpload": "boolean",
+                                        "loadAsDataUrl": "boolean",
+                                        "states": "object"
+                                    },
+                                    "designerId": "3a9c68e2-8e6b-4cbb-afd7-302aa8fab837",
+                                    "customConfigs": [
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "autoUpload",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "loadAsDataUrl",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "states",
+                                            "type": "string"
+                                        },
+                                        {
+                                            "group": "(Custom Properties)",
+                                            "name": "url",
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "defaults": null,
+                        "layout": null,
+                        "instructions": null,
+                        "title": null
+                    },
+                    "designerId": "85332824-0bdd-4f2d-96f0-1fbb1a478e76",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Number",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "label": null,
+                                "name": "Phone",
+                                "required": true,
+                                "placeHolder": "Phone Number"
+                            },
+                            "designerId": "e75afef9-431c-4e56-a17f-1490eddb6c69"
+                        },
+                        {
+                            "type": "Ext.field.Email",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "label": null,
+                                "name": "Email",
+                                "placeHolder": "Email"
+                            },
+                            "designerId": "6df34bcf-359f-4c8b-b9db-92b1641469ea"
+                        },
+                        {
+                            "type": "Ext.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "label": null,
+                                "name": "Street",
+                                "placeHolder": "Street"
+                            },
+                            "designerId": "5f1ca26d-7627-4fda-b4de-42e44e101b01"
+                        },
+                        {
+                            "type": "Ext.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "label": null,
+                                "name": "City",
+                                "placeHolder": "City"
+                            },
+                            "designerId": "d775d318-8758-4056-981e-f648340d7f75"
+                        },
+                        {
+                            "type": "Ext.field.Select",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "label": null,
+                                "name": "State",
+                                "placeHolder": "State",
+                                "options": [
+                                    "[",
+                                    "{text: \"State\", value: \"\"},",
+                                    "{text: \"Alabama\", value: \"Alabama\"},",
+                                    "{text: \"Alaska\", value: \"Alaska\"},",
+                                    "{text: \"Arizona\", value: \"Arizona\"},",
+                                    "{text: \"Arkansas\", value: \"Arkansas\"},",
+                                    "{text: \"California\", value: \"California\"},",
+                                    "{text: \"Colorado\", value: \"Colorado\"},",
+                                    "{text: \"Connecticut\", value: \"Connecticut\"},",
+                                    "{text: \"Delaware\", value: \"Delaware\"},",
+                                    "{text: \"Florida\", value: \"Florida\"},",
+                                    "{text: \"Georgia\", value: \"Georgia\"},",
+                                    "{text: \"Hawaii\", value: \"Hawaii\"},",
+                                    "{text: \"Idaho\", value: \"Idaho\"},",
+                                    "{text: \"Illinois\", value: \"Illinois\"},",
+                                    "{text: \"Indiana\", value: \"Indiana\"},",
+                                    "{text: \"Iowa\", value: \"Iowa\"},",
+                                    "{text: \"Kansas\", value: \"Kansas\"},",
+                                    "{text: \"Kentucky\", value: \"Kentucky\"},",
+                                    "{text: \"Louisiana\", value: \"Louisiana\"},",
+                                    "{text: \"Maine\", value: \"Maine\"},",
+                                    "{text: \"Maryland\", value: \"Maryland\"},",
+                                    "{text: \"Massachusetts\", value: \"Massachusetts\"},",
+                                    "{text: \"Michigan\", value: \"Michigan\"},",
+                                    "{text: \"Minnesota\", value: \"Minnesota\"},",
+                                    "{text: \"Mississippi\", value: \"Mississippi\"},",
+                                    "{text: \"Missouri\", value: \"Missouri\"},",
+                                    "{text: \"Montana\", value: \"Montana\"},",
+                                    "{text: \"Nebraska\", value: \"Nebraska\"},",
+                                    "{text: \"Nevada\", value: \"Nevada\"},",
+                                    "{text: \"New Hampshire\", value: \"New Hampshire\"},",
+                                    "{text: \"New Jersey\", value: \"New Jersey\"},",
+                                    "{text: \"New Mexico\", value: \"New Mexico\"},",
+                                    "{text: \"New York\", value: \"New York\"},",
+                                    "{text: \"North Carolina\", value: \"North Carolina\"},",
+                                    "{text: \"North Dakota\", value: \"North Dakota\"},",
+                                    "{text: \"Ohio\", value: \"Ohio\"},",
+                                    "{text: \"Oklahoma\", value: \"Oklahoma\"},",
+                                    "{text: \"Oregon\", value: \"Oregon\"},",
+                                    "{text: \"Pennsylvania\", value: \"Pennsylvania\"},",
+                                    "{text: \"Rhode Island\", value: \"Rhode Island\"},",
+                                    "{text: \"South Carolina\", value: \"South Carolina\"},",
+                                    "{text: \"South Dakota\", value: \"South Dakota\"},",
+                                    "{text: \"Tennessee\", value: \"Tennessee\"},",
+                                    "{text: \"Texas\", value: \"Texas\"},",
+                                    "{text: \"Utah\", value: \"Utah\"},",
+                                    "{text: \"Vermont\", value: \"Vermont\"},",
+                                    "{text: \"Virginia\", value: \"Virginia\"},",
+                                    "{text: \"Washington\", value: \"Washington\"},",
+                                    "{text: \"West Virginia\", value: \"West Virginia\"},",
+                                    "{text: \"Wisconsin\", value: \"Wisconsin\"},",
+                                    "{text: \"Wyoming\", value: \"Wyoming\"}]"
+                                ]
+                            },
+                            "designerId": "4c3e828f-72fb-4d85-814d-37f0f7a55db3"
+                        },
+                        {
+                            "type": "Ext.field.Number",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "label": null,
+                                "name": "Zip",
+                                "placeHolder": "Zip"
+                            },
+                            "designerId": "6e09d481-66f5-4a23-8ee5-4855507b8256"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "btn"
+                        ],
+                        "id": "EnterEmployeeBtn",
+                        "text": "Add"
+                    },
+                    "designerId": "33f9014a-d8d4-43a1-b479-2b511d55003f"
+                }
+            ]
+        }
+    ]
+}

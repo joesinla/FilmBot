@@ -1,0 +1,55 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "customers",
+        "designer|userClassName": "Customers",
+        "designer|userAlias": "customers",
+        "layout": "card"
+    },
+    "designerId": "519d35ed-d5f8-491a-9025-c97d87ab7bb7",
+    "cn": [
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "MyFieldSet11"
+            },
+            "designerId": "ae09f441-5fbe-43ff-9a95-3e8ac4ba70dd",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Field"
+                    },
+                    "designerId": "3acdfe46-02dc-41a4-bc80-8431b912b34d"
+                },
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "Field"
+                    },
+                    "designerId": "7e62d022-66ee-4423-81bd-06270cb9942e"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,190 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Employee"
+    },
+    "designerId": "2c899366-fbc0-40a4-ae0e-ea33285d70e6",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "upfile",
+                "selector": "#upfile"
+            },
+            "designerId": "6e4eba47-900c-41a8-a617-66318a941774"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "upfilebtn",
+                "selector": "#upfilebtn"
+            },
+            "designerId": "af36ce57-7c59-4492-9517-965029561df0"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "picform",
+                "selector": "#picform"
+            },
+            "designerId": "14cdf9b3-5a8d-4511-9fd8-eae370e8eaa7"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "EmployeeForm",
+                "selector": "#EmployeeForm"
+            },
+            "designerId": "f461e712-a3b7-46e5-9449-ddf38b1a91b6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onEnterEmployeeBtnTap",
+                "implHandler": [
+                    "var formData = this.getEmployeeForm().getValues();",
+                    "",
+                    "",
+                    "",
+                    "var model = Ext.create(\"MyApp.model.Employee\", formData);",
+                    "var store = Ext.getStore(\"Employees\");",
+                    "",
+                    "store.add(model);",
+                    "store.sync();",
+                    ""
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#EnterEmployeeBtn"
+            },
+            "designerId": "e7ba2e06-e9e7-4438-b8c2-c7c12626f48d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onAddEmployeeBtnTap",
+                "implHandler": [
+                    "this.getEmployees().animateActiveItem(1, {type:'slide',direction:'up'});",
+                    "",
+                    "var bttn = Ext.getCmp('addEmployee');",
+                    "",
+                    "bttn.setIconCls('arrow_down');",
+                    "bttn.setItemId('closeEmployee');",
+                    "bttn.setId('closeEmployee');",
+                    "",
+                    "bttn.observableId = '#closeEmployee';",
+                    "",
+                    "console.log(this);",
+                    "",
+                    "//this.clearOrder();",
+                    "",
+                    "//this.newOrder();"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#addEmployee"
+            },
+            "designerId": "f96459f0-f6fd-4c5b-a44b-08334d6b9a23"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "employees",
+                "selector": "#employees"
+            },
+            "designerId": "6d4bc368-9471-439e-82a3-fd6e3554b28e"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onCloseEmployeeBtnTap",
+                "implHandler": [
+                    "this.getEmployees().animateActiveItem(0, {type:'slide',direction:'down'});",
+                    "",
+                    "var bttn = Ext.getCmp('addEmployee')",
+                    "",
+                    "bttn.setIconCls('add');",
+                    "bttn.setItemId('addEmployee');",
+                    "bttn.setId('addEmployee');",
+                    "",
+                    "bttn.observableId = '#addEmployee';",
+                    "",
+                    "//this.clearOrder();"
+                ],
+                "name": "tap",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "#closeEmployee"
+            },
+            "designerId": "a0b95f5f-2f4e-4458-beb3-5cc390295913"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onButtonSuccess",
+                "designer|params": [
+                    "button",
+                    "response",
+                    "tis",
+                    "el"
+                ],
+                "implHandler": [
+                    "console.log('controlelr success yo', button, response, tis, el);"
+                ],
+                "name": "success",
+                "designer|targetType": "Ext.Button",
+                "designer|controlQuery": "button"
+            },
+            "designerId": "42989a17-a97e-4841-859c-5c7e20f72765"
+        }
+    ]
+}

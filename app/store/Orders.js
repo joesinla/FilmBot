@@ -55,7 +55,7 @@ Ext.define('MyApp.store.Orders', {
     onStoreLoad: function(store, records, successful, operation, eOpts) {
         console.log('order store load', records);
 
-        MyApp.app.getController('Home').loadStore(store);
+        //MyApp.app.getController('Home').loadStore(store);
     }
 
 });

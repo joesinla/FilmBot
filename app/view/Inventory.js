@@ -52,6 +52,26 @@ Ext.define('MyApp.view.Inventory', {
                 },
                 items: [
                     {
+                        xtype: 'component',
+                        hidden: true,
+                        id: 'errorField',
+                        showAnimation: {
+                            type: 'slide',
+                            direction: 'down'
+                        },
+                        tpl: [
+                            '<div class="invform-error">',
+                            '   ',
+                            '    <p>{config.field}{config.message} hiiiiii</p>',
+                            '    <p>{config.field}{config.message} hiiiiii</p>',
+                            '    <p>{config.field}{config.message} hiiiiii</p>',
+                            '    <p>{config.field}{config.message} hiiiiii</p>',
+                            '    <p>{config.field}{config.message} hiiiiii</p>',
+                            '    ',
+                            '</div>'
+                        ]
+                    },
+                    {
                         xtype: 'fieldset',
                         id: 'FilmFields',
                         defaults: {
@@ -60,30 +80,36 @@ Ext.define('MyApp.view.Inventory', {
                         items: [
                             {
                                 xtype: 'textfield',
+                                cls: 'val',
                                 id: 'MnfField',
-                                labelWrap: true,
+                                inputCls: 'val',
                                 name: 'Manufacturer',
+                                required: true,
                                 autoComplete: true,
                                 placeHolder: 'Manufacturer'
                             },
                             {
                                 xtype: 'textfield',
                                 id: 'TypeField',
+                                inputCls: 'val',
                                 name: 'Type',
                                 autoComplete: true,
                                 placeHolder: 'Type'
                             },
                             {
-                                xtype: 'textfield',
+                                xtype: 'numberfield',
+                                cls: 'val',
                                 id: 'ShadeField',
                                 name: 'Shade',
+                                required: true,
                                 autoComplete: true,
                                 placeHolder: 'Shade'
                             },
                             {
-                                xtype: 'textfield',
+                                xtype: 'numberfield',
                                 id: 'SizeField',
                                 name: 'Size',
+                                required: true,
                                 autoComplete: true,
                                 placeHolder: 'Size'
                             }
@@ -98,26 +124,31 @@ Ext.define('MyApp.view.Inventory', {
                                 xtype: 'textfield',
                                 id: 'RollNumberField',
                                 name: 'RollNumber',
+                                required: true,
                                 autoComplete: false,
                                 placeHolder: 'Roll Number'
                             },
                             {
-                                xtype: 'textfield',
+                                xtype: 'numberfield',
                                 id: 'LinearFeetField',
                                 name: 'LinearFeet',
+                                required: true,
                                 placeHolder: 'Linear Feet'
                             },
                             {
                                 xtype: 'textfield',
                                 id: 'PriceField',
                                 name: 'Price',
+                                required: true,
                                 placeHolder: 'Price'
                             }
                         ]
                     },
                     {
                         xtype: 'button',
+                        cls: 'btn',
                         id: 'InventoryEnter',
+                        margin: '2%',
                         ui: 'action',
                         text: 'Add'
                     }

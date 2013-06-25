@@ -1,5 +1,3 @@
-require 'bootstrap-sass';
-
 # Get the directory that this configuration file exists in
 dir = File.dirname(__FILE__)
 
@@ -10,6 +8,5 @@ load File.join(dir, '..', 'themes')
 fonts_path = File.join(dir, '..', 'themes/fonts/')
 sass_path = dir
 css_path = File.join(dir, "..", "css")
-images_path = File.join(dir, '..', 'images/')
 environment  = :development
 output_style = :compressed

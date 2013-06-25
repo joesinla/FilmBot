@@ -38,8 +38,8 @@
 * @param {string} $gradient: $toolbar-gradien Background gradient style for the UI.
 */
 @mixin sencha-toolbar-ui($ui-label, $color, $gradient: $toolbar-gradient) {
-    $toolbar-border-color: $color;
-    $toolbar-button-color: $color;
+    $toolbar-border-color: darken($color, 50%);
+    $toolbar-button-color: darken($color, 5%);
 
     .x-toolbar-#{$ui-label} {
         @include background-gradient($color, $gradient);
@@ -82,7 +82,7 @@
 }
 
 @if $include-toolbar-uis {
-    @include sencha-toolbar-ui('dark', $toolbar-base-color);
+    @include sencha-toolbar-ui('dark', darken($toolbar-base-color, 10%));
     @include sencha-toolbar-ui('light', $toolbar-base-color);
     @include sencha-toolbar-ui('neutral', $neutral-color);
 

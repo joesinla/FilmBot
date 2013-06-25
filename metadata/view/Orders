@@ -201,8 +201,9 @@
                                     "userConfig": {
                                         "id": "FilmSelect",
                                         "itemId": null,
-                                        "label": "Film",
+                                        "label": null,
                                         "labelWidth": null,
+                                        "placeHolder": "Film",
                                         "options": null
                                     },
                                     "designerId": "c95360d9-3695-4026-b8e7-ad78b1bb212e",
@@ -235,10 +236,11 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "id": "Location",
-                                        "label": "Location",
+                                        "label": null,
                                         "labelWidth": null,
                                         "name": "Location",
-                                        "autoCapitalize": true
+                                        "autoCapitalize": true,
+                                        "placeHolder": "Location"
                                     },
                                     "designerId": "1907c4ea-1d95-40a8-9775-759d89bd9186"
                                 },
@@ -251,9 +253,10 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "id": "Direction",
-                                        "label": "Direction",
+                                        "label": null,
                                         "labelWidth": null,
                                         "name": "Direction",
+                                        "placeHolder": "Direction",
                                         "options": [
                                             "[",
                                             "    {text:'',value:''},",
@@ -275,7 +278,7 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "id": "Difficulty",
-                                        "label": "Removal",
+                                        "label": null,
                                         "labelWidth": null,
                                         "name": "Difficulty",
                                         "maxValue": 10
@@ -331,6 +334,9 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "cls": [
+                                    "btn"
+                                ],
                                 "id": "enterOrder",
                                 "iconCls": null,
                                 "text": "Enter"
@@ -686,54 +692,53 @@
                             "designerId": "097b727d-df0b-4e91-a0df-3d316b51073e"
                         },
                         {
-                            "type": "Ext.form.FieldSet",
+                            "type": "Ext.Toolbar",
                             "reference": {
                                 "name": "items",
                                 "type": "array"
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "title": "Additional Expenses"
+                                "docked": "top",
+                                "title": ""
                             },
-                            "designerId": "4056f033-e038-4503-87ac-e055c053144c",
+                            "designerId": "51d59f69-bb6a-4015-bc93-08474c6d9d11",
                             "cn": [
                                 {
-                                    "type": "Ext.Container",
+                                    "type": "Ext.Button",
                                     "reference": {
                                         "name": "items",
                                         "type": "array"
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "layout": "hbox"
+                                        "text": "MyButton11"
                                     },
-                                    "designerId": "5de2bbe5-9295-434d-8e6f-bcf8515f4f28",
-                                    "cn": [
-                                        {
-                                            "type": "Ext.Button",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "text": "MyButton6"
-                                            },
-                                            "designerId": "3d288796-684a-4fd2-a719-98e0ff6c05de"
-                                        },
-                                        {
-                                            "type": "Ext.field.Text",
-                                            "reference": {
-                                                "name": "items",
-                                                "type": "array"
-                                            },
-                                            "codeClass": null,
-                                            "userConfig": {
-                                                "label": "Field"
-                                            },
-                                            "designerId": "3b7638d4-b333-4cbb-b5ce-360303c92c92"
-                                        }
-                                    ]
+                                    "designerId": "7b1aaf83-f31d-466e-863a-e7a403ee3846"
+                                },
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "text": "MyButton12"
+                                    },
+                                    "designerId": "5e73b38b-3227-4c97-97eb-6511d14af8d7"
+                                },
+                                {
+                                    "type": "Ext.Button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "text": "MyButton13"
+                                    },
+                                    "designerId": "8d4c25f6-4f9d-477d-b14c-ac552fcf798d"
                                 }
                             ]
                         }

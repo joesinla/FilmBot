@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js4",
+        "url": "io/sencha-io-debug.js"
+    },
+    "designerId": "bacbbb86-4e17-4a81-ac18-1a23b3f7e6f5"
+}

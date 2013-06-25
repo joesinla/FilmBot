@@ -20,7 +20,7 @@
             "userConfig": {
                 "fn": "onAddInventoryButtonTap",
                 "implHandler": [
-                    "this.getInventory().animateActiveItem(1, {type:'slide',direction:'up'});",
+                    "this.getInventory().animateActiveItem(1, {type:'slide', direction:'up'});",
                     "",
                     "var bttn = Ext.getCmp('addInventory');",
                     "",
@@ -85,14 +85,6 @@
             "userConfig": {
                 "fn": "onInventoryEnterButtonTap",
                 "implHandler": [
-                    "Ext.Viewport.setMasked({",
-                    "    xtype: 'loadmask',",
-                    "    message: 'Added Roll'",
-                    "});",
-                    "new Ext.util.DelayedTask(function () {",
-                    "    Ext.Viewport.setMasked(false);    ",
-                    "}).delay(450);",
-                    "",
                     "this.addRoll();"
                 ],
                 "name": "tap",
@@ -130,7 +122,7 @@
                     "\"Do you wish to delete roll?\", ",
                     "function(button){",
                     "    if (button == 'yes') {",
-                    "        ",
+                    "",
                     "        that.deleteRoll(record);",
                     "    } else {",
                     "        return false;",
@@ -164,19 +156,41 @@
                     "var rollModel = Ext.create('MyApp.model.Roll', formData);",
                     "",
                     "",
-                    "//get store",
-                    "var rollStore = Ext.getStore('Rolls');",
+                    "//validate model",
                     "",
-                    "record = rollStore.findRecord('RollNumber', formData.RollNumber,0,false,false,true);",
+                    "var errors = rollModel.validate();",
                     "",
-                    "if(record !== null){",
-                    "    alert('This roll already exists.');",
-                    "}else{            ",
+                    "if(!errors.isValid()){",
+                    "    var errField = this.getErrorField();",
+                    "    //add error data to error div",
+                    "    errField.setData(errors);",
+                    "    console.log('errfield',errField);",
+                    "    //show errors",
+                    "    errField.show();",
+                    "}else{",
                     "",
-                    "    rollStore.add(rollModel);",
-                    "    rollStore.sync();//Ext.bind(this.getApplication().getController('ioControl').syncCallback, this));",
-                    "    rollStore.load();",
-                    "    //form.reset();",
+                    "    //get store",
+                    "    var rollStore = Ext.getStore('Rolls');",
+                    "",
+                    "    record = rollStore.findRecord('RollNumber', formData.RollNumber,0,false,false,true);",
+                    "",
+                    "    if(record !== null){",
+                    "        alert('This roll already exists.');",
+                    "    }else{            ",
+                    "",
+                    "        rollStore.add(rollModel);",
+                    "        rollStore.sync();//Ext.bind(this.getApplication().getController('ioControl').syncCallback, this));",
+                    "        rollStore.load();",
+                    "        ",
+                    "        //reset form, set button text, clear errors",
+                    "        form.reset();",
+                    "    \tthis.getErrorField().setData();",
+                    "        console.log('has data?',this.getErrorField())",
+                    "        this.getFilmAddButton().setText(\"Film Added!\");",
+                    "        this.getErrorField().hide();",
+                    "    }",
+                    "    ",
+                    "    ",
                     "}"
                 ]
             },
@@ -408,6 +422,140 @@
                 ]
             },
             "designerId": "6bc23cdb-043c-4063-b754-cef2897400eb"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "validate",
+                "designer|params": [
+                    "field"
+                ],
+                "implHandler": [
+                    "var data = field.getValue();",
+                    "",
+                    "if(data.length > 2){",
+                    "    field.removeCls(\"error\");",
+                    "\treturn true;",
+                    "}else{",
+                    "\tfield.addCls(\"error\");",
+                    "}"
+                ]
+            },
+            "designerId": "68f8eeb5-fe4d-4f25-b510-2dcbf951ba1d"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "invformField",
+                "selector": "#invForm .x-field"
+            },
+            "designerId": "646eaef8-9577-4858-b64a-4fe92d813f47"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onInvformTextfieldBlur",
+                "implHandler": [
+                    "var value = textfield.getValue();",
+                    "",
+                    "switch (textfield.id){",
+                    "    case \"MnfField\":",
+                    "    case \"TypeField\":",
+                    "    if(!isNaN(value)){",
+                    "        textfield.setCls(\"error\");",
+                    "    }",
+                    "    case \"RollNumberField\": ",
+                    "    if(value.length < 3){",
+                    "        textfield.setCls(\"error\");",
+                    "    }",
+                    "    break;",
+                    "",
+                    "    case \"ShadeField\":",
+                    "    if(value > 100 || isNaN(value)){",
+                    "        textfield.setCls(\"error\");",
+                    "    }",
+                    "    break;",
+                    "",
+                    "    case \"SizeField\":",
+                    "    case \"LinearFeetField\":",
+                    "    if(value > 100  || isNaN(value)){",
+                    "        textfield.setCls(\"error\");",
+                    "    }",
+                    "    break;",
+                    "}"
+                ],
+                "name": "blur",
+                "designer|targetType": "Ext.field.Text",
+                "designer|controlQuery": "#InventoryForm textfield"
+            },
+            "designerId": "394801f5-4100-48cb-bb58-b842b0c51c2f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTextareafieldFocus",
+                "implHandler": [
+                    "for(var i = 0; i < textfield.getCls().length; i++){",
+                    "    if(textfield.getCls()[i] === \"error\"){",
+                    "        textfield.removeCls(\"error\");",
+                    "        textfield.reset();",
+                    "    }",
+                    "    if(this.getFilmAddButton().getText() === \"Film Added!\"){",
+                    "        this.getFilmAddButton().setText(\"Add\");",
+                    "    }",
+                    "}"
+                ],
+                "name": "focus",
+                "designer|targetType": "Ext.field.TextArea",
+                "designer|controlQuery": "#InventoryForm textfield"
+            },
+            "designerId": "c7b88d20-a0ca-4480-808a-a1aa89d1d3a8"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "errorField",
+                "selector": "#errorField"
+            },
+            "designerId": "d1b9337d-3710-4629-bf28-6269ebc99cb1"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "filmAddButton",
+                "selector": "#InventoryEnter"
+            },
+            "designerId": "d3f2f1c0-777e-4e94-b22a-c3143cd1c1bf"
         }
     ]
 }

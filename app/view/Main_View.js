@@ -115,6 +115,24 @@ Ext.define("MyApp.view.Main_View", {
                 maskOnOpen: true
             }]
 			},
+            //start orders item
+        {
+            title: 'Orders',
+            group: 'Group 1',
+
+            // Enable the slide button using the defaults defined above in
+            // `slideButtonDefaults`.
+            slideButton: true,
+            items: [{
+                xtype: 'toolbar',
+                title: 'Orders',
+                docked: 'top'
+            },{
+                xtype: 'orders',
+                // Mask this item when the container is opened
+                maskOnOpen: true
+            }]
+        },//end orders item
 		{
             title: 'Inventory',
             group: 'Group 1',
@@ -132,26 +150,64 @@ Ext.define("MyApp.view.Main_View", {
                 maskOnOpen: true
             }]
 			},
-			//start orders item
-		{
-            title: 'Orders',
-            group: 'Group 1',
+			
+		
+    //start Customers item
+    {
+        title: 'Customers',
+        group: 'Group 1',
 
-            // Enable the slide button using the defaults defined above in
-            // `slideButtonDefaults`.
-            slideButton: true,
-            items: [{
-                xtype: 'toolbar',
-                title: 'Orders',
-                docked: 'top'
-            },{
-                xtype: 'orders',
-                // Mask this item when the container is opened
-                maskOnOpen: true
-            }]
-		},//end orders item
-		//start Settings item
-	{
+        // Enable the slide button using the defaults defined above in
+        // `slideButtonDefaults`.
+        slideButton: true,
+        items: [{
+            xtype: 'toolbar',
+            title: 'Customers',
+            docked: 'top'
+        },{
+            xtype: 'customers',
+            // Mask this item when the container is opened
+            maskOnOpen: true
+        }]
+    },//end customers item
+    //start Emoployees item
+    {
+        title: 'Employees',
+        group: 'Group 1',
+
+        // Enable the slide button using the defaults defined above in
+        // `slideButtonDefaults`.
+        slideButton: true,
+        items: [{
+            xtype: 'toolbar',
+            title: 'Employees',
+            docked: 'top'
+        },{
+            xtype: 'employees',
+            // Mask this item when the container is opened
+            maskOnOpen: true
+        }]
+    }//end employees item
+    ,//start Emoployees item
+    {
+        title: 'Stats',
+        group: 'Group 1',
+
+        // Enable the slide button using the defaults defined above in
+        // `slideButtonDefaults`.
+        slideButton: true,
+        items: [{
+            xtype: 'toolbar',
+            title: 'Stats',
+            docked: 'top'
+        },{
+            xtype: 'stats',
+            // Mask this item when the container is opened
+            maskOnOpen: true
+        }]
+    },//end employees item
+     //start Settings item
+    {
         title: 'Settings',
         group: 'Group 1',
 
@@ -167,7 +223,7 @@ Ext.define("MyApp.view.Main_View", {
             // Mask this item when the container is opened
             maskOnOpen: true
         }]
-	}//end orders item
+    },//end orders item
 		
 	]}//end config
 });//end of define

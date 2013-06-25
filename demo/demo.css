@@ -1,0 +1,30 @@
+
+/***** Iphone iframe **********/
+
+body {
+	background-color: rgb(222,222,222);
+}
+
+#wrapper {
+	
+
+	
+}
+
+#container{
+	margin: auto auto;
+	width: 600px;
+	height: 800px;
+	
+	
+	background: url('whiteiphone5.png') no-repeat;
+}
+
+#iframe {
+	padding-top: 141px;
+	padding-left: 40px;
+	width: 295px;
+	height: 525px;
+	border: 0;
+	
+}

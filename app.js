@@ -15,10 +15,17 @@
 
 //@require @packageOverrides
 Ext.Loader.setConfig({
-
+    paths: {
+        'Ext.ux': './ux',
+        'Ext.io': './io'
+    }
 });
 
 Ext.application({
+
+    requires: [
+        'Ext.ux.Fileup'
+    ],
     io: {
         appId: '3410023f-0a0f-40e1-be94-9492e9354e37',
         url: 'https://api.sencha.io'
@@ -27,13 +34,15 @@ Ext.application({
         'Roll',
         'Order',
         'Window',
-        'Window_has_Roll'
+        'Window_has_Roll',
+        'Employee'
     ],
     stores: [
         'Orders',
         'Rolls',
         'temp',
-        'Windows'
+        'Windows',
+        'Employees'
     ],
     views: [
         'Main_View',
@@ -44,7 +53,10 @@ Ext.application({
         'actionbutton',
         'OrderAction',
         'Orders',
-        'ioLoginbutton'
+        'ioLoginbutton',
+        'Customers',
+        'Employees',
+        'Stats'
     ],
     controllers: [
         'Orders',
@@ -53,7 +65,8 @@ Ext.application({
         'Calc',
         'Ext.io.Controller',
         'ioControl',
-        'Home'
+        'Home',
+        'Employee'
     ],
     name: 'MyApp',
 

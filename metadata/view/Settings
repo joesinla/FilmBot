@@ -180,8 +180,9 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "label": "Field",
-                                "name": "Tax"
+                                "label": null,
+                                "name": "Tax",
+                                "placeHolder": "$0.00"
                             },
                             "designerId": "95521ea8-0e75-46ea-b9d4-15dec10d8d1d"
                         }

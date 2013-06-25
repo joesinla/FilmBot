@@ -53,6 +53,20 @@ Ext.define('MyApp.controller.Navigation', {
             });
         }
 
+        if((item.items.items[1].id == 'employees') && (item.items.items[0].items.length == 2)){
+
+            item.items.items[0].add({
+                xtype:'spacer'
+            });
+
+            item.items.items[0].add({
+                xtype: 'button',
+                id: 'addEmployee',
+                iconCls: 'add',
+                iconMask: true
+            });
+        }
+
     }
 
 });

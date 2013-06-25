@@ -84,8 +84,8 @@ Ext.define('MyApp.view.Settings', {
                         items: [
                             {
                                 xtype: 'numberfield',
-                                label: 'Field',
-                                name: 'Tax'
+                                name: 'Tax',
+                                placeHolder: '$0.00'
                             }
                         ]
                     }

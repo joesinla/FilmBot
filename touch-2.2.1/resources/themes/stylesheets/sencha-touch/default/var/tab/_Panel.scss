@@ -35,7 +35,7 @@ $tabs-light-active: lighten(saturate($active-color, 20%), 20%) !default;
  * @var {color} $tabs-dark
  * Base color for "dark" UI tabs.
  */
-$tabs-dark: $base-color !default;
+$tabs-dark: darken($base-color, 20%) !default;
 
 /**
  * @var {color} $tabs-dark-active
