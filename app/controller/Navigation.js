@@ -34,6 +34,7 @@ Ext.define('MyApp.controller.Navigation', {
             item.items.items[0].add({
                 xtype: 'button',
                 id: 'addOrder',
+                ui: 'plain',
                 iconCls: 'add',
                 iconMask: true
             });
@@ -48,6 +49,7 @@ Ext.define('MyApp.controller.Navigation', {
             item.items.items[0].add({
                 xtype: 'button',
                 id: 'addInventory',
+                ui: 'plain',
                 iconCls: 'add',
                 iconMask: true
             });
@@ -63,6 +65,7 @@ Ext.define('MyApp.controller.Navigation', {
                 xtype: 'button',
                 id: 'addEmployee',
                 iconCls: 'add',
+                ui: 'plain',
                 iconMask: true
             });
         }

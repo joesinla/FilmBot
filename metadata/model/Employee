@@ -18,7 +18,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "First"
+                "name": "First",
+                "type": "string"
             },
             "designerId": "6c227942-5400-479b-abeb-1d35eb9d074f"
         },
@@ -30,7 +31,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "Last"
+                "name": "Last",
+                "type": "string"
             },
             "designerId": "c2351317-5dee-4cc3-b7a3-a65e57249996"
         },
@@ -42,7 +44,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "Phone"
+                "name": "Phone",
+                "type": "string"
             },
             "designerId": "ccc8b784-97e9-4800-aa7a-2d313ff9deb9"
         },
@@ -54,7 +57,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "Email"
+                "name": "Email",
+                "type": "string"
             },
             "designerId": "a1b83a07-69de-41e5-82ed-6084c13744ed"
         },
@@ -66,7 +70,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "Street"
+                "name": "Street",
+                "type": "string"
             },
             "designerId": "d51cd890-e498-40e1-a919-8b05cf221010"
         },
@@ -78,7 +83,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "City"
+                "name": "City",
+                "type": "string"
             },
             "designerId": "50014591-2e54-4233-9077-49b90c463008"
         },
@@ -90,7 +96,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "State"
+                "name": "State",
+                "type": "string"
             },
             "designerId": "b2c7a8bb-228c-4611-8f05-d6f69ce875e7"
         },
@@ -102,7 +109,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "Zip"
+                "name": "Zip",
+                "type": "int"
             },
             "designerId": "a6c8ca62-8c6b-44f4-b8b7-31849c81a337"
         },
@@ -114,7 +122,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "Birthday"
+                "name": "Birthday",
+                "type": "string"
             },
             "designerId": "60471554-00ea-49b7-9d60-075267e84835"
         },
@@ -126,7 +135,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "StartDate"
+                "name": "StartDate",
+                "type": "date"
             },
             "designerId": "b73d5a01-e3a2-4c6f-87c9-3e44e7ddfa3c"
         },
@@ -138,7 +148,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "Position"
+                "name": "Position",
+                "type": "string"
             },
             "designerId": "98ab48a1-1c44-4ba1-9ba8-659212fe9b63"
         },
@@ -150,9 +161,139 @@
             },
             "codeClass": null,
             "userConfig": {
-                "name": "EmployeeId"
+                "name": "EmployeeId",
+                "type": "int"
             },
             "designerId": "bd5ece41-1d8b-4eaa-a041-d7e36db5ed15"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "PicUrl",
+                "type": "string"
+            },
+            "designerId": "0f7d49b2-133d-4926-9e39-a61af4efc333"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "first",
+                "field": "First"
+            },
+            "designerId": "dc106613-a38b-4c5b-a76c-124f9ae298ff"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "last",
+                "field": "Last"
+            },
+            "designerId": "2b9673ab-657f-4cdf-b339-f7fcba46e401"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "phone",
+                "field": "Phone"
+            },
+            "designerId": "334c039a-640e-4ed8-8778-b0ce2eaaa732"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "email",
+                "field": "Email"
+            },
+            "designerId": "1401c2c5-7703-43e3-8fbb-ed283d0390fe"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "street",
+                "field": "Street"
+            },
+            "designerId": "db2cef24-9360-43e5-9fed-bc72891dbc9f"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "city",
+                "field": "City"
+            },
+            "designerId": "62a34c2b-d698-407e-b9d4-6614e4683935"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "state",
+                "field": "State"
+            },
+            "designerId": "141fca73-2f0c-452e-a117-00c0f87867b8"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "zip",
+                "field": "Zip"
+            },
+            "designerId": "14c51ab1-0c1e-47fd-96da-f71408501971"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "field": "Email"
+            },
+            "designerId": "aa24f3cd-1377-44ae-9923-159d25ed3c09"
         }
     ]
 }

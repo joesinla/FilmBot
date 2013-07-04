@@ -18,6 +18,7 @@ Ext.define('MyApp.view.Settings', {
     alias: 'widget.settings',
 
     requires: [
+        'MyApp.view.ioLoginbutton',
         'MyApp.view.override.Settings'
     ],
 
@@ -80,6 +81,16 @@ Ext.define('MyApp.view.Settings', {
                     },
                     {
                         xtype: 'fieldset',
+                        title: 'Sales Commision',
+                        items: [
+                            {
+                                xtype: 'numberfield',
+                                placeHolder: '%'
+                            }
+                        ]
+                    },
+                    {
+                        xtype: 'fieldset',
                         title: 'Tax',
                         items: [
                             {
@@ -88,6 +99,12 @@ Ext.define('MyApp.view.Settings', {
                                 placeHolder: '$0.00'
                             }
                         ]
+                    },
+                    {
+                        xtype: 'sioAuthButton',
+                        cls: 'btn',
+                        height: 25,
+                        text: 'Logout'
                     }
                 ]
             }

@@ -82,7 +82,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "title": "Add Windows",
+                        "title": "Add Window",
                         "iconCls": "add",
                         "id": "AddWindowPanel",
                         "layout": null
@@ -98,6 +98,7 @@
                             "codeClass": null,
                             "userConfig": {
                                 "id": "WindowDemensions",
+                                "style": " bodyStyle: \"background-color: transparent",
                                 "layout": null,
                                 "title": null
                             },
@@ -116,6 +117,9 @@
                                         "id": "DimensionsPanel",
                                         "margin": null,
                                         "width": null,
+                                        "defaults": [
+                                            "{margin: \"0px 6px 0px 0px\"}"
+                                        ],
                                         "layout": "hbox"
                                     },
                                     "designerId": "9166fcd8-0b6f-43c2-bf4e-a480a9fb8a91",
@@ -641,30 +645,6 @@
                     ]
                 },
                 {
-                    "type": "basiceventbinding",
-                    "reference": {
-                        "name": "listeners",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "fn": "onNewOrderActivate",
-                        "implHandler": [
-                            "var tp = Ext.getCmp('newOrder');",
-                            "",
-                            "var btn = Ext.create('widget.actionbutton', {",
-                            "    id: 'actionBttn',",
-                            "    style:'position:absolute;top:auto;bottom:10px;right:10px;z-index:10;'",
-                            "",
-                            "});",
-                            "",
-                            "tp.element.insertFirst(btn.element);"
-                        ],
-                        "name": "activate"
-                    },
-                    "designerId": "cb90af8d-870b-4464-8f84-d5ccef4571b0"
-                },
-                {
                     "type": "Ext.form.Panel",
                     "reference": {
                         "name": "items",
@@ -672,7 +652,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "title": "Details",
+                        "title": "Options",
                         "iconCls": "settings"
                     },
                     "designerId": "8d529053-8b3d-4d29-b750-52d49f6b432f",
@@ -685,6 +665,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "margin": "10px",
                                 "label": null,
                                 "name": "Notes",
                                 "placeHolder": "Notes:"
@@ -699,6 +680,8 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "container|align": null,
+                                "container|pack": "center",
                                 "docked": "top",
                                 "title": ""
                             },
@@ -712,7 +695,10 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "text": "MyButton11"
+                                        "layout|flex": 1,
+                                        "ui": null,
+                                        "iconCls": "more",
+                                        "text": "Export"
                                     },
                                     "designerId": "7b1aaf83-f31d-466e-863a-e7a403ee3846"
                                 },
@@ -724,7 +710,11 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "text": "MyButton12"
+                                        "layout|flex": 1,
+                                        "id": "ActionDelete",
+                                        "ui": "decline",
+                                        "iconCls": "delete",
+                                        "text": "Delete"
                                     },
                                     "designerId": "5e73b38b-3227-4c97-97eb-6511d14af8d7"
                                 },
@@ -736,7 +726,11 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
-                                        "text": "MyButton13"
+                                        "layout|flex": 1,
+                                        "id": "ActionSave",
+                                        "ui": "confirm",
+                                        "iconCls": "add",
+                                        "text": "Save"
                                     },
                                     "designerId": "8d4c25f6-4f9d-477d-b14c-ac552fcf798d"
                                 }

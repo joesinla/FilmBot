@@ -56,12 +56,15 @@ Ext.define('MyApp.controller.ioControl', {
         var rollStore = Ext.getStore('Rolls');
         var orderStore = Ext.getStore('Orders');
         var windowStore = Ext.getStore('Windows');
+        var employeeStore = Ext.getStore('Employees');
         rollStore.sync();
         rollStore.load();
         orderStore.sync();
         orderStore.load();
         windowStore.sync();
         windowStore.sync();
+        employeeStore.load();
+        employeeStore.sync();
     },
 
     syncCallback: function() {

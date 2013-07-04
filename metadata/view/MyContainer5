@@ -1,0 +1,17 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "centered": true,
+        "height": 125,
+        "hidden": false,
+        "id": "SuccessUI",
+        "width": 125,
+        "designer|userClassName": "MyContainer5"
+    },
+    "designerId": "5318fa1d-ab8e-4bd4-8bb0-1b218511ff51"
+}

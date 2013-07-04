@@ -19,40 +19,94 @@ Ext.define('MyApp.model.Employee', {
     config: {
         fields: [
             {
-                name: 'First'
+                name: 'First',
+                type: 'string'
             },
             {
-                name: 'Last'
+                name: 'Last',
+                type: 'string'
             },
             {
-                name: 'Phone'
+                name: 'Phone',
+                type: 'string'
             },
             {
-                name: 'Email'
+                name: 'Email',
+                type: 'string'
             },
             {
-                name: 'Street'
+                name: 'Street',
+                type: 'string'
             },
             {
-                name: 'City'
+                name: 'City',
+                type: 'string'
             },
             {
-                name: 'State'
+                name: 'State',
+                type: 'string'
             },
             {
-                name: 'Zip'
+                name: 'Zip',
+                type: 'int'
             },
             {
-                name: 'Birthday'
+                name: 'Birthday',
+                type: 'string'
             },
             {
-                name: 'StartDate'
+                name: 'StartDate',
+                type: 'date'
             },
             {
-                name: 'Position'
+                name: 'Position',
+                type: 'string'
             },
             {
-                name: 'EmployeeId'
+                name: 'EmployeeId',
+                type: 'int'
+            },
+            {
+                name: 'PicUrl',
+                type: 'string'
+            }
+        ],
+        validations: [
+            {
+                type: 'presence',
+                field: 'First'
+            },
+            {
+                type: 'presence',
+                field: 'Last'
+            },
+            {
+                type: 'presence',
+                field: 'Phone'
+            },
+            {
+                type: 'presence',
+                field: 'Email'
+            },
+            {
+                type: 'presence',
+                field: 'Street'
+            },
+            {
+                type: 'presence',
+                field: 'City'
+            },
+            {
+                type: 'presence',
+                field: 'State'
+            },
+            {
+                type: 'presence',
+                field: 'Zip'
+            },
+            {
+                type: 'presence',
+                field: 'Email'
             }
         ]
     }

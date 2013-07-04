@@ -26,19 +26,30 @@
 	}
 }
 
+body {
 
 
+}
+
+#EmployeePic{
+	border-radius: 50px;
+}
 
 /**********************************/
 
-.invform-error {
+.invform-error-field {
+	padding: 10px;
+	font-size: 11px;
 	background-color: rgb(231, 76, 60);
-	
+	@include placeholder-style;
 }
 
 .x-field.error .x-input-el{
-
-	color: red;
+	
+	border: 1px solid rgb(231, 76, 60);
+	@include border-radius(5px);
+	color: rgb(231, 76, 60);
+	@include placeholder-style;
 }
 
 .btn {
@@ -79,8 +90,8 @@
 
 
 .x-title {
-	font-family: $base-font-family;
-	letter-spacing:1.55px;
+	font-family: "FuturaStd-Book";
+	//letter-spacing:1.55px;
 }
 
 
@@ -102,7 +113,7 @@
 
 .test {
 	
-	border:2px solid red;
+	//border:2px solid red;
 }
 
 
@@ -118,6 +129,11 @@
 		border: 0 !important;
 		color: white;
 		height: 15px !important;
+
+		&.x-item-selected {
+			background-image: none !important;
+			background-color: lighten($flatui-darkblue, 30%) !important;
+		}
 	}
 
 }

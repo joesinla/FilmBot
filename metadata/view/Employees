@@ -38,7 +38,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "implHandler": [
-                            "<div>Order {Number} was created on {Created:date(\"m-d H:i:s\")}</div>"
+                            "<div><img src=\"images/\" + {PicUrl} />Order {Number} was created on {Created:date(\"m-d H:i:s\")}</div>"
                         ],
                         "designer|displayName": "itemTpl"
                     },
@@ -98,6 +98,7 @@
                                         "height": null,
                                         "label": null,
                                         "name": "First",
+                                        "required": true,
                                         "placeHolder": "First Name"
                                     },
                                     "designerId": "f00707bf-b779-454b-96be-929b3a17bee7"
@@ -126,7 +127,7 @@
                             },
                             "codeClass": null,
                             "userConfig": {
-                                "layout|flex": 1
+                                "layout|flex": null
                             },
                             "designerId": "55cfd3c1-a334-4ce0-988a-299f74df3966",
                             "cn": [
@@ -139,11 +140,11 @@
                                     "codeClass": null,
                                     "userConfig": {
                                         "centered": false,
-                                        "height": "100px",
-                                        "id": "employeeImage",
+                                        "height": "80px",
+                                        "id": "EmployeePic",
                                         "margin": "10px auto 10px auto",
-                                        "width": "100px",
-                                        "src": "touch-2.2.1/resources//images/no-image.gif"
+                                        "width": "80px",
+                                        "src": "touch-2.2.1/resources/images/no-image.gif"
                                     },
                                     "designerId": "9c7380c5-f703-45e6-a8c0-66e2b865d76a"
                                 },
@@ -166,6 +167,7 @@
                                         ],
                                         "height": 22,
                                         "hidden": false,
+                                        "id": "fileBtn",
                                         "itemId": "fileBtn",
                                         "margin": "auto",
                                         "width": 100,
@@ -176,7 +178,7 @@
                                         "loadAsDataUrl": "boolean",
                                         "states": "object"
                                     },
-                                    "designerId": "3a9c68e2-8e6b-4cbb-afd7-302aa8fab837",
+                                    "designerId": "4d562d5d-9cc9-4985-b7ab-15683ec151ad",
                                     "customConfigs": [
                                         {
                                             "group": "(Custom Properties)",

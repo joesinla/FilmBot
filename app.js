@@ -48,15 +48,14 @@ Ext.application({
         'Main_View',
         'FilmPicker',
         'Inventory',
+        'Stats',
         'Settings',
         'Home',
-        'actionbutton',
-        'OrderAction',
         'Orders',
         'ioLoginbutton',
         'Customers',
         'Employees',
-        'Stats'
+        'MyContainer5'
     ],
     controllers: [
         'Orders',
@@ -72,7 +71,6 @@ Ext.application({
 
     launch: function() {
         Ext.Viewport.add( Ext.create('MyApp.view.Main_View'));
-        //Ext.Viewport.add( Ext.create('widget.orderAction'));
     }
 
 });

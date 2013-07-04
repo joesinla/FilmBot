@@ -50,17 +50,21 @@ Ext.define('MyApp.view.Orders', {
                 items: [
                     {
                         xtype: 'formpanel',
-                        title: 'Add Windows',
+                        title: 'Add Window',
                         iconCls: 'add',
                         id: 'AddWindowPanel',
                         items: [
                             {
                                 xtype: 'fieldset',
                                 id: 'WindowDemensions',
+                                style: ' bodyStyle: "background-color: transparent',
                                 items: [
                                     {
                                         xtype: 'container',
                                         id: 'DimensionsPanel',
+                                        defaults: {
+                                            margin: '0px 6px 0px 0px'
+                                        },
                                         layout: {
                                             align: 'center',
                                             pack: 'center',
@@ -305,11 +309,12 @@ Ext.define('MyApp.view.Orders', {
                     },
                     {
                         xtype: 'formpanel',
-                        title: 'Details',
+                        title: 'Options',
                         iconCls: 'settings',
                         items: [
                             {
                                 xtype: 'textareafield',
+                                margin: '10px',
                                 name: 'Notes',
                                 placeHolder: 'Notes:'
                             },
@@ -317,18 +322,32 @@ Ext.define('MyApp.view.Orders', {
                                 xtype: 'toolbar',
                                 docked: 'top',
                                 title: '',
+                                layout: {
+                                    pack: 'center',
+                                    type: 'hbox'
+                                },
                                 items: [
                                     {
                                         xtype: 'button',
-                                        text: 'MyButton11'
+                                        flex: 1,
+                                        iconCls: 'more',
+                                        text: 'Export'
                                     },
                                     {
                                         xtype: 'button',
-                                        text: 'MyButton12'
+                                        flex: 1,
+                                        id: 'ActionDelete',
+                                        ui: 'decline',
+                                        iconCls: 'delete',
+                                        text: 'Delete'
                                     },
                                     {
                                         xtype: 'button',
-                                        text: 'MyButton13'
+                                        flex: 1,
+                                        id: 'ActionSave',
+                                        ui: 'confirm',
+                                        iconCls: 'add',
+                                        text: 'Save'
                                     }
                                 ]
                             }
@@ -336,26 +355,7 @@ Ext.define('MyApp.view.Orders', {
                     }
                 ]
             }
-        ],
-        listeners: [
-            {
-                fn: 'onNewOrderActivate',
-                event: 'activate',
-                delegate: '#newOrder'
-            }
         ]
-    },
-
-    onNewOrderActivate: function(newActiveItem, container, oldActiveItem, eOpts) {
-        var tp = Ext.getCmp('newOrder');
-
-        var btn = Ext.create('widget.actionbutton', {
-            id: 'actionBttn',
-            style:'position:absolute;top:auto;bottom:10px;right:10px;z-index:10;'
-
-        });
-
-        tp.element.insertFirst(btn.element);
     }
 
 });

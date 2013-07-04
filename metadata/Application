@@ -27,15 +27,14 @@
             "Main_View",
             "FilmPicker",
             "Inventory",
+            "Stats",
             "Settings",
             "Home",
-            "actionbutton",
-            "OrderAction",
             "Orders",
             "ioLoginbutton",
             "Customers",
             "Employees",
-            "Stats"
+            "MyContainer5"
         ],
         "requires": [
             "Ext.ux.Fileup"
@@ -81,8 +80,7 @@
             "userConfig": {
                 "fn": "launch",
                 "implHandler": [
-                    "Ext.Viewport.add( Ext.create('MyApp.view.Main_View'));",
-                    "//Ext.Viewport.add( Ext.create('widget.orderAction'));"
+                    "Ext.Viewport.add( Ext.create('MyApp.view.Main_View'));"
                 ]
             },
             "designerId": "6e2021f7-cf80-4922-925c-c5d8c1cecdfe"

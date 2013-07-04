@@ -97,14 +97,17 @@ Ext.define('MyApp.controller.Inventory', {
             if(!isNaN(value)){
                 textfield.setCls("error");
             }
+            break;
+
             case "RollNumberField": 
             if(value.length < 3){
                 textfield.setCls("error");
             }
+
             break;
 
             case "ShadeField":
-            if(value > 100 || isNaN(value)){
+            if(value === null || value > 100){
                 textfield.setCls("error");
             }
             break;
@@ -144,12 +147,26 @@ Ext.define('MyApp.controller.Inventory', {
         var errors = rollModel.validate();
 
         if(!errors.isValid()){
+
+            var errorData = {};
+            errorData.errs = [];
+
+            errors.each(function(err){
+                errorData.errs.push ({field: err.getField(), message:err.getMessage()} );//. = err.getField();// .err.getMessage();
+            });
+
             var errField = this.getErrorField();
             //add error data to error div
-            errField.setData(errors);
-            console.log('errfield',errField);
+
+            errField.setData(errorData);
+            console.log(errField.getData());
             //show errors
             errField.show();
+
+            errors.each(function(error) {
+                form.getFields()[error.getField()].addCls('error');
+            });
+
         }else{
 
             //get store
@@ -168,7 +185,7 @@ Ext.define('MyApp.controller.Inventory', {
                 //reset form, set button text, clear errors
                 form.reset();
                 this.getErrorField().setData();
-                console.log('has data?',this.getErrorField())
+                form.down("#MnfField").focus();
                 this.getFilmAddButton().setText("Film Added!");
                 this.getErrorField().hide();
             }

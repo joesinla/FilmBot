@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "autoLoad": true,
         "model": "Employee",
         "storeId": "Employees",
         "designer|userClassName": "Employees"
@@ -27,6 +28,15 @@
                 "name": "addrecords"
             },
             "designerId": "0b322140-95a9-4a5b-b51d-d7829e88066c"
+        },
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "designerId": "5024a116-d4fd-4f18-bf36-252daa411f62"
         }
     ]
 }

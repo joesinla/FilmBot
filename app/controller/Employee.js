@@ -22,7 +22,8 @@ Ext.define('MyApp.controller.Employee', {
             upfilebtn: '#upfilebtn',
             picform: '#picform',
             EmployeeForm: '#EmployeeForm',
-            employees: '#employees'
+            employees: '#employees',
+            employeePic: '#EmployeePic'
         },
 
         control: {
@@ -35,23 +36,30 @@ Ext.define('MyApp.controller.Employee', {
             "#closeEmployee": {
                 tap: 'onCloseEmployeeBtnTap'
             },
-            "button": {
+            "#fileBtn": {
                 success: 'onButtonSuccess'
+            },
+            "#EmployeeList": {
+                itemtap: 'onListItemTap',
+                disclose: 'onEmployeeListDisclose'
             }
         }
     },
 
     onEnterEmployeeBtnTap: function(button, e, eOpts) {
-        var formData = this.getEmployeeForm().getValues();
+        var form = this.getEmployeeForm();
 
+        var record = form.getRecord();
 
+        if(record === null){
+            var values = form.getValues();
+            var model = Ext.create('MyApp.model.Employee', values);
+            model.set('EmployeeId', Math.floor(Math.random()*90000) + 10000);
+            record = model;
+            form.setRecord(model);
+        }
 
-        var model = Ext.create("MyApp.model.Employee", formData);
-        var store = Ext.getStore("Employees");
-
-        store.add(model);
-        store.sync();
-
+        this.saveEmployee(record);
     },
 
     onAddEmployeeBtnTap: function(button, e, eOpts) {
@@ -65,7 +73,6 @@ Ext.define('MyApp.controller.Employee', {
 
         bttn.observableId = '#closeEmployee';
 
-        console.log(this);
 
         //this.clearOrder();
 
@@ -75,7 +82,7 @@ Ext.define('MyApp.controller.Employee', {
     onCloseEmployeeBtnTap: function(button, e, eOpts) {
         this.getEmployees().animateActiveItem(0, {type:'slide',direction:'down'});
 
-        var bttn = Ext.getCmp('addEmployee')
+        var bttn = Ext.getCmp('addEmployee');
 
         bttn.setIconCls('add');
         bttn.setItemId('addEmployee');
@@ -87,7 +94,75 @@ Ext.define('MyApp.controller.Employee', {
     },
 
     onButtonSuccess: function(button, response, tis, el) {
-        console.log('controlelr success yo', button, response, tis, el);
+        response = Ext.JSON.decode(response.response);
+
+        //add to current form model
+        var record = this.getEmployeeForm().getRecord();
+
+        record.set("PicUrl",response.name);
+
+        //set picture
+        this.getEmployeePic().setSrc("php/images/" + response.name);
+    },
+
+    onListItemTap: function(dataview, index, target, record, e, eOpts) {
+        console.log(record, 'record');
+
+        this.getEmployees().animateActiveItem(1, {type:'slide',direction:'up'});
+
+        var bttn = Ext.getCmp('addEmployee');
+
+        bttn.setIconCls('arrow_down');
+        bttn.setItemId('closeEmployee');
+        bttn.setId('closeEmployee');
+
+        bttn.observableId = '#closeEmployee';
+
+        this.getEmployeeForm().setRecord(record);
+    },
+
+    onEmployeeListDisclose: function(list, record, target, index, e, eOpts) {
+        var that = this;
+
+        Ext.Msg.confirm(
+        "Confirm", 
+        "Do you wish to delete " + record.getData().First + " ?", 
+        function(button){
+            if (button == 'yes') {
+                that.deleteCustomer(record);
+            } else {
+                return false;
+            }
+        });
+
+    },
+
+    deleteCustomer: function(record) {
+        var store = Ext.getStore('Employees');
+
+        store.remove(record);
+
+        store.sync();
+
+    },
+
+    saveEmployee: function(record) {
+        //save model to store
+        this.getEmployeeForm().setRecord(record);
+
+        var store = Ext.getStore("Employees");
+
+        if(record.dirty){
+            console.log('dirty',record);
+        }else{
+            console.log('notdirty',record);
+        }
+
+
+        store.add(record);
+        store.sync();
+        store.load();
+        this.getEmployeeForm().down('#EnterEmployeeBtn').setText('Added!');
     }
 
 });

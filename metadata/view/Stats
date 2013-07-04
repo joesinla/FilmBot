@@ -7,7 +7,25 @@
     "codeClass": null,
     "userConfig": {
         "id": "stats",
-        "designer|userClassName": "Stats"
+        "designer|userClassName": "Stats",
+        "designer|userAlias": "stats",
+        "autoDestroy": false,
+        "layout": "card"
     },
-    "designerId": "63b5fc05-7f51-4b46-8251-c1ad896252de"
+    "designerId": "09e2f730-9c71-47f7-b222-57c40d09559e",
+    "cn": [
+        {
+            "type": "Ext.carousel.Carousel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "direction": "vertical",
+                "activeItem": null
+            },
+            "designerId": "6ea2ef16-2101-4216-9ed0-db07a2715e4d"
+        }
+    ]
 }

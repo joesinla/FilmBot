@@ -71,9 +71,6 @@ Ext.define('MyApp.controller.Orders', {
             "#FilmPicker": {
                 hide: 'onFilmPickerHide'
             },
-            "#actionBttn": {
-                tap: 'onActionButtonTap'
-            },
             "#ActionSave": {
                 tap: 'onActionSaveButtonTap'
             },
@@ -103,8 +100,6 @@ Ext.define('MyApp.controller.Orders', {
         bttn.setId('closeOrder');
 
         bttn.observableId = '#closeOrder';
-
-        console.log(this);
 
         this.clearOrder();
 
@@ -189,12 +184,14 @@ Ext.define('MyApp.controller.Orders', {
     },
 
     onActionDeleteButtonTap: function(button, e, eOpts) {
+        var me = this;
+
         Ext.Msg.confirm(  
         "Confirm", 
         "Do you wish to delete Order " + this.getCustomerForm().getRecord().getData().Number + " ?", 
         function(button){
             if (button == 'yes') {
-                this.deleteOrder();
+                me.deleteOrder(me.getCustomerForm().getRecord());
             } else {
                 return false;
             }
@@ -367,16 +364,8 @@ Ext.define('MyApp.controller.Orders', {
     */
     },
 
-    onActionButtonTap: function(button, e, eOpts) {
-        var actionSheet = this.getActionPanel();
-        Ext.Viewport.add(actionSheet);
-        actionSheet.show();
-    },
-
     onActionSaveButtonTap: function(button, e, eOpts) {
         this.saveOrder();
-
-        this.getActionPanel().hide();
     },
 
     onOrderListSelect: function(dataview, record, eOpts) {
@@ -444,12 +433,10 @@ Ext.define('MyApp.controller.Orders', {
         *
         */ 
 
-
         var orderStore = Ext.getStore('Orders');
         var windowStore = Ext.getStore('Windows');
         var tempStore = Ext.getStore('temp');
 
-        console.log('temp store', tempStore);
 
         var orderModel = this.getCustomerForm().getRecord();
 
@@ -468,7 +455,7 @@ Ext.define('MyApp.controller.Orders', {
             console.log('inloop');
         });
 
-        console.log('outloop');
+
         windowStore.sync();
         orderStore.sync();
 
@@ -523,12 +510,18 @@ Ext.define('MyApp.controller.Orders', {
             }
         });
 
+        this.getOrders().animateActiveItem(0, {type:'slide',direction:'down'});
 
-        this.getActionPanel().hide();
+        var bttn = Ext.getCmp('addOrder');
+
+        bttn.setIconCls('add');
+        bttn.setItemId('addOrder');
+        bttn.setId('addOrder');
+
+        bttn.observableId = '#addOrder';
     },
 
     newOrder: function() {
-
         //new order #
         var orderNumber = Math.floor(Math.random()*90000) + 10000;
 
@@ -545,8 +538,6 @@ Ext.define('MyApp.controller.Orders', {
     },
 
     clearOrder: function() {
-        console.log('clear order');
-
         Ext.getStore('temp').removeAll();
 
         Ext.getStore('Windows').clearFilter();
@@ -554,18 +545,13 @@ Ext.define('MyApp.controller.Orders', {
         this.getCustomerForm().setRecord(null);
 
         this.getCustomerForm().reset();
-
-
     },
 
     loadOrder: function(record) {
-
-
-        var orderStore = Ext.getStore('Orders');
-        var windowStore = Ext.getStore('Windows');
-        var tempStore = Ext.getStore('temp');
-
-        var orderModel = orderStore.getById(record.getData().id);
+        var orderStore = Ext.getStore('Orders'),
+            windowStore = Ext.getStore('Windows'),
+            tempStore = Ext.getStore('temp'),
+            orderModel = orderStore.getById(record.getData().id);
 
         //load ordermodel into form
         this.getCustomerForm().setRecord(orderModel);
@@ -576,7 +562,6 @@ Ext.define('MyApp.controller.Orders', {
         windowStore.load();
 
 
-
         //var windows = orderModel.windows();
         //fill temp store with windows
         tempStore.removeAll();
@@ -584,8 +569,6 @@ Ext.define('MyApp.controller.Orders', {
         windowStore.each(function(r){
             tempStore.add(r);
         });
-
-        console.log('load temp store', tempStore);
 
         windowStore.clearFilter();
     }

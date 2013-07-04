@@ -60,14 +60,12 @@ Ext.define('MyApp.view.Inventory', {
                             direction: 'down'
                         },
                         tpl: [
-                            '<div class="invform-error">',
-                            '   ',
-                            '    <p>{config.field}{config.message} hiiiiii</p>',
-                            '    <p>{config.field}{config.message} hiiiiii</p>',
-                            '    <p>{config.field}{config.message} hiiiiii</p>',
-                            '    <p>{config.field}{config.message} hiiiiii</p>',
-                            '    <p>{config.field}{config.message} hiiiiii</p>',
-                            '    ',
+                            '<div class="invform-error-field">',
+                            '    <ul>',
+                            '       <tpl for="errs">',
+                            '        <li>{field} field {message}</li>',
+                            '       </tpl>',
+                            '    </ul>',
                             '</div>'
                         ]
                     },
@@ -101,7 +99,6 @@ Ext.define('MyApp.view.Inventory', {
                                 cls: 'val',
                                 id: 'ShadeField',
                                 name: 'Shade',
-                                required: true,
                                 autoComplete: true,
                                 placeHolder: 'Shade'
                             },
@@ -112,6 +109,13 @@ Ext.define('MyApp.view.Inventory', {
                                 required: true,
                                 autoComplete: true,
                                 placeHolder: 'Size'
+                            },
+                            {
+                                xtype: 'textfield',
+                                id: 'PriceField',
+                                name: 'Price',
+                                required: true,
+                                placeHolder: 'Price'
                             }
                         ]
                     },
@@ -134,13 +138,6 @@ Ext.define('MyApp.view.Inventory', {
                                 name: 'LinearFeet',
                                 required: true,
                                 placeHolder: 'Linear Feet'
-                            },
-                            {
-                                xtype: 'textfield',
-                                id: 'PriceField',
-                                name: 'Price',
-                                required: true,
-                                placeHolder: 'Price'
                             }
                         ]
                     },

@@ -22,6 +22,7 @@ Ext.define('MyApp.store.Employees', {
     ],
 
     config: {
+        autoLoad: true,
         model: 'MyApp.model.Employee',
         storeId: 'Employees',
         listeners: [
@@ -29,7 +30,10 @@ Ext.define('MyApp.store.Employees', {
                 fn: 'onStoreAddrecords',
                 event: 'addrecords'
             }
-        ]
+        ],
+        proxy: {
+            type: 'localstorage'
+        }
     },
 
     onStoreAddrecords: function(store, records, eOpts) {

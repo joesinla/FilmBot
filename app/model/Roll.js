@@ -90,6 +90,12 @@ Ext.define('MyApp.model.Roll', {
                 field: 'LinearFeet',
                 max: 3,
                 min: 1
+            },
+            {
+                type: 'length',
+                field: 'Price',
+                max: 5,
+                min: 1
             }
         ],
         hasMany: {

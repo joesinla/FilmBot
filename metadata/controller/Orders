@@ -30,8 +30,6 @@
                     "",
                     "bttn.observableId = '#closeOrder';",
                     "",
-                    "console.log(this);",
-                    "",
                     "this.clearOrder();",
                     "",
                     "this.newOrder();"
@@ -210,12 +208,14 @@
             "userConfig": {
                 "fn": "onActionDeleteButtonTap",
                 "implHandler": [
+                    "var me = this;",
+                    "",
                     "Ext.Msg.confirm(  ",
                     "\"Confirm\", ",
                     "\"Do you wish to delete Order \" + this.getCustomerForm().getRecord().getData().Number + \" ?\", ",
                     "function(button){",
                     "    if (button == 'yes') {",
-                    "        this.deleteOrder();",
+                    "        me.deleteOrder(me.getCustomerForm().getRecord());",
                     "    } else {",
                     "        return false;",
                     "    }",
@@ -408,7 +408,7 @@
                 "implHandler": [
                     "/*",
                     "var mnfSlot = this.getMnfSlot(),",
-                    "    picker = this.getFilmPicker();",
+                    "picker = this.getFilmPicker();",
                     "",
                     "var mnfValue = mnfSlot.getSelection()[0].getData().value;",
                     "",
@@ -470,16 +470,16 @@
                     "",
                     "var shades = [];",
                     "Ext.each(store.getData().items, function(obj){",
-                    "    shades.push(obj.getData().Shade);",
+                    "shades.push(obj.getData().Shade);",
                     "});",
                     "",
                     "var uniqueArray = shades.filter(function(elem, pos) {",
-                    "    return shades.indexOf(elem) == pos;",
+                    "return shades.indexOf(elem) == pos;",
                     "});",
                     "",
                     "var tData = [{text:\"\",value:\"\"}];",
                     "Ext.each(uniqueArray,function(elem){",
-                    "    tData.push({\"text\":elem,\"value\":elem});",
+                    "tData.push({\"text\":elem,\"value\":elem});",
                     "});",
                     "",
                     "this.getShadeSlot().setData(tData);",
@@ -592,12 +592,10 @@
                     "*",
                     "*/ ",
                     "",
-                    "",
                     "var orderStore = Ext.getStore('Orders');",
                     "var windowStore = Ext.getStore('Windows');",
                     "var tempStore = Ext.getStore('temp');",
                     "",
-                    "console.log('temp store', tempStore);",
                     "",
                     "var orderModel = this.getCustomerForm().getRecord();",
                     "",
@@ -616,7 +614,7 @@
                     "    console.log('inloop');",
                     "});",
                     "",
-                    "console.log('outloop');",
+                    "",
                     "windowStore.sync();",
                     "orderStore.sync();",
                     "",
@@ -637,31 +635,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "onActionButtonTap",
-                "implHandler": [
-                    "var actionSheet = this.getActionPanel();",
-                    "Ext.Viewport.add(actionSheet);",
-                    "actionSheet.show();"
-                ],
-                "name": "tap",
-                "designer|targetType": "Ext.Button",
-                "designer|controlQuery": "#actionBttn"
-            },
-            "designerId": "ed88d957-5def-4986-9acd-89d92b04a9c4"
-        },
-        {
-            "type": "controlleraction",
-            "reference": {
-                "name": "listeners",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
                 "fn": "onActionSaveButtonTap",
                 "implHandler": [
-                    "this.saveOrder();",
-                    "",
-                    "this.getActionPanel().hide();"
+                    "this.saveOrder();"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
@@ -786,8 +762,15 @@
                     "    }",
                     "});",
                     "",
+                    "this.getOrders().animateActiveItem(0, {type:'slide',direction:'down'});",
                     "",
-                    "this.getActionPanel().hide();"
+                    "var bttn = Ext.getCmp('addOrder');",
+                    "",
+                    "bttn.setIconCls('add');",
+                    "bttn.setItemId('addOrder');",
+                    "bttn.setId('addOrder');",
+                    "",
+                    "bttn.observableId = '#addOrder';"
                 ]
             },
             "designerId": "bf649abf-f404-46f3-9491-534e951100d6"
@@ -850,7 +833,6 @@
             "userConfig": {
                 "fn": "newOrder",
                 "implHandler": [
-                    "",
                     "//new order #",
                     "var orderNumber = Math.floor(Math.random()*90000) + 10000;",
                     "",
@@ -898,17 +880,13 @@
             "userConfig": {
                 "fn": "clearOrder",
                 "implHandler": [
-                    "console.log('clear order');",
-                    "",
                     "Ext.getStore('temp').removeAll();",
                     "",
                     "Ext.getStore('Windows').clearFilter();",
                     "",
                     "this.getCustomerForm().setRecord(null);",
                     "",
-                    "this.getCustomerForm().reset();",
-                    "",
-                    ""
+                    "this.getCustomerForm().reset();"
                 ]
             },
             "designerId": "1d44a11f-18d9-4c6c-b92b-5640cfb50a9b"
@@ -926,13 +904,10 @@
                     "record"
                 ],
                 "implHandler": [
-                    "",
-                    "",
-                    "var orderStore = Ext.getStore('Orders');",
-                    "var windowStore = Ext.getStore('Windows');",
-                    "var tempStore = Ext.getStore('temp');",
-                    "",
-                    "var orderModel = orderStore.getById(record.getData().id);",
+                    "var orderStore = Ext.getStore('Orders'),",
+                    "    windowStore = Ext.getStore('Windows'),",
+                    "    tempStore = Ext.getStore('temp'),",
+                    "    orderModel = orderStore.getById(record.getData().id);",
                     "",
                     "//load ordermodel into form",
                     "this.getCustomerForm().setRecord(orderModel);",
@@ -943,7 +918,6 @@
                     "windowStore.load();",
                     "",
                     "",
-                    "",
                     "//var windows = orderModel.windows();",
                     "//fill temp store with windows",
                     "tempStore.removeAll();",
@@ -951,8 +925,6 @@
                     "windowStore.each(function(r){",
                     "    tempStore.add(r);",
                     "});",
-                    "",
-                    "console.log('load temp store', tempStore);",
                     "",
                     "windowStore.clearFilter();"
                 ]

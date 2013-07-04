@@ -31,7 +31,7 @@ Ext.define('MyApp.view.Employees', {
                 xtype: 'list',
                 id: 'EmployeeList',
                 itemTpl: [
-                    '<div>Order {Number} was created on {Created:date("m-d H:i:s")}</div>'
+                    '<div><img src="images/" + {PicUrl} />Order {Number} was created on {Created:date("m-d H:i:s")}</div>'
                 ],
                 store: 'Employees',
                 onItemDisclosure: true,
@@ -56,6 +56,7 @@ Ext.define('MyApp.view.Employees', {
                                     {
                                         xtype: 'textfield',
                                         name: 'First',
+                                        required: true,
                                         placeHolder: 'First Name'
                                     },
                                     {
@@ -67,16 +68,15 @@ Ext.define('MyApp.view.Employees', {
                             },
                             {
                                 xtype: 'container',
-                                flex: 1,
                                 items: [
                                     {
                                         xtype: 'image',
                                         centered: false,
-                                        height: '100px',
-                                        id: 'employeeImage',
+                                        height: '80px',
+                                        id: 'EmployeePic',
                                         margin: '10px auto 10px auto',
-                                        width: '100px',
-                                        src: 'touch-2.2.1/resources//images/no-image.gif'
+                                        width: '80px',
+                                        src: 'touch-2.2.1/resources/images/no-image.gif'
                                     },
                                     {
                                         xtype: 'fileupload',
@@ -87,6 +87,7 @@ Ext.define('MyApp.view.Employees', {
                                         cls: 'btn x-button',
                                         height: 22,
                                         hidden: false,
+                                        id: 'fileBtn',
                                         itemId: 'fileBtn',
                                         margin: 'auto',
                                         width: 100

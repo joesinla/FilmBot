@@ -227,6 +227,7 @@ Ext.define('Ext.ux.slidenavigation.View', {
         me._slideButtonConfig = {
             xtype: 'button',
             iconMask: true,
+            ui: "plain",
             iconCls: 'more',
             align: this.getListPosition(),
             name: 'slidebutton',

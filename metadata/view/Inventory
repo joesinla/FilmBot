@@ -129,14 +129,12 @@
                             "codeClass": null,
                             "userConfig": {
                                 "implHandler": [
-                                    "<div class=\"invform-error\">",
-                                    "   ",
-                                    "    <p>{config.field}{config.message} hiiiiii</p>",
-                                    "    <p>{config.field}{config.message} hiiiiii</p>",
-                                    "    <p>{config.field}{config.message} hiiiiii</p>",
-                                    "    <p>{config.field}{config.message} hiiiiii</p>",
-                                    "    <p>{config.field}{config.message} hiiiiii</p>",
-                                    "    ",
+                                    "<div class=\"invform-error-field\">",
+                                    "    <ul>",
+                                    "       <tpl for=\"errs\">",
+                                    "        <li>{field} field {message}</li>",
+                                    "       </tpl>",
+                                    "    </ul>",
                                     "</div>"
                                 ],
                                 "designer|displayName": "tpl"
@@ -217,7 +215,6 @@
                                 "id": "ShadeField",
                                 "label": null,
                                 "name": "Shade",
-                                "required": true,
                                 "autoComplete": true,
                                 "placeHolder": "Shade"
                             },
@@ -239,6 +236,22 @@
                                 "placeHolder": "Size"
                             },
                             "designerId": "a5d5ccc8-3559-4fae-bfe2-4e3cf1f8e43a"
+                        },
+                        {
+                            "type": "Ext.field.Text",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "id": "PriceField",
+                                "label": null,
+                                "name": "Price",
+                                "required": true,
+                                "placeHolder": "Price"
+                            },
+                            "designerId": "d4bbf883-53c0-4b89-a71b-05dfd0733493"
                         }
                     ]
                 },
@@ -289,22 +302,6 @@
                                 "placeHolder": "Linear Feet"
                             },
                             "designerId": "06041c54-aa96-4f41-b297-9c14bc88bf44"
-                        },
-                        {
-                            "type": "Ext.field.Text",
-                            "reference": {
-                                "name": "items",
-                                "type": "array"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "id": "PriceField",
-                                "label": null,
-                                "name": "Price",
-                                "required": true,
-                                "placeHolder": "Price"
-                            },
-                            "designerId": "d4bbf883-53c0-4b89-a71b-05dfd0733493"
                         }
                     ]
                 },

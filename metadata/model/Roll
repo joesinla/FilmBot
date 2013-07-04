@@ -191,6 +191,21 @@
             "designerId": "0eb1867b-1a62-45be-9ae0-e448b14d3c2b"
         },
         {
+            "type": "lengthvalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "PriceValidation",
+                "field": "Price",
+                "max": 5,
+                "min": 1
+            },
+            "designerId": "81c18cf4-bb8d-4114-bc6c-088d7a2da93f"
+        },
+        {
             "type": "Ext.data.Field",
             "reference": {
                 "name": "fields",

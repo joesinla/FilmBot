@@ -63,19 +63,6 @@
             "designerId": "c001fa84-113a-4e59-9d3b-86c8b1c05d11"
         },
         {
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "inventory",
-                "selector": "#inventory"
-            },
-            "designerId": "b97d6b8f-27f0-4898-b98d-15f756a25dbe"
-        },
-        {
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -92,19 +79,6 @@
                 "designer|controlQuery": "#InventoryEnter"
             },
             "designerId": "934a223a-ce47-4130-a2ef-5fc81461d795"
-        },
-        {
-            "type": "controllerref",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "ref": "invForm",
-                "selector": "#InventoryForm"
-            },
-            "designerId": "adafdedf-6dfa-4425-930a-31430d39f72d"
         },
         {
             "type": "controlleraction",
@@ -161,12 +135,26 @@
                     "var errors = rollModel.validate();",
                     "",
                     "if(!errors.isValid()){",
+                    "",
+                    "    var errorData = {};",
+                    "    errorData.errs = [];",
+                    "",
+                    "    errors.each(function(err){",
+                    "        errorData.errs.push ({field: err.getField(), message:err.getMessage()} );//. = err.getField();// .err.getMessage();",
+                    "    });",
+                    "",
                     "    var errField = this.getErrorField();",
                     "    //add error data to error div",
-                    "    errField.setData(errors);",
-                    "    console.log('errfield',errField);",
+                    "",
+                    "    errField.setData(errorData);",
+                    "    console.log(errField.getData());",
                     "    //show errors",
                     "    errField.show();",
+                    "",
+                    "    errors.each(function(error) {",
+                    "        form.getFields()[error.getField()].addCls('error');",
+                    "    });",
+                    "",
                     "}else{",
                     "",
                     "    //get store",
@@ -181,16 +169,16 @@
                     "        rollStore.add(rollModel);",
                     "        rollStore.sync();//Ext.bind(this.getApplication().getController('ioControl').syncCallback, this));",
                     "        rollStore.load();",
-                    "        ",
+                    "",
                     "        //reset form, set button text, clear errors",
                     "        form.reset();",
-                    "    \tthis.getErrorField().setData();",
-                    "        console.log('has data?',this.getErrorField())",
+                    "        this.getErrorField().setData();",
+                    "        form.down(\"#MnfField\").focus();",
                     "        this.getFilmAddButton().setText(\"Film Added!\");",
                     "        this.getErrorField().hide();",
                     "    }",
-                    "    ",
-                    "    ",
+                    "",
+                    "",
                     "}"
                 ]
             },
@@ -440,13 +428,39 @@
                     "",
                     "if(data.length > 2){",
                     "    field.removeCls(\"error\");",
-                    "\treturn true;",
+                    "    return true;",
                     "}else{",
-                    "\tfield.addCls(\"error\");",
+                    "    field.addCls(\"error\");",
                     "}"
                 ]
             },
             "designerId": "68f8eeb5-fe4d-4f25-b510-2dcbf951ba1d"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "inventory",
+                "selector": "#inventory"
+            },
+            "designerId": "b97d6b8f-27f0-4898-b98d-15f756a25dbe"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "invForm",
+                "selector": "#InventoryForm"
+            },
+            "designerId": "adafdedf-6dfa-4425-930a-31430d39f72d"
         },
         {
             "type": "controllerref",
@@ -479,14 +493,17 @@
                     "    if(!isNaN(value)){",
                     "        textfield.setCls(\"error\");",
                     "    }",
+                    "    break;",
+                    "",
                     "    case \"RollNumberField\": ",
                     "    if(value.length < 3){",
                     "        textfield.setCls(\"error\");",
                     "    }",
+                    "",
                     "    break;",
                     "",
                     "    case \"ShadeField\":",
-                    "    if(value > 100 || isNaN(value)){",
+                    "    if(value === null || value > 100){",
                     "        textfield.setCls(\"error\");",
                     "    }",
                     "    break;",

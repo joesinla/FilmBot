@@ -168,6 +168,33 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "title": "Sales Commision"
+                    },
+                    "designerId": "b49116d8-9139-4c44-8f11-761eac4e7f08",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Number",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "label": null,
+                                "placeHolder": "%"
+                            },
+                            "designerId": "dd9d9343-b39e-456f-95f0-fde3ade3c9cd"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
                         "title": "Tax"
                     },
                     "designerId": "c9eb62b7-dfed-4db3-85c0-8e21762ffb62",
@@ -187,6 +214,23 @@
                             "designerId": "95521ea8-0e75-46ea-b9d4-15dec10d8d1d"
                         }
                     ]
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "btn"
+                        ],
+                        "height": 25,
+                        "text": "Logout"
+                    },
+                    "designerId": "10db92e1-1022-4211-bbd2-0bf2883a14fb",
+                    "masterInstanceId": "05678a88-ca74-4267-b43d-8ff0ed14ae1c"
                 }
             ]
         }

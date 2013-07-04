@@ -110,12 +110,15 @@
                     "var rollStore = Ext.getStore('Rolls');",
                     "var orderStore = Ext.getStore('Orders');",
                     "var windowStore = Ext.getStore('Windows');",
+                    "var employeeStore = Ext.getStore('Employees');",
                     "rollStore.sync();",
                     "rollStore.load();",
                     "orderStore.sync();",
                     "orderStore.load();",
                     "windowStore.sync();",
-                    "windowStore.sync();"
+                    "windowStore.sync();",
+                    "employeeStore.load();",
+                    "employeeStore.sync();"
                 ]
             },
             "designerId": "b1fc94cd-2de9-433f-a814-0a186b9f23ea"

@@ -15,9 +15,20 @@
 
 Ext.define('MyApp.view.Stats', {
     extend: 'Ext.Container',
+    alias: 'widget.stats',
 
     config: {
-        id: 'stats'
+        id: 'stats',
+        autoDestroy: false,
+        layout: {
+            type: 'card'
+        },
+        items: [
+            {
+                xtype: 'carousel',
+                direction: 'vertical'
+            }
+        ]
     }
 
 });

@@ -124,22 +124,6 @@
             ],
             "className": "Settings"
         },
-        "519762ee-0acf-42ef-9c81-2d5b3d9245f3": {
-            "paths": [
-                "metadata/view/OrderAction",
-                "app/view/override/OrderAction.js",
-                "app/view/OrderAction.js"
-            ],
-            "className": "OrderAction"
-        },
-        "f07de2a3-84c6-4636-9377-8ff4b2f212f7": {
-            "paths": [
-                "metadata/view/actionbutton",
-                "app/view/override/actionbutton.js",
-                "app/view/actionbutton.js"
-            ],
-            "className": "actionbutton"
-        },
         "06af2c6f-3e92-4434-be6c-50169e37c3ed": {
             "paths": [
                 "metadata/view/FilmPicker",
@@ -286,13 +270,21 @@
             ],
             "className": "js4"
         },
-        "63b5fc05-7f51-4b46-8251-c1ad896252de": {
+        "09e2f730-9c71-47f7-b222-57c40d09559e": {
             "paths": [
                 "metadata/view/Stats",
                 "app/view/override/Stats.js",
                 "app/view/Stats.js"
             ],
             "className": "Stats"
+        },
+        "5318fa1d-ab8e-4bd4-8bb0-1b218511ff51": {
+            "paths": [
+                "metadata/view/MyContainer5",
+                "app/view/override/MyContainer5.js",
+                "app/view/MyContainer5.js"
+            ],
+            "className": "MyContainer5"
         }
     },
     "viewOrderMap": {
@@ -302,12 +294,11 @@
             "feaff807-b000-4a81-b3db-9b6ffb8fc032",
             "519d35ed-d5f8-491a-9025-c97d87ab7bb7",
             "c6b97797-21f5-424f-b970-4ed7e745d2df",
-            "63b5fc05-7f51-4b46-8251-c1ad896252de",
+            "09e2f730-9c71-47f7-b222-57c40d09559e",
             "c63b3ac9-c6d5-4e20-900a-96ad11f57e64",
-            "519762ee-0acf-42ef-9c81-2d5b3d9245f3",
             "06af2c6f-3e92-4434-be6c-50169e37c3ed",
-            "f07de2a3-84c6-4636-9377-8ff4b2f212f7",
-            "05678a88-ca74-4267-b43d-8ff0ed14ae1c"
+            "05678a88-ca74-4267-b43d-8ff0ed14ae1c",
+            "5318fa1d-ab8e-4bd4-8bb0-1b218511ff51"
         ],
         "store": [
             "29582cfd-f2f6-4569-a611-17751df61290",
