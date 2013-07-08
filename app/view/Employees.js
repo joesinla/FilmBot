@@ -31,11 +31,12 @@ Ext.define('MyApp.view.Employees', {
                 xtype: 'list',
                 id: 'EmployeeList',
                 itemTpl: [
-                    '<div><img src="images/" + {PicUrl} />Order {Number} was created on {Created:date("m-d H:i:s")}</div>'
+                    '<div><img src="images/""{PicUrl}" />Order {Number} was created on {Created:date("m-d H:i:s")}</div>'
                 ],
                 store: 'Employees',
+                infinite: true,
                 onItemDisclosure: true,
-                striped: true
+                pinHeaders: false
             },
             {
                 xtype: 'formpanel',
@@ -76,7 +77,7 @@ Ext.define('MyApp.view.Employees', {
                                         id: 'EmployeePic',
                                         margin: '10px auto 10px auto',
                                         width: '80px',
-                                        src: 'touch-2.2.1/resources/images/no-image.gif'
+                                        src: 'images'
                                     },
                                     {
                                         xtype: 'fileupload',

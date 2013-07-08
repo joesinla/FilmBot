@@ -36,7 +36,26 @@
                 "type": "object"
             },
             "codeClass": null,
+            "userConfig": {
+                "id": "employeee"
+            },
             "designerId": "5024a116-d4fd-4f18-bf36-252daa411f62"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onStoreRemoverecords",
+                "implHandler": [
+                    "console.log('remove from employee store');"
+                ],
+                "name": "removerecords"
+            },
+            "designerId": "343a3142-b7cf-461e-85bb-311d3f5f3a62"
         }
     ]
 }

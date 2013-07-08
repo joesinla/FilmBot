@@ -72,19 +72,7 @@
             "userConfig": {
                 "fn": "onEnterEmployeeBtnTap",
                 "implHandler": [
-                    "var form = this.getEmployeeForm();",
-                    "",
-                    "var record = form.getRecord();",
-                    "",
-                    "if(record === null){",
-                    "    var values = form.getValues();",
-                    "    var model = Ext.create('MyApp.model.Employee', values);",
-                    "    model.set('EmployeeId', Math.floor(Math.random()*90000) + 10000);",
-                    "    record = model;",
-                    "    form.setRecord(model);",
-                    "}",
-                    "\t",
-                    "   this.saveEmployee(record);"
+                    "this.saveEmployee();"
                 ],
                 "name": "tap",
                 "designer|targetType": "Ext.Button",
@@ -113,7 +101,10 @@
                     "bttn.observableId = '#closeEmployee';",
                     "",
                     "",
-                    "//this.clearOrder();",
+                    "var form = this.getEmployeeForm();",
+                    "",
+                    "form.reset();",
+                    "form.setRecord(null);",
                     "",
                     "//this.newOrder();"
                 ],
@@ -217,10 +208,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "onListItemTap",
+                "fn": "onListSelect",
                 "implHandler": [
-                    "console.log(record, 'record');",
-                    "",
                     "this.getEmployees().animateActiveItem(1, {type:'slide',direction:'up'});",
                     "",
                     "var bttn = Ext.getCmp('addEmployee');",
@@ -233,7 +222,7 @@
                     "",
                     "this.getEmployeeForm().setRecord(record);"
                 ],
-                "name": "itemtap",
+                "name": "select",
                 "designer|targetType": "Ext.dataview.List",
                 "designer|controlQuery": "#EmployeeList"
             },
@@ -253,10 +242,10 @@
                     "",
                     "Ext.Msg.confirm(",
                     "\"Confirm\", ",
-                    "\"Do you wish to delete \" + record.getData().First + \" ?\", ",
+                    "\"Do you wish to delete1 \" + record.getData().First + \" ?\", ",
                     "function(button){",
-                    "    if (button == 'yes') {",
-                    "        that.deleteCustomer(record);",
+                    "    if (button === 'yes') {",
+                    "        that.deleteEmployee(record);",
                     "    } else {",
                     "        return false;",
                     "    }",
@@ -277,7 +266,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "fn": "deleteCustomer",
+                "fn": "deleteEmployee",
                 "designer|params": [
                     "record"
                 ],
@@ -301,25 +290,32 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "saveEmployee",
-                "designer|params": [
-                    "record"
-                ],
                 "implHandler": [
-                    "//save model to store",
-                    "this.getEmployeeForm().setRecord(record);",
+                    "var store = Ext.getStore(\"Employees\"),",
+                    "    form = this.getEmployeeForm(),",
+                    "    values = form.getValues(),",
+                    "    record = form.getRecord();",
                     "",
-                    "var store = Ext.getStore(\"Employees\");",
+                    "if(record === null){",
+                    "    //create new model and add to store",
                     "",
-                    "if(record.dirty){",
-                    "    console.log('dirty',record);",
+                    "    model = Ext.create('MyApp.model.Employee', values);",
+                    "    model.set('EmployeeId', Math.floor(Math.random()*90000) + 10000);",
+                    "    form.setRecord(model);",
+                    "    store.add(model);",
+                    "",
+                    "    ",
                     "}else{",
-                    "    console.log('notdirty',record);",
+                    "    //update record",
+                    "    var employeeRecord = store.getAt(store.findExact('EmployeeId', record.get('EmployeeId')));",
+                    "    employeeRecord.set(values);",
+                    "    store.add(employeeRecord);",
                     "}",
                     "",
-                    "",
-                    "store.add(record);",
                     "store.sync();",
                     "store.load();",
+                    "",
+                    "",
                     "this.getEmployeeForm().down('#EnterEmployeeBtn').setText('Added!');"
                 ]
             },

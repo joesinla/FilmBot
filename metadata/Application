@@ -95,7 +95,8 @@
             "userConfig": {
                 "paths": [
                     "{\"Ext.ux\":\"./ux\",",
-                    " \"Ext.io\":\"./io\"}"
+                    " \"Ext.io\":\"./io\",",
+                    " \"images\":\"./touch-2.2.1/resources/images\"}"
                 ]
             },
             "designerId": "7b917627-23a4-47a3-88f5-fa85a378be04"

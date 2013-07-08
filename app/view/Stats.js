@@ -25,8 +25,29 @@ Ext.define('MyApp.view.Stats', {
         },
         items: [
             {
-                xtype: 'carousel',
-                direction: 'vertical'
+                xtype: 'polar',
+                colors: [
+                    '#115fa6',
+                    '#94ae0a',
+                    '#a61120',
+                    '#ff8809',
+                    '#ffd13e',
+                    '#a61187',
+                    '#24ad9a',
+                    '#7c7474',
+                    '#a66111'
+                ],
+                series: [
+                    {
+                        type: 'pie3d',
+                        field: 'y'
+                    }
+                ],
+                interactions: [
+                    {
+                        type: 'rotatePie3d'
+                    }
+                ]
             }
         ]
     }

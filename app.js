@@ -17,7 +17,8 @@
 Ext.Loader.setConfig({
     paths: {
         'Ext.ux': './ux',
-        'Ext.io': './io'
+        'Ext.io': './io',
+        images: './touch-2.2.1/resources/images'
     }
 });
 

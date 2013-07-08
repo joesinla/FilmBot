@@ -15,17 +15,44 @@
     "designerId": "09e2f730-9c71-47f7-b222-57c40d09559e",
     "cn": [
         {
-            "type": "Ext.carousel.Carousel",
+            "type": "Ext.chart.PolarChart",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
             "userConfig": {
-                "direction": "vertical",
-                "activeItem": null
+                "colors": [
+                    "[\"#115fa6\", \"#94ae0a\", \"#a61120\", \"#ff8809\", \"#ffd13e\", \"#a61187\", \"#24ad9a\", \"#7c7474\", \"#a66111\"]"
+                ]
             },
-            "designerId": "6ea2ef16-2101-4216-9ed0-db07a2715e4d"
+            "designerId": "e1c67790-59c4-4cad-bdf4-147d83d1d0f7",
+            "isBuiltIn": true,
+            "iconCls": "icon-pie3d-chart",
+            "autoName": "My3DPieChart",
+            "cn": [
+                {
+                    "type": "Ext.chart.series.Pie3D",
+                    "reference": {
+                        "name": "series",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "field": "y"
+                    },
+                    "designerId": "d25ea1b9-5529-41f7-be7b-a0a55b5e9047"
+                },
+                {
+                    "type": "Ext.chart.interactions.RotatePie3D",
+                    "reference": {
+                        "name": "interactions",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "designerId": "cffb1523-5ab2-4313-b47c-af8cb872fa49"
+                }
+            ]
         }
     ]
 }

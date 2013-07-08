@@ -24,8 +24,10 @@
             "userConfig": {
                 "id": "EmployeeList",
                 "store": "Employees",
+                "infinite": true,
+                "itemHeight": null,
                 "onItemDisclosure": true,
-                "striped": true
+                "pinHeaders": false
             },
             "designerId": "806bab4f-68a1-44c2-a7e8-d626b73ef101",
             "cn": [
@@ -38,7 +40,7 @@
                     "codeClass": null,
                     "userConfig": {
                         "implHandler": [
-                            "<div><img src=\"images/\" + {PicUrl} />Order {Number} was created on {Created:date(\"m-d H:i:s\")}</div>"
+                            "<div><img src=\"images/\"\"{PicUrl}\" />Order {Number} was created on {Created:date(\"m-d H:i:s\")}</div>"
                         ],
                         "designer|displayName": "itemTpl"
                     },
@@ -144,7 +146,7 @@
                                         "id": "EmployeePic",
                                         "margin": "10px auto 10px auto",
                                         "width": "80px",
-                                        "src": "touch-2.2.1/resources/images/no-image.gif"
+                                        "src": "images"
                                     },
                                     "designerId": "9c7380c5-f703-45e6-a8c0-66e2b865d76a"
                                 },

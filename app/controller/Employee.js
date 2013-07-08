@@ -40,26 +40,14 @@ Ext.define('MyApp.controller.Employee', {
                 success: 'onButtonSuccess'
             },
             "#EmployeeList": {
-                itemtap: 'onListItemTap',
+                select: 'onListSelect',
                 disclose: 'onEmployeeListDisclose'
             }
         }
     },
 
     onEnterEmployeeBtnTap: function(button, e, eOpts) {
-        var form = this.getEmployeeForm();
-
-        var record = form.getRecord();
-
-        if(record === null){
-            var values = form.getValues();
-            var model = Ext.create('MyApp.model.Employee', values);
-            model.set('EmployeeId', Math.floor(Math.random()*90000) + 10000);
-            record = model;
-            form.setRecord(model);
-        }
-
-        this.saveEmployee(record);
+        this.saveEmployee();
     },
 
     onAddEmployeeBtnTap: function(button, e, eOpts) {
@@ -74,7 +62,10 @@ Ext.define('MyApp.controller.Employee', {
         bttn.observableId = '#closeEmployee';
 
 
-        //this.clearOrder();
+        var form = this.getEmployeeForm();
+
+        form.reset();
+        form.setRecord(null);
 
         //this.newOrder();
     },
@@ -105,9 +96,7 @@ Ext.define('MyApp.controller.Employee', {
         this.getEmployeePic().setSrc("php/images/" + response.name);
     },
 
-    onListItemTap: function(dataview, index, target, record, e, eOpts) {
-        console.log(record, 'record');
-
+    onListSelect: function(dataview, record, eOpts) {
         this.getEmployees().animateActiveItem(1, {type:'slide',direction:'up'});
 
         var bttn = Ext.getCmp('addEmployee');
@@ -126,10 +115,10 @@ Ext.define('MyApp.controller.Employee', {
 
         Ext.Msg.confirm(
         "Confirm", 
-        "Do you wish to delete " + record.getData().First + " ?", 
+        "Do you wish to delete1 " + record.getData().First + " ?", 
         function(button){
-            if (button == 'yes') {
-                that.deleteCustomer(record);
+            if (button === 'yes') {
+                that.deleteEmployee(record);
             } else {
                 return false;
             }
@@ -137,7 +126,7 @@ Ext.define('MyApp.controller.Employee', {
 
     },
 
-    deleteCustomer: function(record) {
+    deleteEmployee: function(record) {
         var store = Ext.getStore('Employees');
 
         store.remove(record);
@@ -146,22 +135,32 @@ Ext.define('MyApp.controller.Employee', {
 
     },
 
-    saveEmployee: function(record) {
-        //save model to store
-        this.getEmployeeForm().setRecord(record);
+    saveEmployee: function() {
+        var store = Ext.getStore("Employees"),
+            form = this.getEmployeeForm(),
+            values = form.getValues(),
+            record = form.getRecord();
 
-        var store = Ext.getStore("Employees");
+        if(record === null){
+            //create new model and add to store
 
-        if(record.dirty){
-            console.log('dirty',record);
+            model = Ext.create('MyApp.model.Employee', values);
+            model.set('EmployeeId', Math.floor(Math.random()*90000) + 10000);
+            form.setRecord(model);
+            store.add(model);
+
+
         }else{
-            console.log('notdirty',record);
+            //update record
+            var employeeRecord = store.getAt(store.findExact('EmployeeId', record.get('EmployeeId')));
+            employeeRecord.set(values);
+            store.add(employeeRecord);
         }
 
-
-        store.add(record);
         store.sync();
         store.load();
+
+
         this.getEmployeeForm().down('#EnterEmployeeBtn').setText('Added!');
     }
 

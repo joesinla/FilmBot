@@ -29,15 +29,24 @@ Ext.define('MyApp.store.Employees', {
             {
                 fn: 'onStoreAddrecords',
                 event: 'addrecords'
+            },
+            {
+                fn: 'onStoreRemoverecords',
+                event: 'removerecords'
             }
         ],
         proxy: {
-            type: 'localstorage'
+            type: 'localstorage',
+            id: 'employeee'
         }
     },
 
     onStoreAddrecords: function(store, records, eOpts) {
         console.log("Employees store is synced yo");
+    },
+
+    onStoreRemoverecords: function(store, records, indices, eOpts) {
+        console.log('remove from employee store');
     }
 
 });
