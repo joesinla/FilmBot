@@ -14,7 +14,7 @@
  */
 
 //@require @packageOverrides
-Ext.Loader.setConfig({
+Ext.Loader.setConfig({      
     paths: {
         'Ext.ux': './ux',
         'Ext.io': './io',
