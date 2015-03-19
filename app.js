@@ -22,7 +22,7 @@ Ext.Loader.setConfig({
     }
 });
 
-Ext.application({
+Ext.application({            
 
     requires: [
         'Ext.ux.Fileup'
